@@ -26,7 +26,7 @@ jobs:
     
     steps:
     - name: Checkout repository
-      uses: actions/checkout@v4
+      uses: actions/checkout@v5
       with:
         fetch-depth: 0  # Fetch full history for proper rebasing
         token: ${{ secrets.GITHUB_TOKEN }}  # Use default token for pushing
@@ -44,6 +44,19 @@ jobs:
     - name: Update job listings
       run: node .github/scripts/job-fetcher/index.js
 
+    - name: Debug job location data
+      run: node .github/scripts/analyze-job-locations.js
+      env:
+        DISCORD_REMOTE_USA_CHANNEL_ID: ${{ secrets.DISCORD_REMOTE_USA_CHANNEL_ID }}
+        DISCORD_NY_CHANNEL_ID:         ${{ secrets.DISCORD_NY_CHANNEL_ID }}
+        DISCORD_AUSTIN_CHANNEL_ID:     ${{ secrets.DISCORD_AUSTIN_CHANNEL_ID }}
+        DISCORD_CHICAGO_CHANNEL_ID:    ${{ secrets.DISCORD_CHICAGO_CHANNEL_ID }}
+        DISCORD_SEATTLE_CHANNEL_ID:    ${{ secrets.DISCORD_SEATTLE_CHANNEL_ID }}
+        DISCORD_REDMOND_CHANNEL_ID:    ${{ secrets.DISCORD_REDMOND_CHANNEL_ID }}
+        DISCORD_MV_CHANNEL_ID:         ${{ secrets.DISCORD_MV_CHANNEL_ID }}
+        DISCORD_SF_CHANNEL_ID:         ${{ secrets.DISCORD_SF_CHANNEL_ID }}
+        DISCORD_SUNNYVALE_CHANNEL_ID:  ${{ secrets.DISCORD_SUNNYVALE_CHANNEL_ID }}
+        DISCORD_SAN_BRUNO_CHANNEL_ID:  ${{ secrets.DISCORD_SAN_BRUNO_CHANNEL_ID }}
 
     - name: Install bot dependencies
       working-directory: .github/scripts
