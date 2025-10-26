@@ -1,1 +1,24 @@
-[]
+[
+  {
+    "job_title": "Software Engineer – New Grad - Forward Deployed AI",
+    "employer_name": "Promise",
+    "job_city": "Oakland",
+    "job_state": "CA",
+    "job_description": "Join Promise in this exciting opportunity.",
+    "job_apply_link": "https://jobs.ashbyhq.com/Promise/f0a30718-faf0-4a34-8759-0d6335fa365a/application",
+    "job_posted_at_datetime_utc": "2025-10-26T08:36:07.000Z",
+    "job_employment_type": "FULLTIME",
+    "id": "promise-software-engineer-new-grad-forward-deployed-ai-oakland"
+  },
+  {
+    "job_title": "Software Engineer – New Grad - Forward Deployed AI",
+    "employer_name": "Promise",
+    "job_city": "Washington",
+    "job_state": "DC",
+    "job_description": "Join Promise in this exciting opportunity.",
+    "job_apply_link": "https://jobs.ashbyhq.com/Promise/f1bdeaba-567d-4d57-97b6-2d78719c0443/application",
+    "job_posted_at_datetime_utc": "2025-10-26T08:36:04.000Z",
+    "job_employment_type": "FULLTIME",
+    "id": "promise-software-engineer-new-grad-forward-deployed-ai-washington"
+  }
+]
