@@ -1,13 +1,34 @@
 [
   {
-    "job_title": "Principal Software Engineer - Data, Personalization - Microsoft AI",
+    "employer_name": "Microsoft",
+    "job_title": "Fundamentals of AI: Security",
+    "job_city": "Redmond",
+    "job_state": "Washington",
+    "job_posted_at": "Recently",
+    "job_description": "Category: Research Intern. Level: Students and graduates. Posted: Recently. Full Title: Research Intern - Fundamentals of AI: Security",
+    "job_apply_link": "https://jobs.careers.microsoft.com/global/en/job/1903515/Research-Intern---Fundamentals-of-AI%3A-Security%2C-Agents%2C-Systems-%26-Control",
+    "id": "microsoft-fundamentals-of-ai-security-redmond"
+  },
+  {
+    "job_title": "Software Engineer II - Data, Personalization - Microsoft AI",
     "employer_name": "Microsoft",
     "job_city": "Redmond",
     "job_state": "WA",
     "job_description": "Join Microsoft to empower every person and organization on the planet.",
-    "job_apply_link": "https://jobs.careers.microsoft.com/global/en/job/1903381",
-    "job_posted_at_datetime_utc": "2025-10-27T19:09:10.697Z",
+    "job_apply_link": "https://jobs.careers.microsoft.com/global/en/job/1901602",
+    "job_posted_at_datetime_utc": "2025-10-27T19:27:29.038Z",
     "job_employment_type": "FULLTIME",
-    "id": "microsoft-principal-software-engineer-data-personalization-microsoft-ai-redmond"
+    "id": "microsoft-software-engineer-ii-data-personalization-microsoft-ai-redmond"
+  },
+  {
+    "job_title": "Senior Software Engineer - Data, Personalization - Microsoft AI",
+    "employer_name": "Microsoft",
+    "job_city": "Redmond",
+    "job_state": "WA",
+    "job_description": "Join Microsoft to empower every person and organization on the planet.",
+    "job_apply_link": "https://jobs.careers.microsoft.com/global/en/job/1899987",
+    "job_posted_at_datetime_utc": "2025-10-27T19:27:29.038Z",
+    "job_employment_type": "FULLTIME",
+    "id": "microsoft-senior-software-engineer-data-personalization-microsoft-ai-redmond"
   }
 ]
