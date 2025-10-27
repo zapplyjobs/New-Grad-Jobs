@@ -1,24 +1,13 @@
 [
   {
-    "job_title": "Solutions Engineer",
-    "employer_name": "Databricks",
-    "job_city": "New York City",
-    "job_state": "New York",
-    "job_description": "Join Databricks to unify analytics and AI.",
-    "job_apply_link": "https://databricks.com/company/careers/open-positions/job?gh_jid=8223189002",
-    "job_posted_at_datetime_utc": "2025-10-27T18:00:46.000Z",
-    "job_employment_type": "FULLTIME",
-    "id": "databricks-solutions-engineer-new-york-city"
-  },
-  {
-    "job_title": "Solutions Engineer",
-    "employer_name": "Databricks",
-    "job_city": "Denver",
-    "job_state": "Colorado",
-    "job_description": "Join Databricks to unify analytics and AI.",
-    "job_apply_link": "https://databricks.com/company/careers/open-positions/job?gh_jid=8223188002",
-    "job_posted_at_datetime_utc": "2025-10-27T18:00:14.000Z",
-    "job_employment_type": "FULLTIME",
-    "id": "databricks-solutions-engineer-denver"
+    "job_title": "Software Development Engineer, Luna Gen AI",
+    "employer_name": "Amazon",
+    "job_city": "Seattle",
+    "job_state": "WA",
+    "job_description": "Basic qualifications:",
+    "job_apply_link": "https://amazon.jobs/en-gb/jobs/3115925/software-development-engineer-luna-gen-ai",
+    "job_posted_at": "2025-10-27T00:00:00.000Z",
+    "job_posted_at_datetime_utc": "2025-10-27T00:00:00.000Z",
+    "id": "amazon-software-development-engineer-luna-gen-ai-seattle"
   }
 ]
