@@ -1,13 +1,24 @@
 [
   {
-    "job_title": "Solution Engineering AI Biz Apps",
-    "employer_name": "Microsoft",
-    "job_city": "Redmond",
-    "job_state": "WA",
-    "job_description": "Join Microsoft to empower every person and organization on the planet.",
-    "job_apply_link": "https://jobs.careers.microsoft.com/global/en/job/1903187",
-    "job_posted_at_datetime_utc": "2025-10-27T17:54:01.657Z",
+    "job_title": "Solutions Engineer",
+    "employer_name": "Databricks",
+    "job_city": "New York City",
+    "job_state": "New York",
+    "job_description": "Join Databricks to unify analytics and AI.",
+    "job_apply_link": "https://databricks.com/company/careers/open-positions/job?gh_jid=8223189002",
+    "job_posted_at_datetime_utc": "2025-10-27T18:00:46.000Z",
     "job_employment_type": "FULLTIME",
-    "id": "microsoft-solution-engineering-ai-biz-apps-redmond"
+    "id": "databricks-solutions-engineer-new-york-city"
+  },
+  {
+    "job_title": "Solutions Engineer",
+    "employer_name": "Databricks",
+    "job_city": "Denver",
+    "job_state": "Colorado",
+    "job_description": "Join Databricks to unify analytics and AI.",
+    "job_apply_link": "https://databricks.com/company/careers/open-positions/job?gh_jid=8223188002",
+    "job_posted_at_datetime_utc": "2025-10-27T18:00:14.000Z",
+    "job_employment_type": "FULLTIME",
+    "id": "databricks-solutions-engineer-denver"
   }
 ]
