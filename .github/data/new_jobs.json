@@ -1,23 +1,13 @@
 [
   {
-    "employer_name": "Google",
-    "job_title": "Visual Designer",
-    "job_city": "Los Angeles",
-    "job_state": "CA",
-    "job_posted_at": "Recently",
-    "job_description": "Category: Engineering and Technology. Level: corporate_fareGoogle. Posted: Recently. Full Title: Visual Designer, Events and Experiences Marketing",
-    "job_apply_link": "https://www.google.com/about/careers/applications/jobs/results/97454427371119302-visual-designer-events-and-experiences-marketing?category=DEVELOPER_RELATIONS&category=INFORMATION_TECHNOLOGY&category=PRODUCT_MANAGEMENT&category=PROGRAM_MANAGEMENT&category=SOFTWARE_ENGINEERING&category=TECHNICAL_WRITING&category=USER_EXPERIENCE&target_level=MID&target_level=INTERN_AND_APPRENTICE&target_level=EARLY&employment_type=FULL_TIME&employment_type=PART_TIME&employment_type=TEMPORARY&degree=BACHELORS&degree=ASSOCIATE&degree=MASTERS&location=United+States&page=6",
-    "id": "google-visual-designer-los-angeles"
-  },
-  {
-    "job_title": "Engineering Manager, Adaptive Pricing",
-    "employer_name": "Stripe",
-    "job_city": "N/A",
-    "job_state": "CA",
-    "job_description": "Join Stripe to help build the economic infrastructure for the internet.",
-    "job_apply_link": "https://stripe.com/jobs/search?gh_jid=7363660",
-    "job_posted_at_datetime_utc": "2025-10-28T21:53:35.000Z",
+    "job_title": "Software Engineer I - Customer Experience",
+    "employer_name": "Qualtrics",
+    "job_city": "Seattle",
+    "job_state": "WA",
+    "job_description": "Join Qualtrics in this exciting opportunity.",
+    "job_apply_link": "https://www.qualtrics.com/careers/us/en/job/7347811?gh_jid=7347811",
+    "job_posted_at_datetime_utc": "2025-10-28T22:07:58.000Z",
     "job_employment_type": "FULLTIME",
-    "id": "stripe-engineering-manager-adaptive-pricing-n-a"
+    "id": "qualtrics-software-engineer-i-customer-experience-seattle"
   }
 ]
