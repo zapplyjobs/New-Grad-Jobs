@@ -1,24 +1,13 @@
 [
   {
-    "job_title": "Senior Cloud Network Engineer - CTJ - Poly",
+    "job_title": "Technical Support Engineering - Entry Level",
     "employer_name": "Microsoft",
     "job_city": "Redmond",
     "job_state": "WA",
     "job_description": "Join Microsoft to empower every person and organization on the planet.",
-    "job_apply_link": "https://jobs.careers.microsoft.com/global/en/job/1898226",
-    "job_posted_at_datetime_utc": "2025-10-28T20:08:47.992Z",
+    "job_apply_link": "https://jobs.careers.microsoft.com/global/en/job/1903556",
+    "job_posted_at_datetime_utc": "2025-10-28T20:29:19.934Z",
     "job_employment_type": "FULLTIME",
-    "id": "microsoft-senior-cloud-network-engineer-ctj-poly-redmond"
-  },
-  {
-    "job_title": "Senior Cloud Network Engineer - CTJ - TS/SCI",
-    "employer_name": "Microsoft",
-    "job_city": "Redmond",
-    "job_state": "WA",
-    "job_description": "Join Microsoft to empower every person and organization on the planet.",
-    "job_apply_link": "https://jobs.careers.microsoft.com/global/en/job/1898271",
-    "job_posted_at_datetime_utc": "2025-10-28T20:08:47.992Z",
-    "job_employment_type": "FULLTIME",
-    "id": "microsoft-senior-cloud-network-engineer-ctj-ts-sci-redmond"
+    "id": "microsoft-technical-support-engineering-entry-level-redmond"
   }
 ]
