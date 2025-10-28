@@ -1,1 +1,24 @@
-[]
+[
+  {
+    "job_title": "Sr. Solution Engineer - Data & AI",
+    "employer_name": "Microsoft",
+    "job_city": "Redmond",
+    "job_state": "WA",
+    "job_description": "Join Microsoft to empower every person and organization on the planet.",
+    "job_apply_link": "https://jobs.careers.microsoft.com/global/en/job/1903262",
+    "job_posted_at_datetime_utc": "2025-10-28T04:01:45.084Z",
+    "job_employment_type": "FULLTIME",
+    "id": "microsoft-sr-solution-engineer-data-ai-redmond"
+  },
+  {
+    "job_title": "Engineering Manager (Platform -GenAI)",
+    "employer_name": "Coinbase",
+    "job_city": "Remote - USA",
+    "job_state": "CA",
+    "job_description": "Join Coinbase to build the future of cryptocurrency.",
+    "job_apply_link": "https://www.coinbase.com/careers/positions/7353594?gh_jid=7353594",
+    "job_posted_at_datetime_utc": "2025-10-28T03:51:10.000Z",
+    "job_employment_type": "FULLTIME",
+    "id": "coinbase-engineering-manager-platform-genai-remote-usa"
+  }
+]
