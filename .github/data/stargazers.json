@@ -552,13 +552,20 @@
       "avatar_url": "https://avatars.githubusercontent.com/u/236671724?v=4",
       "html_url": "https://github.com/zapply-dev",
       "starred_at": "2025-10-21T16:57:34Z"
+    },
+    {
+      "login": "venkatesh-vuyyala",
+      "id": 126367292,
+      "avatar_url": "https://avatars.githubusercontent.com/u/126367292?v=4",
+      "html_url": "https://github.com/venkatesh-vuyyala",
+      "starred_at": "2025-10-27T19:39:24Z"
     }
   ],
-  "total_count": 79,
-  "last_updated": "2025-10-27T06:04:46.369Z",
+  "total_count": 80,
+  "last_updated": "2025-10-28T06:04:19.715Z",
   "stats": {
-    "new_since_last_run": 0,
+    "new_since_last_run": 1,
     "removed_since_last_run": 0,
-    "net_change": 0
+    "net_change": 1
   }
 }
