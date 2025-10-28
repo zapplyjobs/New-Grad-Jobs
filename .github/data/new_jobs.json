@@ -1,13 +1,12 @@
 [
   {
-    "job_title": "Software Engineer - Commerce + Ecosystems",
     "employer_name": "Microsoft",
+    "job_title": "Commerce + Ecosystems",
     "job_city": "Redmond",
-    "job_state": "WA",
-    "job_description": "Join Microsoft to empower every person and organization on the planet.",
-    "job_apply_link": "https://jobs.careers.microsoft.com/global/en/job/1903967",
-    "job_posted_at_datetime_utc": "2025-10-28T12:31:17.442Z",
-    "job_employment_type": "FULLTIME",
-    "id": "microsoft-software-engineer-commerce-ecosystems-redmond"
+    "job_state": "Washington",
+    "job_posted_at": "Recently",
+    "job_description": "Category: Software Engineer. Level: Students and graduates. Posted: Recently. Full Title: Software Engineer - Commerce + Ecosystems",
+    "job_apply_link": "https://jobs.careers.microsoft.com/global/en/job/1903967/Software-Engineer---Commerce-%2B-Ecosystems",
+    "id": "microsoft-commerce-ecosystems-redmond"
   }
 ]
