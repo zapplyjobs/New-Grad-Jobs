@@ -1,1 +1,23 @@
-[]
+[
+  {
+    "employer_name": "Google",
+    "job_title": "Area Program Manager",
+    "job_city": "Bridgeport",
+    "job_state": "CT",
+    "job_posted_at": "Recently",
+    "job_description": "Category: Business. Level: corporate_fareGoogle. Posted: Recently. Full Title: Area Program Manager, Environmental Health and Safety Construction",
+    "job_apply_link": "https://www.google.com/about/careers/applications/jobs/results/72671280662225606-area-program-manager-environmental-health-and-safety-construction?category=ADMINISTRATIVE&category=BUSINESS_STRATEGY&category=FINANCE&category=LEGAL&category=MARKETING&category=PARTNERSHIPS&category=PEOPLEOPS&category=PRODUCT_SUPPORT&category=PROGRAM_MANAGEMENT&category=REAL_ESTATE&category=SALES&category=SALES_OPERATIONS&target_level=EARLY&target_level=MID&target_level=INTERN_AND_APPRENTICE&employment_type=FULL_TIME&employment_type=PART_TIME&employment_type=TEMPORARY&degree=BACHELORS&degree=MASTERS&degree=ASSOCIATE&location=United+States&page=7",
+    "id": "google-area-program-manager-bridgeport"
+  },
+  {
+    "job_title": "Staff Machine Learning Engineer - Core Automation",
+    "employer_name": "Coinbase",
+    "job_city": "Remote - USA",
+    "job_state": "CA",
+    "job_description": "Join Coinbase to build the future of cryptocurrency.",
+    "job_apply_link": "https://www.coinbase.com/careers/positions/7364827?gh_jid=7364827",
+    "job_posted_at_datetime_utc": "2025-10-29T14:58:32.000Z",
+    "job_employment_type": "FULLTIME",
+    "id": "coinbase-staff-machine-learning-engineer-core-automation-remote-usa"
+  }
+]
