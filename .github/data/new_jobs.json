@@ -1,1 +1,13 @@
-[]
+[
+  {
+    "job_title": "Software Engineer - SAP MM",
+    "employer_name": "Microsoft",
+    "job_city": "Redmond",
+    "job_state": "WA",
+    "job_description": "Join Microsoft to empower every person and organization on the planet.",
+    "job_apply_link": "https://jobs.careers.microsoft.com/global/en/job/1902277",
+    "job_posted_at_datetime_utc": "2025-10-29T12:31:18.179Z",
+    "job_employment_type": "FULLTIME",
+    "id": "microsoft-software-engineer-sap-mm-redmond"
+  }
+]
