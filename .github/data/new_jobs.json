@@ -1,1 +1,13 @@
-[]
+[
+  {
+    "job_title": ".NET MAUI Software Engineer",
+    "employer_name": "Microsoft",
+    "job_city": "Redmond",
+    "job_state": "WA",
+    "job_description": "Join Microsoft to empower every person and organization on the planet.",
+    "job_apply_link": "https://jobs.careers.microsoft.com/global/en/job/1902299",
+    "job_posted_at_datetime_utc": "2025-10-29T08:46:49.450Z",
+    "job_employment_type": "FULLTIME",
+    "id": "microsoft-net-maui-software-engineer-redmond"
+  }
+]
