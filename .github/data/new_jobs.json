@@ -1,13 +1,24 @@
 [
   {
-    "job_title": "Software Development Engineer, Amazon Demand Side Platform",
-    "employer_name": "Amazon",
-    "job_city": "Arlington",
-    "job_state": "VA",
-    "job_description": "Basic qualifications:",
-    "job_apply_link": "https://amazon.jobs/en-gb/jobs/3111042/software-development-engineer-amazon-demand-side-platform",
-    "job_posted_at": "2025-10-29T20:33:35.818Z",
-    "job_posted_at_datetime_utc": "2025-10-29T20:33:35.818Z",
-    "id": "amazon-software-development-engineer-amazon-demand-side-platform-arlington"
+    "job_title": "Principal Forensic Engineer",
+    "employer_name": "Microsoft",
+    "job_city": "Redmond",
+    "job_state": "WA",
+    "job_description": "Join Microsoft to empower every person and organization on the planet.",
+    "job_apply_link": "https://jobs.careers.microsoft.com/global/en/job/1900063",
+    "job_posted_at_datetime_utc": "2025-10-29T21:53:55.018Z",
+    "job_employment_type": "FULLTIME",
+    "id": "microsoft-principal-forensic-engineer-redmond"
+  },
+  {
+    "job_title": "Senior Technical Power Harvesting Engineer",
+    "employer_name": "Microsoft",
+    "job_city": "Redmond",
+    "job_state": "WA",
+    "job_description": "Join Microsoft to empower every person and organization on the planet.",
+    "job_apply_link": "https://jobs.careers.microsoft.com/global/en/job/1903231",
+    "job_posted_at_datetime_utc": "2025-10-29T21:53:55.018Z",
+    "job_employment_type": "FULLTIME",
+    "id": "microsoft-senior-technical-power-harvesting-engineer-redmond"
   }
 ]
