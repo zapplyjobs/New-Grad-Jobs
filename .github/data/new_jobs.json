@@ -1,35 +1,13 @@
 [
   {
-    "job_title": "Software Development Engineer, Ordering",
+    "job_title": "Software Development Engineer, Amazon Demand Side Platform",
     "employer_name": "Amazon",
-    "job_city": "Seattle",
-    "job_state": "WA",
+    "job_city": "Arlington",
+    "job_state": "VA",
     "job_description": "Basic qualifications:",
-    "job_apply_link": "https://amazon.jobs/en-gb/jobs/3118179/software-development-engineer-ordering",
-    "job_posted_at": "2025-10-29T00:00:00.000Z",
-    "job_posted_at_datetime_utc": "2025-10-29T00:00:00.000Z",
-    "id": "amazon-software-development-engineer-ordering-seattle"
-  },
-  {
-    "job_title": "Software Engineer - Data Platform",
-    "employer_name": "Microsoft",
-    "job_city": "Redmond",
-    "job_state": "WA",
-    "job_description": "Join Microsoft to empower every person and organization on the planet.",
-    "job_apply_link": "https://jobs.careers.microsoft.com/global/en/job/1902748",
-    "job_posted_at_datetime_utc": "2025-10-29T21:28:58.291Z",
-    "job_employment_type": "FULLTIME",
-    "id": "microsoft-software-engineer-data-platform-redmond"
-  },
-  {
-    "job_title": "Technical Program Manager – Customer Experience Engineering, Intune",
-    "employer_name": "Microsoft",
-    "job_city": "Redmond",
-    "job_state": "WA",
-    "job_description": "Join Microsoft to empower every person and organization on the planet.",
-    "job_apply_link": "https://jobs.careers.microsoft.com/global/en/job/1902056",
-    "job_posted_at_datetime_utc": "2025-10-29T21:28:58.291Z",
-    "job_employment_type": "FULLTIME",
-    "id": "microsoft-technical-program-manager-customer-experience-engineering-intune-redmond"
+    "job_apply_link": "https://amazon.jobs/en-gb/jobs/3111042/software-development-engineer-amazon-demand-side-platform",
+    "job_posted_at": "2025-10-29T20:33:35.818Z",
+    "job_posted_at_datetime_utc": "2025-10-29T20:33:35.818Z",
+    "id": "amazon-software-development-engineer-amazon-demand-side-platform-arlington"
   }
 ]
