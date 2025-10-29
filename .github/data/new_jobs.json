@@ -1,24 +1,35 @@
 [
   {
-    "job_title": "Audio/Video Streaming Software and Quality Engineer",
+    "job_title": "Digital Solution Engineer – Finance & Supply",
     "employer_name": "Microsoft",
     "job_city": "Redmond",
     "job_state": "WA",
     "job_description": "Join Microsoft to empower every person and organization on the planet.",
-    "job_apply_link": "https://jobs.careers.microsoft.com/global/en/job/1902111",
-    "job_posted_at_datetime_utc": "2025-10-29T20:55:25.691Z",
+    "job_apply_link": "https://jobs.careers.microsoft.com/global/en/job/1903655",
+    "job_posted_at_datetime_utc": "2025-10-29T21:09:51.839Z",
     "job_employment_type": "FULLTIME",
-    "id": "microsoft-audio-video-streaming-software-and-quality-engineer-redmond"
+    "id": "microsoft-digital-solution-engineer-finance-supply-redmond"
   },
   {
-    "job_title": "Senior Software Engineer- Virtualization and Kernel",
+    "job_title": "Senior Security Operations Engineer - CTJ - TS/SCI",
     "employer_name": "Microsoft",
     "job_city": "Redmond",
     "job_state": "WA",
     "job_description": "Join Microsoft to empower every person and organization on the planet.",
-    "job_apply_link": "https://jobs.careers.microsoft.com/global/en/job/1903593",
-    "job_posted_at_datetime_utc": "2025-10-29T20:55:25.691Z",
+    "job_apply_link": "https://jobs.careers.microsoft.com/global/en/job/1903215",
+    "job_posted_at_datetime_utc": "2025-10-29T21:09:51.839Z",
     "job_employment_type": "FULLTIME",
-    "id": "microsoft-senior-software-engineer-virtualization-and-kernel-redmond"
+    "id": "microsoft-senior-security-operations-engineer-ctj-ts-sci-redmond"
+  },
+  {
+    "job_title": "Senior Software Engineer (Backend) - AI/ML Environments",
+    "employer_name": "Databricks",
+    "job_city": "Mountain View",
+    "job_state": "California",
+    "job_description": "Join Databricks to unify analytics and AI.",
+    "job_apply_link": "https://databricks.com/company/careers/open-positions/job?gh_jid=8233899002",
+    "job_posted_at_datetime_utc": "2025-10-29T21:08:45.000Z",
+    "job_employment_type": "FULLTIME",
+    "id": "databricks-senior-software-engineer-backend-ai-ml-environments-mountain-view"
   }
 ]
