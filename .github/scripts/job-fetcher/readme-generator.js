@@ -320,6 +320,16 @@ async function generateReadme(currentJobs, archivedJobs = [], internshipData = n
 ## Apply Faster with Zapply
 ⚡ Apply to 50 jobs in the time it takes to do 5. Use Zapply’s extension to instantly submit applications across Tesla, Amazon, NVIDIA, and 500+ other data-focused employers.  
 [Download Zapply Extension](#)
+---
+
+## ⭐ Stay Up-to-Date
+**Don't miss new opportunities!**  
+- 🌟 **Star this repo** to get updates on your GitHub dashboard  
+- 👁️ **Watch** for instant notifications on new jobs  
+- 🔔 **Turn on notifications** to never miss FAANG+ postings
+
+[![Star History Chart](https://api.star-history.com/svg?repos=zapplyjobs/New-Grad-Jobs&type=Date)](https://star-history.com/#zapplyjobs/New-Grad-Jobs&Date)
+
 
 ---
 
