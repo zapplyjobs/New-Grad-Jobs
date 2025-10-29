@@ -1,35 +1,24 @@
 [
   {
-    "job_title": "Evergreen - Sr. Staff Backend Software Engineer -  Enterprise Apps  (L7)",
-    "employer_name": "Databricks",
+    "job_title": "Software Engineer, Graphics & Media",
+    "employer_name": "Figma",
     "job_city": "San Francisco",
-    "job_state": "California",
-    "job_description": "Join Databricks to unify analytics and AI.",
-    "job_apply_link": "https://databricks.com/company/careers/open-positions/job?gh_jid=8220983002",
-    "job_posted_at_datetime_utc": "2025-10-29T19:58:52.000Z",
+    "job_state": "CA • New York",
+    "job_description": "Join Figma to make design accessible to all.",
+    "job_apply_link": "https://boards.greenhouse.io/figma/jobs/5552522004?gh_jid=5552522004",
+    "job_posted_at_datetime_utc": "2025-10-29T20:27:35.000Z",
     "job_employment_type": "FULLTIME",
-    "id": "databricks-evergreen-sr-staff-backend-software-engineer-enterprise-apps-l7-san-francisco"
+    "id": "figma-software-engineer-graphics-media-san-francisco"
   },
   {
-    "job_title": "Evergreen - Staff Fullstack Engineer - Enterprise Apps  (L6)",
-    "employer_name": "Databricks",
-    "job_city": "San Francisco",
-    "job_state": "California",
-    "job_description": "Join Databricks to unify analytics and AI.",
-    "job_apply_link": "https://databricks.com/company/careers/open-positions/job?gh_jid=8220836002",
-    "job_posted_at_datetime_utc": "2025-10-29T19:58:06.000Z",
+    "job_title": "Staff Software Engineer, Search Infrastructure",
+    "employer_name": "Airbnb",
+    "job_city": "Brazil",
+    "job_state": "CA",
+    "job_description": "Join Airbnb to create a world where anyone can belong anywhere.",
+    "job_apply_link": "https://careers.airbnb.com/positions/7362663?gh_jid=7362663",
+    "job_posted_at_datetime_utc": "2025-10-29T20:25:47.000Z",
     "job_employment_type": "FULLTIME",
-    "id": "databricks-evergreen-staff-fullstack-engineer-enterprise-apps-l6-san-francisco"
-  },
-  {
-    "job_title": "Evergreen - Sr. Staff Fullstack Engineer - Enterprise Apps  (L7)",
-    "employer_name": "Databricks",
-    "job_city": "San Francisco",
-    "job_state": "California",
-    "job_description": "Join Databricks to unify analytics and AI.",
-    "job_apply_link": "https://databricks.com/company/careers/open-positions/job?gh_jid=8220902002",
-    "job_posted_at_datetime_utc": "2025-10-29T19:56:55.000Z",
-    "job_employment_type": "FULLTIME",
-    "id": "databricks-evergreen-sr-staff-fullstack-engineer-enterprise-apps-l7-san-francisco"
+    "id": "airbnb-staff-software-engineer-search-infrastructure-brazil"
   }
 ]
