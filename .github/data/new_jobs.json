@@ -1,52 +1,13 @@
 [
   {
-    "employer_name": "Microsoft",
-    "job_title": "Software Engineering II",
-    "job_city": "Multiple Locations",
-    "job_state": "United States",
-    "job_posted_at": "Recently",
-    "job_description": "Category: Software Engineering. Level: Students and graduates. Posted: Recently. Full Title: Software Engineering - Software Engineering II",
-    "job_apply_link": "https://jobs.careers.microsoft.com/global/en/job/1903779/Software-Engineering-II",
-    "id": "microsoft-software-engineering-ii-multiple-locations"
-  },
-  {
-    "employer_name": "Microsoft",
-    "job_title": "Principal Software Engineering Manager",
-    "job_city": "Multiple Locations",
-    "job_state": "United States",
-    "job_posted_at": "Recently",
-    "job_description": "Category: Software Engineering. Level: Students and graduates. Posted: Recently. Full Title: Software Engineering - Principal Software Engineering Manager",
-    "job_apply_link": "https://jobs.careers.microsoft.com/global/en/job/1902216/Principal-Software-Engineering-Manager",
-    "id": "microsoft-principal-software-engineering-manager-multiple-locations"
-  },
-  {
-    "employer_name": "Microsoft",
-    "job_title": "M365 Copilot App",
-    "job_city": "Mountain View",
-    "job_state": "California",
-    "job_posted_at": "Recently",
-    "job_description": "Category: Principal Software Engineering Manager. Level: Students and graduates. Posted: Recently. Full Title: Principal Software Engineering Manager - M365 Copilot App",
-    "job_apply_link": "https://jobs.careers.microsoft.com/global/en/job/1898989/Principal-Software-Engineering-Manager---M365-Copilot-App",
-    "id": "microsoft-m365-copilot-app-mountain-view"
-  },
-  {
-    "employer_name": "Microsoft",
-    "job_title": "CTJ",
-    "job_city": "Multiple Locations",
-    "job_state": "United States",
-    "job_posted_at": "Recently",
-    "job_description": "Category: Senior Software Engineering Manager. Level: Students and graduates. Posted: Recently. Full Title: Senior Software Engineering Manager - CTJ",
-    "job_apply_link": "https://jobs.careers.microsoft.com/global/en/job/1898066/Senior-Software-Engineering-Manager---CTJ---Poly",
-    "id": "microsoft-ctj-multiple-locations"
-  },
-  {
-    "employer_name": "Microsoft",
-    "job_title": "Principal Engineering Manager",
-    "job_city": "Multiple Locations",
-    "job_state": "United States",
-    "job_posted_at": "Recently",
-    "job_description": "Category: Software Engineering. Level: Students and graduates. Posted: Recently. Full Title: Software Engineering - Principal Engineering Manager",
-    "job_apply_link": "https://jobs.careers.microsoft.com/global/en/job/1902241/Principal-Engineering-Manager",
-    "id": "microsoft-principal-engineering-manager-multiple-locations"
+    "job_title": "Full Stack Software Engineer (L5) - Internal Tools",
+    "employer_name": "Netflix",
+    "job_city": "Los Gatos",
+    "job_state": "CA",
+    "job_description": "Join Netflix to entertain the world.",
+    "job_apply_link": "https://explore.jobs.netflix.net/careers/job/790312659731",
+    "job_posted_at_datetime_utc": "2025-10-29T00:00:00.000Z",
+    "job_employment_type": "FULLTIME",
+    "id": "netflix-full-stack-software-engineer-l5-internal-tools-los-gatos"
   }
 ]
