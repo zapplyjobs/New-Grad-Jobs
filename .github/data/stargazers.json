@@ -559,13 +559,27 @@
       "avatar_url": "https://avatars.githubusercontent.com/u/126367292?v=4",
       "html_url": "https://github.com/venkatesh-vuyyala",
       "starred_at": "2025-10-27T19:39:24Z"
+    },
+    {
+      "login": "usmahm",
+      "id": 59308632,
+      "avatar_url": "https://avatars.githubusercontent.com/u/59308632?v=4",
+      "html_url": "https://github.com/usmahm",
+      "starred_at": "2025-10-28T10:26:55Z"
+    },
+    {
+      "login": "Danialsamadi",
+      "id": 132851496,
+      "avatar_url": "https://avatars.githubusercontent.com/u/132851496?v=4",
+      "html_url": "https://github.com/Danialsamadi",
+      "starred_at": "2025-10-28T20:10:58Z"
     }
   ],
-  "total_count": 80,
-  "last_updated": "2025-10-28T06:04:19.715Z",
+  "total_count": 82,
+  "last_updated": "2025-10-29T06:04:13.546Z",
   "stats": {
-    "new_since_last_run": 1,
+    "new_since_last_run": 2,
     "removed_since_last_run": 0,
-    "net_change": 1
+    "net_change": 2
   }
 }
