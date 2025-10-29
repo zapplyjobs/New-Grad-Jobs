@@ -19,66 +19,6 @@ const {
     delay 
 } = require('./utils');
 
-function filterTargetCompanyJobs(jobs) {
-    console.log('🎯 Filtering for target companies...');
-    
-    const targetJobs = jobs.filter(job => {
-        const companyName = (job.employer_name || '').toLowerCase();
-        
-        // Check against our comprehensive company list
-        const isTargetCompany = COMPANY_BY_NAME[companyName] !== undefined;
-        
-        if (isTargetCompany) {
-            // Normalize company name for consistency
-            job.employer_name = normalizeCompanyName(job.employer_name);
-            return true;
-        }
-        
-        // Additional fuzzy matching for variations
-        for (const company of ALL_COMPANIES) {
-            for (const apiName of company.api_names) {
-                if (companyName.includes(apiName.toLowerCase()) && apiName.length > 3) {
-                    job.employer_name = company.name;
-                    return true;
-                }
-            }
-        }
-        
-        return false;
-    });
-    
-    console.log(`✨ Filtered to ${targetJobs.length} target company jobs`);
-    console.log('🏢 Companies found:', [...new Set(targetJobs.map(j => j.employer_name))]);
-    
-    // Remove duplicates more intelligently
-    const uniqueJobs = targetJobs.filter((job, index, self) => {
-        return index === self.findIndex(j => 
-            j.job_title === job.job_title && 
-            j.employer_name === job.employer_name &&
-            j.job_city === job.job_city
-        );
-    });
-    
-    console.log(`🧹 After deduplication: ${uniqueJobs.length} unique jobs`);
-    
-    // Sort by company tier and recency
-    uniqueJobs.sort((a, b) => {
-        // Prioritize FAANG+ companies
-        const aIsFAANG = companies.faang_plus.some(c => c.name === a.employer_name);
-        const bIsFAANG = companies.faang_plus.some(c => c.name === b.employer_name);
-        
-        if (aIsFAANG && !bIsFAANG) return -1;
-        if (!aIsFAANG && bIsFAANG) return 1;
-        
-        // Then by recency
-        const aDate = new Date(a.job_posted_at_datetime_utc || 0);
-        const bDate = new Date(b.job_posted_at_datetime_utc || 0);
-        return bDate - aDate;
-    });
-    
-    return uniqueJobs.slice(0, 50); // Top 50 jobs
-}
-
 // Generate company statistics with categories
 function generateCompanyStats(jobs) {
     const stats = {

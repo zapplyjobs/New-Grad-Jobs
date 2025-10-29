@@ -44,36 +44,31 @@ function generateJobTable(jobs) {
   const uniqueJobCompanies = [...new Set(jobs.map(job => job.employer_name))];
   console.log(`\n📊 DEBUG: Unique companies found in job data (${uniqueJobCompanies.length}):`, uniqueJobCompanies);
 
-  // Group jobs by company - only include jobs from valid companies
+  // Group jobs by company - PROCESS ALL COMPANIES (whitelist filter removed)
   const jobsByCompany = {};
   const processedCompanies = new Set();
-  const skippedCompanies = new Set();
-  
+
   jobs.forEach((job) => {
-    const employerNameLower = job.employer_name.toLowerCase();
-    const matchedCompany = companyNameMap.get(employerNameLower);
-    
-    // Only process jobs from companies in our category list
-    if (matchedCompany) {
-      processedCompanies.add(job.employer_name);
-      if (!jobsByCompany[matchedCompany.name]) {
-        jobsByCompany[matchedCompany.name] = [];
-      }
-      jobsByCompany[matchedCompany.name].push(job);
-    } else {
-      skippedCompanies.add(job.employer_name);
+    const companyName = job.employer_name;
+    processedCompanies.add(companyName);
+
+    if (!jobsByCompany[companyName]) {
+      jobsByCompany[companyName] = [];
     }
+    jobsByCompany[companyName].push(job);
   });
 
-  console.log(`\n✅ DEBUG: Companies INCLUDED (${processedCompanies.size}):`, [...processedCompanies]);
-  console.log(`\n❌ DEBUG: Companies SKIPPED (${skippedCompanies.size}):`, [...skippedCompanies]);
-  
+  console.log(`\n✅ DEBUG: ALL Companies INCLUDED (${processedCompanies.size}):`, [...processedCompanies].sort());
+
   // Log job counts by company
   console.log(`\n📈 DEBUG: Job counts by company:`);
-  Object.entries(jobsByCompany).forEach(([company, jobs]) => {
-    const companyInfo = companyNameMap.get(company.toLowerCase());
-    console.log(`  ${company}: ${jobs.length} jobs (Category: ${companyInfo?.categoryTitle || 'Unknown'})`);
-  });
+  Object.entries(jobsByCompany)
+    .sort((a, b) => b[1].length - a[1].length) // Sort by job count descending
+    .forEach(([company, jobs]) => {
+      const companyInfo = companyNameMap.get(company.toLowerCase());
+      const category = companyInfo?.categoryTitle || 'Uncategorized';
+      console.log(`  ${company}: ${jobs.length} jobs (Category: ${category})`);
+    });
 
   let output = "";
 
@@ -181,7 +176,110 @@ function generateJobTable(jobs) {
     }
   });
 
-  console.log(`\n🎉 DEBUG: Finished generating job table with ${Object.keys(jobsByCompany).length} companies processed`);
+  // NEW: Process uncategorized companies (not in software.json)
+  const categorizedCompanies = new Set();
+  Object.values(companyCategory).forEach(category => {
+    category.companies.forEach(company => categorizedCompanies.add(company));
+  });
+
+  const uncategorizedCompanies = Object.keys(jobsByCompany).filter(
+    company => !categorizedCompanies.has(company)
+  );
+
+  if (uncategorizedCompanies.length > 0) {
+    const totalUncategorizedJobs = uncategorizedCompanies.reduce(
+      (sum, company) => sum + jobsByCompany[company].length, 0
+    );
+
+    console.log(`\n📝 DEBUG: Processing UNCATEGORIZED companies: ${uncategorizedCompanies.length} companies with ${totalUncategorizedJobs} jobs`);
+
+    output += `### 🏢 **Other Companies** (${totalUncategorizedJobs} positions)\n\n`;
+
+    // Handle large uncategorized companies (>10 jobs) separately
+    const bigUncategorized = uncategorizedCompanies.filter(
+      company => jobsByCompany[company].length > 10
+    );
+
+    bigUncategorized.forEach((companyName) => {
+      const companyJobs = jobsByCompany[companyName];
+      const emoji = getCompanyEmoji(companyName);
+
+      if (companyJobs.length > 50) {
+        output += `<details>\n`;
+        output += `<summary><h4>${emoji} <strong>${companyName}</strong> (${companyJobs.length} positions)</h4></summary>\n\n`;
+      } else {
+        output += `#### ${emoji} **${companyName}** (${companyJobs.length} positions)\n\n`;
+      }
+
+      output += `| Role | Location | Posted | Level | Category | Apply |\n`;
+      output += `|------|----------|--------|-------|----------|-------|\n`;
+
+      companyJobs.forEach((job) => {
+        const role = job.job_title;
+        const location = formatLocation(job.job_city, job.job_state);
+        const posted = formatTimeAgo(job.job_posted_at_datetime_utc);
+        const level = getExperienceLevel(job.job_title, job.job_description);
+        const category = getJobCategory(job.job_title, job.job_description);
+        const applyLink = job.job_apply_link || getCompanyCareerUrl(job.employer_name);
+
+        let statusIndicator = "";
+        const description = (job.job_description || "").toLowerCase();
+        if (description.includes("no sponsorship") || description.includes("us citizen")) {
+          statusIndicator = " 🇺🇸";
+        }
+        if (description.includes("remote")) {
+          statusIndicator += " 🏠";
+        }
+
+        output += `| ${role}${statusIndicator} | ${location} | ${posted} | ${level} | ${category} | [Apply](${applyLink}) |\n`;
+      });
+
+      if (companyJobs.length > 50) {
+        output += `</details>\n\n`;
+      } else {
+        output += "\n";
+      }
+    });
+
+    // Handle small uncategorized companies (<=10 jobs) in one table
+    const smallUncategorized = uncategorizedCompanies.filter(
+      company => jobsByCompany[company].length <= 10
+    );
+
+    if (smallUncategorized.length > 0) {
+      output += `| Company | Role | Location | Posted | Level | Category | Apply |\n`;
+      output += `|---------|------|----------|--------|-------|----------|-------|\n`;
+
+      smallUncategorized.forEach((companyName) => {
+        const companyJobs = jobsByCompany[companyName];
+        const emoji = getCompanyEmoji(companyName);
+
+        companyJobs.forEach((job) => {
+          const role = job.job_title;
+          const location = formatLocation(job.job_city, job.job_state);
+          const posted = formatTimeAgo(job.job_posted_at_datetime_utc);
+          const level = getExperienceLevel(job.job_title, job.job_description);
+          const category = getJobCategory(job.job_title, job.job_description);
+          const applyLink = job.job_apply_link || getCompanyCareerUrl(job.employer_name);
+
+          let statusIndicator = "";
+          const description = (job.job_description || "").toLowerCase();
+          if (description.includes("no sponsorship") || description.includes("us citizen")) {
+            statusIndicator = " 🇺🇸";
+          }
+          if (description.includes("remote")) {
+            statusIndicator += " 🏠";
+          }
+
+          output += `| ${emoji} **${companyName}** | ${role}${statusIndicator} | ${location} | ${posted} | ${level} | ${category} | [Apply](${applyLink}) |\n`;
+        });
+      });
+
+      output += "\n";
+    }
+  }
+
+  console.log(`\n🎉 DEBUG: Finished generating job table with ${Object.keys(jobsByCompany).length} companies processed (${categorizedCompanies.size} categorized + ${uncategorizedCompanies.length} uncategorized)`);
   return output;
 }
 function generateInternshipSection(internshipData) {
