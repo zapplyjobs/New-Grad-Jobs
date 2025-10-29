@@ -1,35 +1,35 @@
 [
   {
-    "job_title": "Digital Solution Engineer – Finance & Supply",
+    "job_title": "Software Development Engineer, Ordering",
+    "employer_name": "Amazon",
+    "job_city": "Seattle",
+    "job_state": "WA",
+    "job_description": "Basic qualifications:",
+    "job_apply_link": "https://amazon.jobs/en-gb/jobs/3118179/software-development-engineer-ordering",
+    "job_posted_at": "2025-10-29T00:00:00.000Z",
+    "job_posted_at_datetime_utc": "2025-10-29T00:00:00.000Z",
+    "id": "amazon-software-development-engineer-ordering-seattle"
+  },
+  {
+    "job_title": "Software Engineer - Data Platform",
     "employer_name": "Microsoft",
     "job_city": "Redmond",
     "job_state": "WA",
     "job_description": "Join Microsoft to empower every person and organization on the planet.",
-    "job_apply_link": "https://jobs.careers.microsoft.com/global/en/job/1903655",
-    "job_posted_at_datetime_utc": "2025-10-29T21:09:51.839Z",
+    "job_apply_link": "https://jobs.careers.microsoft.com/global/en/job/1902748",
+    "job_posted_at_datetime_utc": "2025-10-29T21:28:58.291Z",
     "job_employment_type": "FULLTIME",
-    "id": "microsoft-digital-solution-engineer-finance-supply-redmond"
+    "id": "microsoft-software-engineer-data-platform-redmond"
   },
   {
-    "job_title": "Senior Security Operations Engineer - CTJ - TS/SCI",
+    "job_title": "Technical Program Manager – Customer Experience Engineering, Intune",
     "employer_name": "Microsoft",
     "job_city": "Redmond",
     "job_state": "WA",
     "job_description": "Join Microsoft to empower every person and organization on the planet.",
-    "job_apply_link": "https://jobs.careers.microsoft.com/global/en/job/1903215",
-    "job_posted_at_datetime_utc": "2025-10-29T21:09:51.839Z",
+    "job_apply_link": "https://jobs.careers.microsoft.com/global/en/job/1902056",
+    "job_posted_at_datetime_utc": "2025-10-29T21:28:58.291Z",
     "job_employment_type": "FULLTIME",
-    "id": "microsoft-senior-security-operations-engineer-ctj-ts-sci-redmond"
-  },
-  {
-    "job_title": "Senior Software Engineer (Backend) - AI/ML Environments",
-    "employer_name": "Databricks",
-    "job_city": "Mountain View",
-    "job_state": "California",
-    "job_description": "Join Databricks to unify analytics and AI.",
-    "job_apply_link": "https://databricks.com/company/careers/open-positions/job?gh_jid=8233899002",
-    "job_posted_at_datetime_utc": "2025-10-29T21:08:45.000Z",
-    "job_employment_type": "FULLTIME",
-    "id": "databricks-senior-software-engineer-backend-ai-ml-environments-mountain-view"
+    "id": "microsoft-technical-program-manager-customer-experience-engineering-intune-redmond"
   }
 ]
