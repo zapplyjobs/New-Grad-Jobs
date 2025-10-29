@@ -276,7 +276,7 @@ async function generateReadme(currentJobs, archivedJobs = [], internshipData = n
 ![Total Jobs](https://img.shields.io/badge/Total_Jobs-${currentJobs.length}+-brightgreen?style=flat&logo=briefcase)
 ![Companies](https://img.shields.io/badge/Companies-${totalCompanies}-blue?style=flat&logo=building)
 ![FAANG+ Jobs](https://img.shields.io/badge/FAANG+_Jobs-${faangJobs}-red?style=flat&logo=star)
-![Updated](https://img.shields.io/badge/Updated-Hourly-orange?style=flat&logo=calendar)
+![Updated](https://img.shields.io/badge/Updated-Every_15_Minutes-orange?style=flat&logo=calendar)
 ![License](https://img.shields.io/badge/License-CC--BY--NC--4.0-purple?style=flat&logo=creativecommons)
 
 <!-- Row 2: Repository Stats -->
@@ -287,8 +287,6 @@ async function generateReadme(currentJobs, archivedJobs = [], internshipData = n
 
 <!-- Row 3: Workflow Health -->
 ![Update Jobs](https://img.shields.io/github/actions/workflow/status/zapplyjobs/New-Grad-Jobs/update-jobs.yml?style=flat&label=job-updates&logo=github-actions&logoColor=white)
-![Daily Stats](https://img.shields.io/github/actions/workflow/status/zapplyjobs/New-Grad-Jobs/daily-stats.yml?style=flat&label=daily-stats&logo=github-actions&logoColor=white)
-![Weekly Stats](https://img.shields.io/github/actions/workflow/status/zapplyjobs/New-Grad-Jobs/weekly-stats.yml?style=flat&label=weekly-stats&logo=github-actions&logoColor=white)
 
 <!-- Row 4: Community & Links (for-the-badge style) -->
 [![Browse Jobs](https://img.shields.io/badge/Browse_Jobs-Live_Site-FF6B35?style=for-the-badge&logo=rocket&logoColor=white)](https://new-grad-positions.vercel.app/)
