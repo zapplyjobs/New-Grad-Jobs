@@ -1,13 +1,24 @@
 [
   {
-    "job_title": "Software Development Engineer, NextGen Security Automation",
-    "employer_name": "Amazon",
-    "job_city": "Seattle",
+    "job_title": "AI Engineer",
+    "employer_name": "Microsoft",
+    "job_city": "Redmond",
     "job_state": "WA",
-    "job_description": "Basic qualifications:",
-    "job_apply_link": "https://amazon.jobs/en-gb/jobs/3086491/software-development-engineer-nextgen-security-automation",
-    "job_posted_at": "2025-10-30T13:49:48.388Z",
-    "job_posted_at_datetime_utc": "2025-10-30T13:49:48.388Z",
-    "id": "amazon-software-development-engineer-nextgen-security-automation-seattle"
+    "job_description": "Join Microsoft to empower every person and organization on the planet.",
+    "job_apply_link": "https://jobs.careers.microsoft.com/global/en/job/1892293",
+    "job_posted_at_datetime_utc": "2025-10-30T15:09:18.601Z",
+    "job_employment_type": "FULLTIME",
+    "id": "microsoft-ai-engineer-redmond"
+  },
+  {
+    "job_title": "Research AI Engineer II",
+    "employer_name": "Microsoft",
+    "job_city": "Redmond",
+    "job_state": "WA",
+    "job_description": "Join Microsoft to empower every person and organization on the planet.",
+    "job_apply_link": "https://jobs.careers.microsoft.com/global/en/job/1903481",
+    "job_posted_at_datetime_utc": "2025-10-30T15:09:18.601Z",
+    "job_employment_type": "FULLTIME",
+    "id": "microsoft-research-ai-engineer-ii-redmond"
   }
 ]
