@@ -1,1 +1,24 @@
-[]
+[
+  {
+    "job_title": "Support Escalation Engineer - SQL VMMI",
+    "employer_name": "Microsoft",
+    "job_city": "Redmond",
+    "job_state": "WA",
+    "job_description": "Join Microsoft to empower every person and organization on the planet.",
+    "job_apply_link": "https://jobs.careers.microsoft.com/global/en/job/1903476",
+    "job_posted_at_datetime_utc": "2025-10-30T12:31:05.995Z",
+    "job_employment_type": "FULLTIME",
+    "id": "microsoft-support-escalation-engineer-sql-vmmi-redmond"
+  },
+  {
+    "job_title": "Support Escalation Engineer - SQL Engine",
+    "employer_name": "Microsoft",
+    "job_city": "Redmond",
+    "job_state": "WA",
+    "job_description": "Join Microsoft to empower every person and organization on the planet.",
+    "job_apply_link": "https://jobs.careers.microsoft.com/global/en/job/1903404",
+    "job_posted_at_datetime_utc": "2025-10-30T12:31:05.995Z",
+    "job_employment_type": "FULLTIME",
+    "id": "microsoft-support-escalation-engineer-sql-engine-redmond"
+  }
+]
