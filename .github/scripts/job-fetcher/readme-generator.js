@@ -410,11 +410,6 @@ async function generateReadme(currentJobs, archivedJobs = [], internshipData = n
 
 ---
 
-## Join Our Community
-**🤗 [Job Finder & Career Hub by Zapply](https://discord.gg/yKWw28q7Yq)** - Connect with job seekers, get career advice, share experiences, and stay updated on opportunities. Join 1000+ analytics students and data enthusiasts on their career journey!
-
----
-
 ## Apply Faster with Zapply
 ⚡ Apply to 50 jobs in the time it takes to do 5. Use Zapply’s extension to instantly submit applications across Tesla, Amazon, NVIDIA, and 500+ other data-focused employers.  
 [Download Zapply Extension](#)
@@ -615,41 +610,9 @@ ${archivedJobs.length > 0 ? generateArchivedSection(archivedJobs, stats) : "No a
 
 ---
 
-## 📬 Contact & Support
-
-**Need help or want to get in touch?**
-
 <div align="center">
 
-<a href="https://discord.gg/yKWw28q7Yq">
-  <img src="https://img.shields.io/badge/Discord-Join%201000%2B%20Job%20Seekers-5865F2?style=for-the-badge&logo=discord&logoColor=white" height="60" alt="Discord Community">
-</a>
-
-<a href="https://www.reddit.com/r/Zapply/">
-  <img src="https://img.shields.io/badge/Reddit-r%2FZapply%20Community-FF4500?style=for-the-badge&logo=reddit&logoColor=white" height="60" alt="Reddit">
-</a>
-
-<a href="https://github.com/zapplyjobs/New-Grad-Jobs/issues">
-  <img src="https://img.shields.io/badge/GitHub-Report%20Issues-181717?style=for-the-badge&logo=github&logoColor=white" height="60" alt="GitHub Issues">
-</a>
-
-<a href="mailto:admin@zapply.jobs">
-  <img src="https://img.shields.io/badge/Email-Business%20Inquiries-EA4335?style=for-the-badge&logo=gmail&logoColor=white" height="60" alt="Email">
-</a>
-
-</div>
-
-**How can we help?**
-- 💬 **General questions?** Join our [Discord community](https://discord.gg/yKWw28q7Yq)
-- 🐛 **Found a bug?** [Report an issue](https://github.com/zapplyjobs/New-Grad-Jobs/issues)
-- 💡 **Have a suggestion?** Share on [Reddit](https://www.reddit.com/r/Zapply/)
-- 📧 **Business inquiries?** Email us at admin@zapply.jobs
-
----
-
-<div align="center">
-
-**🎯 ${currentJobs.length} current opportunities from 250 companies**
+**🎯 ${currentJobs.length} current opportunities from 261 companies**
 
 **Found this helpful? Give it a ⭐ to support Zapply!**
 
