@@ -366,12 +366,12 @@ async function generateReadme(currentJobs, archivedJobs = [], internshipData = n
 <img src="jobboard/public/mega-zapply.png" alt="Zapply - New Grad Jobs" width="200">
 
 <h3>💼 New Grad Jobs 2025-2026</h3>
-<p><em>Real-time job opportunities at ${totalCompanies}+ top tech companies</em></p>
+<p><em>Real-time job opportunities from ${totalCompanies} companies</em></p>
 
 <br>
 
 <!-- Row 1: Job Stats (Custom Static Badges) -->
-![Total Jobs](https://img.shields.io/badge/Total_Jobs-${currentJobs.length}+-brightgreen?style=flat&logo=briefcase)
+![Total Jobs](https://img.shields.io/badge/Total_Jobs-${currentJobs.length}-brightgreen?style=flat&logo=briefcase)
 ![Companies](https://img.shields.io/badge/Companies-${totalCompanies}-blue?style=flat&logo=building)
 ![FAANG+ Jobs](https://img.shields.io/badge/FAANG+_Jobs-${faangJobs}-red?style=flat&logo=star)
 ![Updated](https://img.shields.io/badge/Updated-Every_15_Minutes-orange?style=flat&logo=calendar)
@@ -402,7 +402,7 @@ async function generateReadme(currentJobs, archivedJobs = [], internshipData = n
 
 # 💻 Software Engineering Jobs & Internships 2025-2026 by Zapply
 
-**🚀 Real-time software engineering, programming, and IT jobs from ${totalCompanies}+ top companies like Tesla, NVIDIA, and Raytheon. Updated every 24 hours with ${currentJobs.length}+ fresh opportunities for data analysts, scientists, and entry-level software developers.**
+**🚀 Real-time software engineering, programming, and IT jobs from ${totalCompanies} companies like Tesla, NVIDIA, and Raytheon. Updated every 24 hours with ${currentJobs.length} fresh opportunities for data analysts, scientists, and entry-level software developers.**
 
 **🎯 Includes roles across tech giants, fast-growing startups, and engineering-first companies like Chewy, CACI, and TD Bank.**
 
@@ -433,7 +433,7 @@ async function generateReadme(currentJobs, archivedJobs = [], internshipData = n
 
 ## 📊 Live Stats
 - **🔥 Current Positions**: ${currentJobs.length}
-- **🏢 Companies**: ${totalCompanies} elite tech companies
+- **🏢 Companies**: ${totalCompanies} companies
 - **⭐ FAANG+ Jobs**: ${faangJobs} premium opportunities
 - **📅 Last Updated**: ${currentDate}
 - **🤖 Next Update**: Tomorrow at 9 AM UTC
@@ -529,7 +529,7 @@ ${topCompanies
 
 ## 🔮 Why Software Engineers Choose Our Job Board
 
-- ✅ **100% Real Jobs**: ${currentJobs.length}+ verified roles for Software Engineering roles from ${totalCompanies} elite tech companies.
+- ✅ **100% Real Jobs**: ${currentJobs.length} verified roles for Software Engineering roles from ${totalCompanies} companies.
 - ✅ **Fresh Daily Updates**: Live data from Tesla, Raytheon, Chewy, and CACI refreshed every 24 hours automatically.
 - ✅ **Entry-Level Focused**: Smart filtering for internships and entry-level analytics roles.
 - ✅ **Intern-to-FTE Pipeline**: Track internships converting to full-time roles.
@@ -605,7 +605,7 @@ ${archivedJobs.length > 0 ? generateArchivedSection(archivedJobs, stats) : "No a
 
 <div align="center">
 
-**🎯 ${currentJobs.length} current opportunities from ${totalCompanies} elite companies**
+**🎯 ${currentJobs.length} current opportunities from ${totalCompanies} companies**
 
 **Found this helpful? Give it a ⭐ to support Zapply!**
 
