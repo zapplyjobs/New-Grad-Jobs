@@ -1,24 +1,13 @@
 [
   {
-    "job_title": "AI Engineer",
+    "job_title": "Principal Software Engineer - Azure SQL Databases Team",
     "employer_name": "Microsoft",
     "job_city": "Redmond",
     "job_state": "WA",
     "job_description": "Join Microsoft to empower every person and organization on the planet.",
-    "job_apply_link": "https://jobs.careers.microsoft.com/global/en/job/1892293",
-    "job_posted_at_datetime_utc": "2025-10-30T15:09:18.601Z",
+    "job_apply_link": "https://jobs.careers.microsoft.com/global/en/job/1903181",
+    "job_posted_at_datetime_utc": "2025-10-30T15:29:31.580Z",
     "job_employment_type": "FULLTIME",
-    "id": "microsoft-ai-engineer-redmond"
-  },
-  {
-    "job_title": "Research AI Engineer II",
-    "employer_name": "Microsoft",
-    "job_city": "Redmond",
-    "job_state": "WA",
-    "job_description": "Join Microsoft to empower every person and organization on the planet.",
-    "job_apply_link": "https://jobs.careers.microsoft.com/global/en/job/1903481",
-    "job_posted_at_datetime_utc": "2025-10-30T15:09:18.601Z",
-    "job_employment_type": "FULLTIME",
-    "id": "microsoft-research-ai-engineer-ii-redmond"
+    "id": "microsoft-principal-software-engineer-azure-sql-databases-team-redmond"
   }
 ]
