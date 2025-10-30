@@ -1,1 +1,13 @@
-[]
+[
+  {
+    "job_title": "Fullstack Engineer, Link",
+    "employer_name": "Stripe",
+    "job_city": "N/A",
+    "job_state": "CA",
+    "job_description": "Join Stripe to help build the economic infrastructure for the internet.",
+    "job_apply_link": "https://stripe.com/jobs/search?gh_jid=7369145",
+    "job_posted_at_datetime_utc": "2025-10-30T23:41:13.000Z",
+    "job_employment_type": "FULLTIME",
+    "id": "stripe-fullstack-engineer-link-n-a"
+  }
+]
