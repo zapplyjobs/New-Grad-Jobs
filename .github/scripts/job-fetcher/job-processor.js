@@ -264,9 +264,6 @@ async function processJobs() {
 }
 
 module.exports = {
-    
-    
-    
     generateCompanyStats,
     writeNewJobsJson,
     updateSeenJobsStore,
