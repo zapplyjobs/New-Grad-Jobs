@@ -2,18 +2,18 @@ const fs = require('fs');
 const { generateJobId } = require('./job-fetcher/utils');
 const scrapeAmazonJobs = require('../../jobboard/src/backend/platforms/amazon/amazonScraper');
 const googleScraper = require('../../jobboard/src/backend/platforms/google/googleScraper');
-const scrapeMetaJobs = require('../../jobboard/src/backend/platforms/meta/metaScraper');
-const microsoftScraper = require('../../jobboard/src/backend/platforms/microsoft/microsoftScraper');
+// const scrapeMetaJobs = require('../../jobboard/src/backend/platforms/meta/metaScraper'); // DISABLED: robots.txt requires written permission
+// const microsoftScraper = require('../../jobboard/src/backend/platforms/microsoft/microsoftScraper'); // DISABLED: duplicate (using API instead - see line 159)
 const scrapeUberJobs = require('../../jobboard/src/backend/platforms/uber/uberScraper');
-const scrapeSlackJobs = require('../../jobboard/src/backend/platforms/slack/slackScraper');
+// const scrapeSlackJobs = require('../../jobboard/src/backend/platforms/slack/slackScraper'); // DISABLED: robots.txt explicitly disallows /careers/
 const {isUSOnlyJob} = require('./job-fetcher/utils');
 // Load company database
 const companies = JSON.parse(fs.readFileSync('./.github/scripts/job-fetcher/companies.json', 'utf8'));
 const ALL_COMPANIES = Object.values(companies).flat();
 
-// Real career page endpoints for major companies
+// API endpoint configurations
 const CAREER_APIS = {
-    // Greenhouse API Companies
+    // Group A
     'Stripe': {
         api: 'https://api.greenhouse.io/v1/boards/stripe/jobs',
         method: 'GET',
@@ -119,7 +119,7 @@ const CAREER_APIS = {
         }
     },
 
-    // Custom API Companies
+    // Group B
     'Apple': {
         api: 'https://jobs.apple.com/api/v1/search',
         method: 'POST',
@@ -176,8 +176,6 @@ const CAREER_APIS = {
                 }));
         }
     },
-
-    // Amazon now uses dedicated scraper
 
     'Netflix': {
         api: 'https://explore.jobs.netflix.net/api/apply/v2/jobs?domain=netflix.com&query=engineer',
@@ -252,9 +250,6 @@ const CAREER_APIS = {
         }
     },
 
-    // Lever API Companies
-    // Uber now uses dedicated scraper
-
     'Discord': {
         api: 'https://boards-api.greenhouse.io/v1/boards/discord/jobs',
         method: 'GET',
@@ -295,9 +290,7 @@ const CAREER_APIS = {
                     job_employment_type: 'FULLTIME'
                 }));
         }
-    },
-
-    // Slack now uses dedicated scraper
+    }
 };
 
 // Utility functions
@@ -362,14 +355,13 @@ async function fetchCompanyJobs(companyName) {
     }
 }
 
-// No sample jobs - only real API data
-
-// Fetch jobs from external aggregated sources
+// Fetch jobs from secondary data sources
 async function fetchExternalJobsData() {
     try {
-        console.log('📡 Fetching data from public sources...');
+        console.log('📡 Fetching data from secondary sources...');
 
-        const newGradUrl = 'https://raw.githubusercontent.com/SimplifyJobs/New-Grad-Positions/dev/.github/scripts/listings.json';
+        // Use environment variable if set, otherwise fallback to default
+        const newGradUrl = process.env.EXTERNAL_JOBS_SOURCE || 'https://raw.githubusercontent.com/SimplifyJobs/New-Grad-Positions/dev/.github/scripts/listings.json';
         const response = await fetch(newGradUrl);
 
         if (!response.ok) {
@@ -394,7 +386,7 @@ async function fetchExternalJobsData() {
                 job_employment_type: 'FULLTIME'
             }));
 
-        console.log(`📋 Found ${activeJobs.length} active positions from external sources`);
+        console.log(`📋 Found ${activeJobs.length} active positions`);
         return activeJobs;
 
     } catch (error) {
@@ -403,33 +395,30 @@ async function fetchExternalJobsData() {
     }
 }
 
-// Fetch jobs from all companies with real career APIs
+// Fetch jobs from all configured sources
 async function fetchAllRealJobs() {
-    console.log('🚀 Starting REAL career page scraping...');
+    console.log('🚀 Starting job data collection...');
 
     let allJobs = [];
-    const [amazonJobs, metaJobs, microsoftJobs, googleJobs, uberJobs, slackJobs] = await Promise.all([
+    const [amazonJobs, googleJobs, uberJobs] = await Promise.all([
         scrapeAmazonJobs().catch(err => { console.error('❌ Amazon scraper failed:', err.message); return []; }),
-        scrapeMetaJobs().catch(err => { console.error('❌ Meta scraper failed:', err.message); return []; }),
-        microsoftScraper().catch(err => { console.error('❌ Microsoft scraper failed:', err.message); return []; }),
         googleScraper().catch(err => { console.error('❌ Google scraper failed:', err.message); return []; }),
         scrapeUberJobs().catch(err => { console.error('❌ Uber scraper failed:', err.message); return []; }),
-        scrapeSlackJobs().catch(err => { console.error('❌ Slack scraper failed:', err.message); return []; }),
     ]);
-    allJobs.push(...amazonJobs, ...metaJobs, ...microsoftJobs, ...googleJobs, ...uberJobs, ...slackJobs);
+    allJobs.push(...amazonJobs, ...googleJobs, ...uberJobs);
     const companiesWithAPIs = Object.keys(CAREER_APIS);
 
-    // Fetch real jobs from companies with APIs
- 
+    // Fetch from API sources
+
 for (const company of companiesWithAPIs) {
     const jobs = await fetchCompanyJobs(company);
     allJobs.push(...jobs);
-    
-    // Be respectful with rate limiting
+
+    // Rate limiting
     await delay(2000);
 }
 
-// Fetch jobs from external sources
+// Fetch from secondary sources
 const externalJobs = await fetchExternalJobsData();
 allJobs.push(...externalJobs);
 
@@ -464,9 +453,7 @@ console.log(`Removed ${removedJobs.length} non-US jobs:`, removedJobs);
 
     console.log(`📊 Total jobs collected: ${allJobs.length}`);
     console.log(`🧹 After deduplication: ${uniqueJobs.length}`);
-    console.log(`🏢 Companies with real API data: ${companiesWithAPIs.length}`);
-    console.log(`📡 External job sources: ${externalJobs.length}`);
-    console.log(`✅ REAL JOBS ONLY - No fake data!`);
+    console.log(`✅ Job collection complete`);
 
     return uniqueJobs;
 }
