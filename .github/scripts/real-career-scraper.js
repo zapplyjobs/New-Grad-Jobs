@@ -364,8 +364,8 @@ async function fetchCompanyJobs(companyName) {
 
 // No sample jobs - only real API data
 
-// Fetch jobs from SimplifyJobs public data
-async function fetchSimplifyJobsData() {
+// Fetch jobs from external aggregated sources
+async function fetchExternalJobsData() {
     try {
         console.log('📡 Fetching data from public sources...');
 
@@ -430,7 +430,7 @@ for (const company of companiesWithAPIs) {
 }
 
 // Fetch jobs from external sources
-const externalJobs = await fetchSimplifyJobsData();
+const externalJobs = await fetchExternalJobsData();
 allJobs.push(...externalJobs);
 
 // Filter to keep only US jobs
@@ -471,4 +471,4 @@ console.log(`Removed ${removedJobs.length} non-US jobs:`, removedJobs);
     return uniqueJobs;
 }
 
-module.exports = { fetchAllRealJobs };
+module.exports = { fetchAllRealJobs, fetchExternalJobsData };
