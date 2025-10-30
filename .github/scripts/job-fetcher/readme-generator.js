@@ -366,13 +366,13 @@ async function generateReadme(currentJobs, archivedJobs = [], internshipData = n
 <img src="jobboard/public/mega-zapply.png" alt="Zapply - New Grad Jobs" width="200">
 
 <h3>💼 New Grad Jobs 2025-2026</h3>
-<p><em>Real-time job opportunities from 250 companies</em></p>
+<p><em>Real-time job opportunities from 261 companies</em></p>
 
 <br>
 
 <!-- Row 1: Job Stats (Custom Static Badges) -->
 ![Total Jobs](https://img.shields.io/badge/Total_Jobs-${currentJobs.length}-brightgreen?style=flat&logo=briefcase)
-![Companies](https://img.shields.io/badge/Companies-250-blue?style=flat&logo=building)
+![Companies](https://img.shields.io/badge/Companies-261-blue?style=flat&logo=building)
 ![FAANG+ Jobs](https://img.shields.io/badge/FAANG+_Jobs-${faangJobs}-red?style=flat&logo=star)
 ![Updated](https://img.shields.io/badge/Updated-Every_15_Minutes-orange?style=flat&logo=calendar)
 ![License](https://img.shields.io/badge/License-CC--BY--NC--4.0-purple?style=flat&logo=creativecommons)
@@ -433,11 +433,10 @@ async function generateReadme(currentJobs, archivedJobs = [], internshipData = n
 
 ## 📊 Live Stats
 - **🔥 Current Positions**: ${currentJobs.length}
-- **🏢 Companies**: 250 companies
+- **🏢 Companies**: 261 companies
 - **⭐ FAANG+ Jobs**: ${faangJobs} premium opportunities
 - **📅 Last Updated**: ${currentDate}
 - **🤖 Next Update**: Tomorrow at 9 AM UTC
-- **📁 Archived Jobs**: ${archivedJobs.length} (older than 1 week)
 
 
 
