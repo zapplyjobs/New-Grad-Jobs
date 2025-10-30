@@ -1,1 +1,24 @@
-[]
+[
+  {
+    "job_title": "Principal Software Engineer - Agent Team - Microsoft Identity",
+    "employer_name": "Microsoft",
+    "job_city": "Redmond",
+    "job_state": "WA",
+    "job_description": "Join Microsoft to empower every person and organization on the planet.",
+    "job_apply_link": "https://jobs.careers.microsoft.com/global/en/job/1902288",
+    "job_posted_at_datetime_utc": "2025-10-30T05:28:58.646Z",
+    "job_employment_type": "FULLTIME",
+    "id": "microsoft-principal-software-engineer-agent-team-microsoft-identity-redmond"
+  },
+  {
+    "job_title": "Digital Solution Engineer - AI Business Solutions - Copilot",
+    "employer_name": "Microsoft",
+    "job_city": "Redmond",
+    "job_state": "WA",
+    "job_description": "Join Microsoft to empower every person and organization on the planet.",
+    "job_apply_link": "https://jobs.careers.microsoft.com/global/en/job/1899673",
+    "job_posted_at_datetime_utc": "2025-10-30T05:28:58.646Z",
+    "job_employment_type": "FULLTIME",
+    "id": "microsoft-digital-solution-engineer-ai-business-solutions-copilot-redmond"
+  }
+]
