@@ -223,16 +223,18 @@ async function processJobs() {
         // Fetch jobs from both API and real career pages
         const allJobs = await fetchAllRealJobs();
         const usJobs = allJobs.filter(isUSOnlyJob);
-        const currentJobs = usJobs.filter(j => !isJobOlderThanWeek(j.job_posted_at_datetime_utc));
-        
+
+        // SHOW ALL JOBS (no time filtering)
+        const currentJobs = usJobs; // All US jobs, no time filter
+
         // Add unique IDs for deduplication using standardized generation
         currentJobs.forEach(job => {
             job.id = generateJobId(job);
         });
-        
+
         // Filter for truly new jobs (not previously seen)
         const freshJobs = currentJobs.filter(job => !seenIds.has(job.id));
-        
+
         if (freshJobs.length === 0) {
             console.log('ℹ️ No new jobs found - all current openings already processed');
             // Write empty array to clear stale data
@@ -244,11 +246,11 @@ async function processJobs() {
             // Update seen jobs store
             updateSeenJobsStore(freshJobs, seenIds);
         }
-        
-        // Calculate archived jobs
-        const archivedJobs = usJobs.filter(j => isJobOlderThanWeek(j.job_posted_at_datetime_utc));
-        
-        console.log(`✅ Job processing complete - ${currentJobs.length} current, ${archivedJobs.length} archived`);
+
+        // No archived jobs (showing all jobs as current)
+        const archivedJobs = [];
+
+        console.log(`✅ Job processing complete - ${currentJobs.length} current (all jobs shown)`);
         
         return {
             currentJobs,
