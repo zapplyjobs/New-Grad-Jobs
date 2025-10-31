@@ -1,1 +1,24 @@
-[]
+[
+  {
+    "job_title": "Advertising Technology (AdTech) Infrastructure Engineer",
+    "employer_name": "Microsoft",
+    "job_city": "Redmond",
+    "job_state": "WA",
+    "job_description": "Join Microsoft to empower every person and organization on the planet.",
+    "job_apply_link": "https://jobs.careers.microsoft.com/global/en/job/1894797",
+    "job_posted_at_datetime_utc": "2025-10-31T14:29:08.028Z",
+    "job_employment_type": "FULLTIME",
+    "id": "microsoft-advertising-technology-adtech-infrastructure-engineer-redmond"
+  },
+  {
+    "job_title": "Technical Support Advisory Engineer",
+    "employer_name": "Microsoft",
+    "job_city": "Redmond",
+    "job_state": "WA",
+    "job_description": "Join Microsoft to empower every person and organization on the planet.",
+    "job_apply_link": "https://jobs.careers.microsoft.com/global/en/job/1874899",
+    "job_posted_at_datetime_utc": "2025-10-31T14:29:08.028Z",
+    "job_employment_type": "FULLTIME",
+    "id": "microsoft-technical-support-advisory-engineer-redmond"
+  }
+]
