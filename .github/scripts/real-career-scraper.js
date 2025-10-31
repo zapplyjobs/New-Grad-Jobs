@@ -4,7 +4,7 @@ const scrapeAmazonJobs = require('../../jobboard/src/backend/platforms/amazon/am
 const googleScraper = require('../../jobboard/src/backend/platforms/google/googleScraper');
 // const scrapeMetaJobs = require('../../jobboard/src/backend/platforms/meta/metaScraper'); // DISABLED: robots.txt requires written permission
 // const microsoftScraper = require('../../jobboard/src/backend/platforms/microsoft/microsoftScraper'); // DISABLED: duplicate (using API instead - see line 159)
-const scrapeUberJobs = require('../../jobboard/src/backend/platforms/uber/uberScraper');
+// const scrapeUberJobs = require('../../jobboard/src/backend/platforms/uber/uberScraper'); // DISABLED: Already getting Uber jobs from SimplifyJobs (93% source). Scraper fails due to DOM changes - selector [data-testid="job-card"] no longer exists
 // const scrapeSlackJobs = require('../../jobboard/src/backend/platforms/slack/slackScraper'); // DISABLED: robots.txt explicitly disallows /careers/
 const {isUSOnlyJob} = require('./job-fetcher/utils');
 // Load company database
@@ -400,12 +400,11 @@ async function fetchAllRealJobs() {
     console.log('🚀 Starting job data collection...');
 
     let allJobs = [];
-    const [amazonJobs, googleJobs, uberJobs] = await Promise.all([
+    const [amazonJobs, googleJobs] = await Promise.all([
         scrapeAmazonJobs().catch(err => { console.error('❌ Amazon scraper failed:', err.message); return []; }),
         googleScraper().catch(err => { console.error('❌ Google scraper failed:', err.message); return []; }),
-        scrapeUberJobs().catch(err => { console.error('❌ Uber scraper failed:', err.message); return []; }),
     ]);
-    allJobs.push(...amazonJobs, ...googleJobs, ...uberJobs);
+    allJobs.push(...amazonJobs, ...googleJobs);
     const companiesWithAPIs = Object.keys(CAREER_APIS);
 
     // Fetch from API sources
