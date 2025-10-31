@@ -417,11 +417,15 @@ async function generateReadme(currentJobs, archivedJobs = [], internshipData = n
 
 ## ⭐ Stay Up-to-Date
 **Don't miss new opportunities!**  
-- 🌟 **Star this repo** to get updates on your GitHub dashboard  
-- 👁️ **Watch** for instant notifications on new jobs  
+- 🌟 **Star this repo** to get updates on your GitHub dashboard
+- 👁️ **Watch** for instant notifications on new jobs
 - 🔔 **Turn on notifications** to never miss FAANG+ postings
 
-[![Star History Chart](https://api.star-history.com/svg?repos=zapplyjobs/New-Grad-Jobs&type=Date)](https://star-history.com/#zapplyjobs/New-Grad-Jobs&Date)
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="https://api.star-history.com/svg?repos=zapplyjobs/New-Grad-Jobs&type=Date&theme=dark" />
+  <source media="(prefers-color-scheme: light)" srcset="https://api.star-history.com/svg?repos=zapplyjobs/New-Grad-Jobs&type=Date" />
+  <img alt="Star History Chart" src="https://api.star-history.com/svg?repos=zapplyjobs/New-Grad-Jobs&type=Date" />
+</picture>
 
 
 ---
