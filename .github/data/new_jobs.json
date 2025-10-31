@@ -1,24 +1,24 @@
 [
   {
-    "job_title": "Senior Quality Assurance Engineer",
+    "job_title": "AI Pipeline Evaluation Engineer",
     "employer_name": "Qualcomm",
     "job_city": "Santa Clara",
     "job_state": "California",
     "job_description": "Join Qualcomm to invent breakthrough technologies.",
-    "job_apply_link": "https://careers.qualcomm.com/careers/job/446715274250",
-    "job_posted_at_datetime_utc": "2025-10-31T17:42:12.770Z",
+    "job_apply_link": "https://careers.qualcomm.com/careers/job/446715274253",
+    "job_posted_at_datetime_utc": "2025-10-31T17:54:11.612Z",
     "job_employment_type": "FULLTIME",
-    "id": "qualcomm-senior-quality-assurance-engineer-santa-clara"
+    "id": "qualcomm-ai-pipeline-evaluation-engineer-santa-clara"
   },
   {
-    "job_title": "Sr.  Backend Engineer - Core Infrastructure",
+    "job_title": "Sr. AI Model Training Engineer",
     "employer_name": "Qualcomm",
     "job_city": "Santa Clara",
     "job_state": "California",
     "job_description": "Join Qualcomm to invent breakthrough technologies.",
-    "job_apply_link": "https://careers.qualcomm.com/careers/job/446715287993",
-    "job_posted_at_datetime_utc": "2025-10-31T17:42:12.770Z",
+    "job_apply_link": "https://careers.qualcomm.com/careers/job/446715274252",
+    "job_posted_at_datetime_utc": "2025-10-31T17:54:11.612Z",
     "job_employment_type": "FULLTIME",
-    "id": "qualcomm-sr-backend-engineer-core-infrastructure-santa-clara"
+    "id": "qualcomm-sr-ai-model-training-engineer-santa-clara"
   }
 ]
