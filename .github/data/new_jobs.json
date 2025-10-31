@@ -1,13 +1,24 @@
 [
   {
-    "job_title": "Principal Software Engineer - Foundations Performance Engineering",
+    "job_title": "Critical Environment Field Service Engineer (CEFSE)",
     "employer_name": "Microsoft",
     "job_city": "Redmond",
     "job_state": "WA",
     "job_description": "Join Microsoft to empower every person and organization on the planet.",
-    "job_apply_link": "https://jobs.careers.microsoft.com/global/en/job/1899135",
-    "job_posted_at_datetime_utc": "2025-10-31T22:09:13.636Z",
+    "job_apply_link": "https://jobs.careers.microsoft.com/global/en/job/1885833",
+    "job_posted_at_datetime_utc": "2025-10-31T22:28:29.280Z",
     "job_employment_type": "FULLTIME",
-    "id": "microsoft-principal-software-engineer-foundations-performance-engineering-redmond"
+    "id": "microsoft-critical-environment-field-service-engineer-cefse-redmond"
+  },
+  {
+    "job_title": "Associate Software Development Engineer",
+    "employer_name": "CVS Health",
+    "job_city": "Remote from USA",
+    "job_state": "Locations",
+    "job_description": "Join CVS Health in this exciting opportunity.",
+    "job_apply_link": "https://cvshealth.wd1.myworkdayjobs.com/en-US/cvs_health_careers/job/TX---Work-from-home/Associate-Software-Development-Engineer_R0754288",
+    "job_posted_at_datetime_utc": "2025-10-31T22:10:57.000Z",
+    "job_employment_type": "FULLTIME",
+    "id": "cvs-health-associate-software-development-engineer-remote-from-usa"
   }
 ]
