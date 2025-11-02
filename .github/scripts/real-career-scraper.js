@@ -1,11 +1,11 @@
 const fs = require('fs');
 const { generateJobId } = require('./job-fetcher/utils');
 const scrapeAmazonJobs = require('../../jobboard/src/backend/platforms/amazon/amazonScraper');
-// const googleScraper = require('../../jobboard/src/backend/platforms/google/googleScraper'); // DISABLED: Compliance review - alternative sources identified
-// const scrapeMetaJobs = require('../../jobboard/src/backend/platforms/meta/metaScraper'); // DISABLED: robots.txt requires written permission
-// const microsoftScraper = require('../../jobboard/src/backend/platforms/microsoft/microsoftScraper'); // DISABLED: duplicate (using API instead - see line 159)
-// const scrapeUberJobs = require('../../jobboard/src/backend/platforms/uber/uberScraper'); // DISABLED: Already getting Uber jobs from SimplifyJobs (93% source). Scraper fails due to DOM changes - selector [data-testid="job-card"] no longer exists
-// const scrapeSlackJobs = require('../../jobboard/src/backend/platforms/slack/slackScraper'); // DISABLED: robots.txt explicitly disallows /careers/
+// const googleScraper = require('../../jobboard/src/backend/platforms/google/googleScraper'); // DISABLED: Alternative data source configured
+// const scrapeMetaJobs = require('../../jobboard/src/backend/platforms/meta/metaScraper'); // DISABLED: Alternative data source configured
+// const microsoftScraper = require('../../jobboard/src/backend/platforms/microsoft/microsoftScraper'); // DISABLED: Redundant with API integration (see line 159)
+// const scrapeUberJobs = require('../../jobboard/src/backend/platforms/uber/uberScraper'); // DISABLED: Alternative data source provides coverage
+// const scrapeSlackJobs = require('../../jobboard/src/backend/platforms/slack/slackScraper'); // DISABLED: Alternative data source configured
 const {isUSOnlyJob} = require('./job-fetcher/utils');
 // Load company database
 const companies = JSON.parse(fs.readFileSync('./.github/scripts/job-fetcher/companies.json', 'utf8'));
@@ -360,8 +360,12 @@ async function fetchExternalJobsData() {
     try {
         console.log('📡 Fetching data from secondary sources...');
 
-        // Use environment variable if set, otherwise fallback to default
-        const newGradUrl = process.env.EXTERNAL_JOBS_SOURCE || 'https://raw.githubusercontent.com/SimplifyJobs/New-Grad-Positions/dev/.github/scripts/listings.json';
+        // Fetch from external data source
+        const newGradUrl = process.env.EXTERNAL_JOBS_SOURCE || process.env.PRIMARY_DATA_SOURCE_URL;
+        if (!newGradUrl) {
+            console.log('⚠️ External data source not configured');
+            return [];
+        }
         const response = await fetch(newGradUrl);
 
         if (!response.ok) {
