@@ -1,1 +1,24 @@
-[]
+[
+  {
+    "job_title": "Senior Engineer, Mobile Architecture",
+    "employer_name": "Discord",
+    "job_city": "SF Bay Area",
+    "job_state": "CA",
+    "job_description": "Join Discord to build connections.",
+    "job_apply_link": "https://job-boards.greenhouse.io/discord/jobs/8242623002",
+    "job_posted_at_datetime_utc": "2025-11-04T19:32:06.000Z",
+    "job_employment_type": "FULLTIME",
+    "id": "discord-senior-engineer-mobile-architecture-sf-bay-area"
+  },
+  {
+    "job_title": "Senior Staff Machine Learning Engineer - Risk AI/ML ",
+    "employer_name": "Coinbase",
+    "job_city": "Remote - USA",
+    "job_state": "CA",
+    "job_description": "Join Coinbase to build the future of cryptocurrency.",
+    "job_apply_link": "https://www.coinbase.com/careers/positions/7360803?gh_jid=7360803",
+    "job_posted_at_datetime_utc": "2025-11-04T19:30:46.000Z",
+    "job_employment_type": "FULLTIME",
+    "id": "coinbase-senior-staff-machine-learning-engineer-risk-ai-ml-remote-usa"
+  }
+]
