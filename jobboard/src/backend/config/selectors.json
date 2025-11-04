@@ -1,0 +1,612 @@
+{
+  "amd": {
+    "name": "AMD",
+    "jobSelector": "mat-expansion-panel.search-result-item",
+    "titleSelector": "span[itemprop=\"title\"]",
+    "locationSelector": "span.label-value.location",
+    "applyLinkSelector": "a#link-apply-${index}",
+    "linkAttribute": "href",
+    "reqIdSelector": "p.req-id span",
+    "categorySelector": "span.categories.label-value",
+    "postedSelector": "span.posted-date",
+    "descriptionType": "next-page",
+    "descriptionSelector": "ul",
+    "pagination": {
+      "type": "url-page",
+      "pageParam": "page",
+      "nextPageSelector": "button[aria-label=\"Next page\"]:not([disabled])"
+    }
+  },
+  "apple": {
+    "name": "Apple",
+    "jobSelector": "#search-job-list > li",
+    "titleSelector": "h3 a.link-inline",
+    "applyLinkSelector": "h3 a.link-inline",
+    "linkAttribute": "href",
+    "locationSelector": "span[id*=\"search-store-name-container\"]",
+    "postedSelector": "span.job-posted-date",
+    "descriptionType": "next-page",
+    "descriptionSelector": "#jobdetails-minimumqualifications",
+    "pagination": {
+      "type": "url-page",
+      "pageParam": "page",
+      "nextPageSelector": "a.pagination__next"
+    }
+  },
+  "analogdevices": {
+    "name": "Analog Devices",
+    "jobSelector": "li.css-1q2dra3",
+    "titleSelector": "h3",
+    "applyLinkSelector": "a",
+    "linkAttribute": "href",
+    "locationSelector": "div[data-automation-id='locations'] dd.css-129m7dg",
+    "postedSelector": "div[data-automation-id='postedOn'] dd.css-129m7dg",
+    "categorySelector": "div[data-automation-id='jobCategory'] dd.css-129m7dg",
+    "reqIdSelector": "div[data-automation-id='jobReqId'] dd.css-129m7dg",
+    "descriptionSelector": "ul",
+    "pagination": {
+      "type": "chevron-click",
+      "nextButtonSelector": "svg.wd-icon-chevron-right-small.wd-icon",
+      "parentButtonSelector": "button",
+      "disabledAttribute": "aria-disabled"
+    }
+  },
+  "appliedmaterials": {
+    "name": "Applied Materials",
+    "jobSelector": "div[class*='cardContainer']",
+    "titleSelector": "div[class*='title']",
+    "applyLinkSelector": "a",
+    "linkAttribute": "href",
+    "locationSelector": "div[class*='fieldValue']",
+    "postedSelector": "div[class*='subData']",
+    "categorySelector": "div[class*='category']",
+    "pagination": {
+      "type": "url-page",
+      "startParam": "start",
+      "itemsPerPage": 10
+    }
+  },
+
+  "baesystems": {
+    "name": "BAE Systems",
+    "jobSelector": "li.css-1q2dra3",
+    "titleSelector": "h3",
+    "applyLinkSelector": "a",
+    "linkAttribute": "href",
+    "locationSelector": "div[data-automation-id='locations'] dd.css-129m7dg",
+    "postedSelector": "div[data-automation-id='postedOn'] dd.css-129m7dg",
+    "categorySelector": "div[data-automation-id='jobCategory'] dd.css-129m7dg",
+    "reqIdSelector": "div[data-automation-id='jobReqId'] dd.css-129m7dg",
+    "descriptionSelector": "li",
+    "pagination": {
+      "type": "chevron-click",
+      "nextButtonSelector": "svg.wd-icon-chevron-right-small.wd-icon",
+      "parentButtonSelector": "button",
+      "disabledAttribute": "aria-disabled"
+    }
+  },
+  "broadcom": {
+    "name": "Broadcom",
+    "jobSelector": "li.css-1q2dra3",
+    "titleSelector": "h3",
+    "applyLinkSelector": "a",
+    "linkAttribute": "href",
+    "locationSelector": "div[data-automation-id='locations'] dd.css-129m7dg",
+    "postedSelector": "div[data-automation-id='postedOn'] dd.css-129m7dg",
+    "categorySelector": "div[data-automation-id='jobCategory'] dd.css-129m7dg",
+    "reqIdSelector": "div[data-automation-id='jobReqId'] dd.css-129m7dg",
+    "descriptionSelector": "li",
+
+    "pagination": {
+      "type": "chevron-click",
+      "nextButtonSelector": "svg.wd-icon-chevron-right-small.wd-icon",
+      "parentButtonSelector": "button",
+      "disabledAttribute": "aria-disabled"
+    }
+  },
+  "cisco": {
+    "name": "Cisco",
+    "jobSelector": "tbody tr",
+    "titleSelector": "a[href*=\"/jobs/ProjectDetail/\"]",
+    "applyLinkSelector": "a[href*=\"/jobs/ProjectDetail/\"]",
+    "linkAttribute": "href",
+    "locationSelector": "td[data-th=\"Location\"]",
+    "postedSelector": "td[data-th=\"Date Posted\"]",
+    "categorySelector": "td[data-th=\"Category\"]",
+    "pagination": {
+      "type": "url-page",
+      "offsetParam": "projectOffset",
+      "itemsPerPage": 25,
+      "nextPageSelector": "a.pagination-next:not(.disabled)"
+    }
+  },
+  "gdit": {
+    "name": "General Dynamics",
+    "jobSelector": "li.css-1q2dra3",
+    "titleSelector": "h3",
+    "applyLinkSelector": "a",
+    "linkAttribute": "href",
+    "locationSelector": "div[data-automation-id='locations'] dd.css-129m7dg",
+    "postedSelector": "div[data-automation-id='postedOn'] dd.css-129m7dg",
+    "categorySelector": "div[data-automation-id='jobCategory'] dd.css-129m7dg",
+    "reqIdSelector": "div[data-automation-id='jobReqId'] dd.css-129m7dg",
+    "descriptionSelector": ".css-1x6f30n",
+
+    "pagination": {
+      "type": "chevron-click",
+      "nextButtonSelector": "svg.wd-icon-chevron-right-small.wd-icon",
+      "parentButtonSelector": "button",
+      "disabledAttribute": "aria-disabled"
+    }
+
+  },
+  "salesforce": {
+    "name": "Salesforce",
+    "jobSelector": "div.card.card-job",
+    "titleSelector": "a.stretched-link.js-view-job",
+    "applyLinkSelector": "a.stretched-link.js-view-job",
+    "linkAttribute": "href",
+    "locationSelector": "ul.list-inline.locations li.list-inline-item",
+    
+    "postedSelector": "time",
+    "descriptionType": "next-page",
+
+    "descriptionSelector": "ul",
+  
+
+    "pagination": {
+      "type": "url-page",
+      "pageParam": "page"
+     
+    }
+  },
+  "dell": {
+    "name": "Dell",
+    "jobSelector": "li.css-1q2dra3",
+    "titleSelector": "h3",
+    "applyLinkSelector": "a",
+    "linkAttribute": "href",
+    "locationSelector": "div[data-automation-id='locations'] dd.css-129m7dg",
+    "postedSelector": "div[data-automation-id='postedOn'] dd.css-129m7dg",
+    "categorySelector": "div[data-automation-id='jobCategory'] dd.css-129m7dg",
+    "reqIdSelector": "div[data-automation-id='jobReqId'] dd.css-129m7dg",
+    "descriptionSelector": "ul",
+    "pagination": {
+      "type": "chevron-click",
+      "nextButtonSelector": "svg.wd-icon-chevron-right-small.wd-icon",
+      "parentButtonSelector": "button",
+      "disabledAttribute": "aria-disabled"
+    }
+  },
+  "10xgenomics": {
+    "name": "10x Genomics",
+    "jobSelector": "[data-test-id=\"job-listing\"]",
+    "titleSelector": "a[aria-label]",
+    "titleAttribute": "aria-label",
+    "applyLinkSelector": "a[href*=\"job\"]",
+    "linkAttribute": "href",
+    "locationSelector": "div.fieldValue-3kEar",
+    "postedSelector": "div.subData-13Lm1",
+    "categorySelector": "div.category",
+    "descriptionSelector": "ul",
+    "pagination": {
+      "type": "url-page",
+      "startParam": "start",
+      "itemsPerPage": 10,
+      "nextPageSelector": "button.load-more:not([disabled])"
+    }
+  },
+  "guidehouse": {
+    "name": "Guidehouse",
+    "jobSelector": "li.css-1q2dra3",
+    "titleSelector": "h3",
+    "applyLinkSelector": "a",
+    "linkAttribute": "href",
+    "locationSelector": "div[data-automation-id='locations'] dd.css-129m7dg",
+    "postedSelector": "div[data-automation-id='postedOn'] dd.css-129m7dg",
+    "categorySelector": "div[data-automation-id='jobCategory'] dd.css-129m7dg",
+    "reqIdSelector": "div[data-automation-id='jobReqId'] dd.css-129m7dg",
+    "descriptionSelector": "ul",
+    "pagination": {
+      "type": "chevron-click",
+      "nextButtonSelector": "svg.wd-icon-chevron-right-small.wd-icon",
+      "parentButtonSelector": "button",
+      "disabledAttribute": "aria-disabled"
+    }
+  },
+  "hpe": {
+    "name": "Hewlett Packard Enterprise",
+    "jobSelector": "li.css-1q2dra3",
+    "titleSelector": "h3",
+    "applyLinkSelector": "a",
+    "linkAttribute": "href",
+    "locationSelector": "div[data-automation-id='locations'] dd.css-129m7dg",
+    "postedSelector": "div[data-automation-id='postedOn'] dd.css-129m7dg",
+    "categorySelector": "div[data-automation-id='jobCategory'] dd.css-129m7dg",
+    "reqIdSelector": "div[data-automation-id='jobReqId'] dd.css-129m7dg",
+    "descriptionSelector": "ul",
+    "pagination": {
+      "type": "chevron-click",
+      "nextButtonSelector": "svg.wd-icon-chevron-right-small.wd-icon",
+      "parentButtonSelector": "button",
+      "disabledAttribute": "aria-disabled"
+    }
+  },
+  "illumina": {
+    "name": "Illumina",
+    "jobSelector": "li.css-1q2dra3",
+    "titleSelector": "h3",
+    "applyLinkSelector": "a",
+    "linkAttribute": "href",
+    "locationSelector": "div[data-automation-id='locations'] dd.css-129m7dg",
+    "postedSelector": "div[data-automation-id='postedOn'] dd.css-129m7dg",
+    "categorySelector": "div[data-automation-id='jobCategory'] dd.css-129m7dg",
+    "reqIdSelector": "div[data-automation-id='jobReqId'] dd.css-129m7dg",
+    "descriptionSelector": "ul",
+    "pagination": {
+      "type": "chevron-click",
+      "nextButtonSelector": "svg.wd-icon-chevron-right-small.wd-icon",
+      "parentButtonSelector": "button",
+      "disabledAttribute": "aria-disabled"
+    }
+  },
+  "intel": {
+    "name": "Intel",
+    "jobSelector": "li.css-1q2dra3",
+    "titleSelector": "h3",
+    "applyLinkSelector": "a",
+    "linkAttribute": "href",
+    "locationSelector": "div[data-automation-id='locations'] dd.css-129m7dg",
+    "postedSelector": "div[data-automation-id='postedOn'] dd.css-129m7dg",
+    "categorySelector": "div[data-automation-id='jobCategory'] dd.css-129m7dg",
+    "reqIdSelector": "div[data-automation-id='jobReqId'] dd.css-129m7dg",
+    "descriptionSelector": "ul",
+    "pagination": {
+      "type": "chevron-click",
+      "nextButtonSelector": "svg.wd-icon-chevron-right-small.wd-icon",
+      "parentButtonSelector": "button",
+      "disabledAttribute": "aria-disabled"
+    }
+  },
+  "magna": {
+    "name": "Magna International",
+    "jobSelector": "li.css-1q2dra3",
+    "titleSelector": "h3",
+    "applyLinkSelector": "a",
+    "linkAttribute": "href",
+    "locationSelector": "div[data-automation-id='locations'] dd.css-129m7dg",
+    "postedSelector": "div[data-automation-id='postedOn'] dd.css-129m7dg",
+    "categorySelector": "div[data-automation-id='jobCategory'] dd.css-129m7dg",
+    "reqIdSelector": "div[data-automation-id='jobReqId'] dd.css-129m7dg",
+    "descriptionSelector": "ul",
+    "pagination": {
+      "type": "chevron-click",
+      "nextButtonSelector": "svg.wd-icon-chevron-right-small.wd-icon",
+      "parentButtonSelector": "button",
+      "disabledAttribute": "aria-disabled"
+    }
+  },
+  "marvel": {
+    "name": "Marvel Technology",
+    "jobSelector": "li.css-1q2dra3",
+    "titleSelector": "h3",
+    "applyLinkSelector": "a",
+    "linkAttribute": "href",
+    "locationSelector": "div[data-automation-id='locations'] dd.css-129m7dg",
+    "postedSelector": "div[data-automation-id='postedOn'] dd.css-129m7dg",
+    "categorySelector": "div[data-automation-id='jobCategory'] dd.css-129m7dg",
+    "reqIdSelector": "div[data-automation-id='jobReqId'] dd.css-129m7dg",
+    "descriptionSelector": "ul",
+    "pagination": {
+      "type": "chevron-click",
+      "nextButtonSelector": "svg.wd-icon-chevron-right-small.wd-icon",
+      "parentButtonSelector": "button",
+      "disabledAttribute": "aria-disabled"
+    }
+  },
+  "nvidia": {
+    "name": "NVIDIA",
+    "jobSelector": "li.css-1q2dra3",
+    "titleSelector": "h3",
+    "applyLinkSelector": "a",
+    "linkAttribute": "href",
+    "locationSelector": "div[data-automation-id='locations'] dd.css-129m7dg",
+    "postedSelector": "div[data-automation-id='postedOn'] dd.css-129m7dg",
+    "categorySelector": "div[data-automation-id='jobCategory'] dd.css-129m7dg",
+    "reqIdSelector": "div[data-automation-id='jobReqId'] dd.css-129m7dg",
+    "descriptionSelector": "ul",
+    "pagination": {
+      "type": "chevron-click",
+      "nextButtonSelector": "svg.wd-icon-chevron-right-small.wd-icon",
+      "parentButtonSelector": "button",
+      "disabledAttribute": "aria-disabled"
+    }
+  },
+  "verizon": {
+    "name": "Verizon",
+    "jobSelector": "li.css-1q2dra3",
+    "titleSelector": "h3",
+    "applyLinkSelector": "a",
+    "linkAttribute": "href",
+    "locationSelector": "div[data-automation-id='locations'] dd.css-129m7dg",
+    "postedSelector": "div[data-automation-id='postedOn'] dd.css-129m7dg",
+    "categorySelector": "div[data-automation-id='jobCategory'] dd.css-129m7dg",
+    "reqIdSelector": "div[data-automation-id='jobReqId'] dd.css-129m7dg",
+    "descriptionSelector": "ul",
+
+    "pagination": {
+      "type": "chevron-click",
+      "nextButtonSelector": "svg.wd-icon-chevron-right-small.wd-icon",
+      "parentButtonSelector": "button",
+      "disabledAttribute": "aria-disabled"
+    }
+  },
+  "workday": {
+    "name": "Workday",
+    "jobSelector": "li.css-1q2dra3",
+    "titleSelector": "h3",
+    "applyLinkSelector": "a",
+    "linkAttribute": "href",
+    "locationSelector": "div[data-automation-id='locations'] dd.css-129m7dg",
+    "postedSelector": "div[data-automation-id='postedOn'] dd.css-129m7dg",
+    "categorySelector": "div[data-automation-id='jobCategory'] dd.css-129m7dg",
+    "reqIdSelector": "div[data-automation-id='jobReqId'] dd.css-129m7dg",
+    "descriptionSelector": "ul",
+
+    "pagination": {
+      "type": "chevron-click",
+      "nextButtonSelector": "svg.wd-icon-chevron-right-small.wd-icon",
+      "parentButtonSelector": "button",
+      "disabledAttribute": "aria-disabled"
+    }
+  },
+  "honeywell": {
+    "name": "Honeywell",
+    "jobSelector": "#main > div > div > div > div > div > div:nth-child(3) > div > div > div > div:nth-child(2) > div > div > ul > li",
+    "titleSelector": "span.job-tile__title",
+    "applyLinkSelector": "a",
+    "linkAttribute": "href",
+    "locationSelector": "span.job-tile__location",
+    "postedSelector": "div > div.job-tile__subheader > div.job-list-item__job-info-container > ul > li:nth-child(2) > div.job-list-item__job-info-value-container",
+    "categorySelector": "span.job-tile__category",
+    "descriptionSelector": "ul",
+
+    "pagination": {
+      "type": "infinite-scroll"
+    }
+  },
+  "jpmc": {
+    "name": "JPMorgan Chase",
+    "jobSelector": "#main > div > div > div > div > div > div:nth-child(3) > div > div > div > div > div > div > ul > li",
+    "titleSelector": "span.job-tile__title",
+    "applyLinkSelector": "a",
+    "linkAttribute": "href",
+    "locationSelector": "span.job-tile__location",
+    "postedSelector": "#main > job-details-wrapper > div > div > job-details-checker > job-details-loader > job-details-page > div > article > job-details-content > div > div.cc-page.cc-page--job-details-fullscreen > div > div > div > div:nth-child(1) > div > div > div > div.component-styling-wrapper-89164 > div > div.job-details__info-section > div > div > ul > li:nth-child(4)>span.job-meta__subitem",
+    "categorySelector": "span.job-tile__category",
+    "descriptionSelector": "ul",
+
+    "pagination": {
+      "type": "infinite-scroll"
+    }
+  },
+  "ti": {
+    "name": "Texas Instruments",
+    "jobSelector": "#main > div > div > div > div:nth-child(1) > div > div:nth-child(4) > div > div > div > div.component-styling-wrapper-142231 > div > div > ul > li",
+    "titleSelector": "span.job-tile__title",
+    "applyLinkSelector": "a",
+    "linkAttribute": "href",
+    "locationSelector": "span.job-tile__location",
+    "postedSelector": "div > div.job-tile__subheader > div.job-list-item__job-info-container > ul > li:nth-child(2) > div.job-list-item__job-info-value-container",
+    "categorySelector": "span.job-tile__category",
+    "descriptionSelector": "ul",
+
+    "pagination": {
+      "type": "infinite-scroll"
+    }
+  },
+  "abb": {
+    "name": "ABB",
+    "jobSelector": "li.jobs-list-item.au-target.phw-card-block-nd",
+    "titleSelector": "span.au-target",
+    "applyLinkSelector": "a",
+    "linkAttribute": "href",
+    "locationSelector": ".job-location.au-target",
+    "postedSelector": "",
+    "postedAttribute": "data-ph-at-job-post-date-text",
+    "categorySelector": ".job-category.au-target",
+    "descriptionType": "next-page",
+
+    "descriptionSelector": "ul",
+  
+
+    "pagination": {
+      "type": "url-page",
+      "pageParam": "from",
+      "itemsPerPage": 10
+    }
+  },
+  "arm": {
+    "name": "Arm",
+    "jobSelector": "li.job-card.fs-start.fs-middle.fs-container.custom-row-gap-1",
+    "titleSelector": "a.job-card__title.fs-11.fs-m-11",
+    "applyLinkSelector": "a.job-card__title.fs-11.fs-m-11",
+    "linkAttribute": "href",
+    "locationSelector": "span.location",
+    "categorySelector": "span.category",
+    
+    "postedSelector": "#ajd-header > div > div > div.ajd_header__job-heading.fs-m-7.fs-l-5.pb-l-1.pb-xl-0 > span.job-date.job-info",
+    "descriptionType": "next-page",
+    "descriptionSelector": "span",
+    "pagination": {
+      "type": "url-page",
+      "pageParam": "p",
+      "nextPageSelector": "a.pagination__next:not(.pagination__next--disabled)"
+    }
+  },
+  "aijobs": {
+    "name": "AI Jobs",
+    "jobSelector": ".job-listings-item.jb-pt-lg.jb-pr-lg.jb-pb-lg.jb-pl-lg.jb-rounded-2xl.jb-border-top-sm.jb-border-top-solid.jb-border-top-color-E2E8F0FF.jb-border-right-sm.jb-border-right-solid.jb-border-right-color-E2E8F0FF.jb-border-bottom-sm.jb-border-bottom-solid.jb-border-bottom-color-E2E8F0FF.jb-border-left-sm.jb-border-left-solid.jb-border-left-color-E2E8F0FF.jb-background-ffffffff.jb-mb-xs.jb-background-f9fcffff--hover",
+    "titleSelector": "h3.jb-color-0f172aff.jb-text-size-lg.jb-font-default-for-headings.jb-font-weight-normal.jb-line-height-normal.jb-letter-spacing-normal.jb-pb-7xs",
+    "applyLinkSelector": "a.job-details-link",
+    "linkAttribute": "href",
+    "locationSelector": "a.job-info-link-item[href^=\"/jobs/\"][href$=\"-united-states\"]",
+    "postedSelector": "span.d-md-inline.d-lg-none.jb-color-475569ff.jb-text-size-sm.jb-font-default-for-texts.jb-font-weight-default-for-texts.jb-line-height-normal.jb-letter-spacing-normal.jb-rounded-none.jb-pl-none.jb-pr-none.jb-pt-none.jb-pb-none",
+    "categorySelector": "span.job-category",
+    "descriptionType": "next-page",
+    "descriptionSelector": "ul",
+
+    "pagination": {
+      "type": "url-page",
+      "pageParam": "page"
+    }
+  },
+  "ibm": {
+    "name": "IBM",
+    "jobSelector": "div.bx--card-group__cards__col",
+    "titleSelector": "div.bx--card__heading",
+    "applyLinkSelector": "a.bx--card-group__card",
+    "linkAttribute": "href",
+    "locationSelector": "div.ibm--card__copy__inner",
+    "postedSelector": "div.bx--card__posted-date",
+    "categorySelector": "div.bx--card__category",
+    "pagination": {
+      "type": "url-page",
+      "pageParam": "p"
+    }
+  },
+  "infineon": {
+    "name": "Infineon Technologies",
+     "jobSelector": "div.cardContainer-GcY1a",
+    "titleSelector": "div.title-1aNJK",
+    "applyLinkSelector": "a[id*=\"job-card-\"][id*=\"-job-list\"]",
+    "linkAttribute": "href",
+    "locationSelector": "div.fieldValue-3kEar",
+    "postedSelector": "div.subData-13Lm1",
+    "categorySelector": "div.category",
+    "descriptionSelector": "li",
+
+    "pagination": {
+      "type": "url-page",
+      "startParam": "start",
+      "itemsPerPage": 10
+    }
+  },
+  "micron": {
+    "name": "Micron Technology",
+    "jobSelector": "div.cardContainer-GcY1a",
+    "titleSelector": "div.title-1aNJK",
+    "applyLinkSelector": "a[id*=\"job-card-\"][id*=\"-job-list\"]",
+    "linkAttribute": "href",
+    "locationSelector": "div.fieldValue-3kEar",
+    "postedSelector": "div.subData-13Lm1",
+    "categorySelector": "div.category",
+    "descriptionSelector": "li",
+
+    "pagination": {
+      "type": "url-page",
+      "startParam": "start",
+      "itemsPerPage": 10
+    }
+  },
+  
+  "synopsys": {
+    "name": "Synopsys",
+    "jobSelector": "li.search-results-list__list-item",
+    "titleSelector": "h2",
+    "applyLinkSelector": "a",
+    "linkAttribute": "href",
+    "locationSelector": "span.job-location",
+    "postedSelector": "span.job-date-posted",
+    "categorySelector": "span.job-category",
+    "descriptionType": "next-page",
+
+    "descriptionSelector": "ul",
+
+    "pagination": {
+      "type": "chevron-click",
+      "nextButtonSelector": "a.next"
+    }
+  },
+  "waymo": {
+    "name": "Waymo",
+    "jobSelector": "article",
+    "titleSelector": "h3",
+    "applyLinkSelector": "a",
+    "linkAttribute": "href",
+    "locationSelector": "span[id*=\"location\"]",
+    "postedSelector": "span.job-posted-date",
+    "categorySelector": "span.job-category",
+    "pagination": {
+      "type": "url-page",
+      "pageParam": "page"
+    }
+  },
+  "rivian": {
+    "name": "RIVIAN",
+    "jobSelector": "mat-expansion-panel.search-result-item",
+    "titleSelector": "span[itemprop=\"title\"]",
+    "locationSelector": "span.label-value.location",
+    "applyLinkSelector": "a#link-apply-${index}",
+    "linkAttribute": "href",
+    "reqIdSelector": "p.req-id span",
+    "categorySelector": "span.categories.label-value",
+    "postedSelector": "span.posted-date",
+    "descriptionType": "next-page",
+
+    "descriptionSelector": "li",
+
+    "pagination": {
+      "type": "url-page",
+      "pageParam": "page",
+      "nextPageSelector": "button[aria-label=\"Next page\"]:not([disabled])"
+    }
+  },
+  "amazon": {
+    "name": "Amazon",
+    "jobSelector": ".job-tile-lists .job-tile",
+    "titleSelector": ".job-link",
+    "locationSelector": ".location-and-id li",
+    "postedSelector": ".posting-date",
+    "linkSelector": ".job-link",
+    "linkAttribute": "href",
+    "pagination": {
+      "type": "url-page"
+    }
+  },
+  "google": {
+    "name": "Google",
+    "jobSelector": "li.lLd3Je",
+    "titleSelector": "h3.QJPWVe",
+    "locationSelector": "span.r0wTof",
+    "postedSelector": "",
+    "linkSelector": "a[jsname='hSRGPd']",
+    "linkAttribute": "href",
+    "pagination": {
+      "type": "url-page"
+    }
+  },
+  "meta": {
+    "name": "Meta",
+    "jobSelector": "a[href*='/jobs/']",
+    "titleSelector": "div._6g3g.x10lme4x.x26uert.xngnso2.x117nqv4.x1mnlqng.x1e096f4",
+    "locationSelector": "span.x26uert.x8xxdc5.x1jchvi3",
+    "postedSelector": "",
+    "linkSelector": "a[href*='/jobs/']",
+    "linkAttribute": "href",
+    "pagination": {
+      "type": "url-page"
+    }
+  },
+    "microsoft": {
+    "name": "Microsoft",
+    "jobSelector": "div.ms-List-cell",
+    "titleSelector": "h2.MZGzlrn8gfgSs8TZHhv2",
+    "locationSelector": "i[data-icon-name='POI'] + span",
+    "postedSelector": "span:nth-of-type(1)",
+    "extractUrlAfterClick": true,
+    "pagination": {
+      "type": "url-page"
+    }
+  }
+}
