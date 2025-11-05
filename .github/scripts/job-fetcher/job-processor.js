@@ -50,7 +50,9 @@ function generateCompanyStats(jobs) {
 
 // Write the new jobs JSON for Discord with atomic writes
 function writeNewJobsJson(jobs) {
-    const dataDir = path.join(process.cwd(), '.github', 'data');
+    // Get repository root (3 levels up from .github/scripts/job-fetcher)
+    const repoRoot = path.join(__dirname, '..', '..', '..');
+    const dataDir = path.join(repoRoot, '.github', 'data');
     
     try {
         // Ensure data folder exists
@@ -89,7 +91,9 @@ function writeNewJobsJson(jobs) {
 
 // Update seen jobs store with atomic writes to prevent corruption
 function updateSeenJobsStore(jobs, seenIds) {
-    const dataDir = path.join(process.cwd(), '.github', 'data');
+    // Get repository root (3 levels up from .github/scripts/job-fetcher)
+    const repoRoot = path.join(__dirname, '..', '..', '..');
+    const dataDir = path.join(repoRoot, '.github', 'data');
     
     try {
         // Ensure data folder exists
@@ -142,7 +146,9 @@ function updateSeenJobsStore(jobs, seenIds) {
 
 // Load seen jobs for deduplication with error handling and validation
 function loadSeenJobsStore() {
-    const dataDir = path.join(process.cwd(), '.github', 'data');
+    // Get repository root (3 levels up from .github/scripts/job-fetcher)
+    const repoRoot = path.join(__dirname, '..', '..', '..');
+    const dataDir = path.join(repoRoot, '.github', 'data');
     const seenPath = path.join(dataDir, 'seen_jobs.json');
     
     try {
