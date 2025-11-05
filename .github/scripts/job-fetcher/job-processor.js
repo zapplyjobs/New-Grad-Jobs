@@ -1,6 +1,6 @@
 const fs = require('fs');
 const path = require('path');
-const { fetchAllRealJobs } = require('../real-career-scraper');
+const { fetchAllJobs } = require('../unified-job-fetcher');
 const { 
     companies, 
     ALL_COMPANIES, 
@@ -221,7 +221,7 @@ async function processJobs() {
         const seenIds = loadSeenJobsStore();
         
         // Fetch jobs from both API and real career pages
-        const allJobs = await fetchAllRealJobs();
+        const allJobs = await fetchAllJobs();
         const usJobs = allJobs.filter(isUSOnlyJob);
 
         // For README: Show ALL jobs (no time filter)
