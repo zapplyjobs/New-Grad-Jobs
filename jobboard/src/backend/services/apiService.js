@@ -53,17 +53,17 @@ async function fetchAPIJobs(company) {
  * @returns {Promise<Array>} Array of job objects
  */
 async function fetchExternalJobsData() {
-  const externalSource = process.env.EXTERNAL_JOBS_SOURCE || process.env.PRIMARY_DATA_SOURCE_URL;
+  const dataSourceUrl = process.env.PRIMARY_DATA_SOURCE_URL;
 
-  if (!externalSource) {
-    console.log('⚠️  External aggregator not configured');
+  if (!dataSourceUrl) {
+    console.log('⚠️  Primary data source not configured');
     return [];
   }
 
   try {
-    console.log('📡 Fetching from external aggregator...');
+    console.log('📡 Fetching from primary data source...');
 
-    const response = await axios.get(externalSource, {
+    const response = await axios.get(dataSourceUrl, {
       headers: {
         'Accept': 'application/json',
         'User-Agent': 'JobAggregator/1.0'
@@ -87,16 +87,16 @@ async function fetchExternalJobsData() {
         job_employment_type: 'FULLTIME'
       }));
 
-    console.log(`✅ External aggregator: ${jobs.length} jobs`);
+    console.log(`✅ Primary data source: ${jobs.length} jobs`);
     return jobs;
 
   } catch (error) {
     if (error.code === 'ECONNABORTED') {
-      console.error(`⏱️  External aggregator: Request timeout (>60s)`);
+      console.error(`⏱️  Primary data source: Request timeout (>60s)`);
     } else if (error.response) {
-      console.error(`❌ External aggregator: HTTP ${error.response.status}`);
+      console.error(`❌ Primary data source: HTTP ${error.response.status}`);
     } else {
-      console.error(`❌ External aggregator: ${error.message}`);
+      console.error(`❌ Primary data source: ${error.message}`);
     }
     return [];
   }

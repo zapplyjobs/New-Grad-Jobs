@@ -52,15 +52,15 @@ async function fetchAllJobs() {
 
   console.log(`\n📊 API companies total: ${allJobs.length} jobs`);
 
-  // === Part 2: Fetch from external aggregator ===
-  console.log('\n📡 Fetching from external aggregator...');
+  // === Part 2: Fetch from primary data source ===
+  console.log('\n📡 Fetching from primary data source...');
 
   try {
     const externalJobs = await fetchExternalJobsData();
     allJobs.push(...externalJobs);
-    console.log(`📊 After external source: ${allJobs.length} jobs total`);
+    console.log(`📊 After primary source: ${allJobs.length} jobs total`);
   } catch (error) {
-    console.error(`❌ External aggregator failed:`, error.message);
+    console.error(`❌ Primary data source failed:`, error.message);
   }
 
   // === Part 3: Filter to US-only jobs ===

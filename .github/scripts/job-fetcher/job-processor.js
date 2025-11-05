@@ -230,49 +230,34 @@ async function processJobs() {
         const allJobs = await fetchAllJobs();
         const usJobs = allJobs.filter(isUSOnlyJob);
 
-        // For README: Show ALL jobs (no time filter)
-        const allCurrentJobs = usJobs;
-        allCurrentJobs.forEach(job => {
+        // Show ALL jobs (no time filter)
+        const currentJobs = usJobs;
+        currentJobs.forEach(job => {
             job.id = generateJobId(job);
         });
 
-        // For DISCORD: Only post jobs from last 21 days (prevent spam)
-        const threeWeeksAgo = new Date();
-        threeWeeksAgo.setDate(threeWeeksAgo.getDate() - 21);
-
-        const isJobWithin21Days = (dateString) => {
-            if (!dateString) return false;
-            const jobDate = new Date(dateString);
-            return jobDate >= threeWeeksAgo;
-        };
-
-        const recentJobsForDiscord = usJobs.filter(j => isJobWithin21Days(j.job_posted_at_datetime_utc));
-        recentJobsForDiscord.forEach(job => {
-            job.id = generateJobId(job);
-        });
-
-        // Filter for truly NEW jobs within 21 days (Discord only)
-        const freshJobs = recentJobsForDiscord.filter(job => !seenIds.has(job.id));
+        // Filter for truly NEW jobs (deduplication only via seen_jobs.json)
+        const freshJobs = currentJobs.filter(job => !seenIds.has(job.id));
 
         if (freshJobs.length === 0) {
-            console.log('ℹ️ No new jobs found - all recent openings already processed');
+            console.log('ℹ️ No new jobs found - all current openings already processed');
             writeNewJobsJson([]);
         } else {
-            console.log(`📬 Found ${freshJobs.length} new jobs to post to Discord (within 21 days)`);
+            console.log(`📬 Found ${freshJobs.length} new jobs to process`);
             writeNewJobsJson(freshJobs);
             updateSeenJobsStore(freshJobs, seenIds);
         }
 
-        // No archived jobs (showing all as current in README)
+        // No archived jobs (showing all jobs as current)
         const archivedJobs = [];
 
-        console.log(`✅ Job processing complete - ${allCurrentJobs.length} total for README, ${recentJobsForDiscord.length} recent for Discord`);
+        console.log(`✅ Job processing complete - ${currentJobs.length} current jobs`);
 
         return {
-            currentJobs: allCurrentJobs,
+            currentJobs,
             archivedJobs,
             freshJobs,
-            stats: generateCompanyStats(allCurrentJobs)
+            stats: generateCompanyStats(currentJobs)
         };
         
     } catch (error) {
