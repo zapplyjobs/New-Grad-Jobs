@@ -1,7 +1,9 @@
 // server.js - Express API Server
 const express = require('express');
 const cors = require('cors');
-const { fetchAllRealJobs } = require('../utility/real-career-scraper');
+// DEPRECATED: This server is not used in production
+// Job fetching now handled by .github/scripts/unified-job-fetcher.js
+// const { fetchAllRealJobs } = require('../utility/real-career-scraper');
 
 const app = express();
 const PORT = process.env.PORT || 3001;
@@ -362,7 +364,8 @@ app.get('/api/jobs', async (req, res) => {
         console.log('🔍 Fetching fresh job data...');
         
         // Fetch fresh data
-        const allJobs = await fetchAllRealJobs();
+        // DEPRECATED: Use .github/scripts/unified-job-fetcher.js instead
+        const allJobs = []; // await fetchAllRealJobs();
         
         if (allJobs.length === 0) {
             return res.status(503).json({ 
