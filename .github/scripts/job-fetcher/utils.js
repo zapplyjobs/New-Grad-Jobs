@@ -23,21 +23,61 @@ function delay(ms) {
 }
 
 /**
- * Generate a standardized job ID for consistent deduplication across systems
- * This ensures the same job gets the same ID in both the scraper and Discord posting
+ * Generate enhanced job ID with normalization fallback
+ * Handles title variations: Roman numerals (I vs 1), abbreviations (Sr. vs Senior)
  */
-function generateJobId(job) {
-    const title = (job.job_title || '').toLowerCase().trim().replace(/\s+/g, '-');
+function generateEnhancedId(job) {
+    let title = (job.job_title || '').toLowerCase().trim();
+
+    // Normalize Roman numerals BEFORE replacing spaces (word boundary matching)
+    title = title
+        .replace(/\bi\b/g, '1')       // " I " → " 1 "
+        .replace(/\bii\b/g, '2')      // " II " → " 2 "
+        .replace(/\biii\b/g, '3')     // " III " → " 3 "
+        .replace(/\biv\b/g, '4')      // " IV " → " 4 "
+        .replace(/\bv\b/g, '5')       // " V " → " 5 "
+        // Common abbreviations
+        .replace(/\bsr\.?\b/g, 'senior')
+        .replace(/\bjr\.?\b/g, 'junior')
+        .replace(/\b&\b/g, 'and')
+        .replace(/\s+/g, '-');        // Spaces to dashes
+
     const company = (job.employer_name || '').toLowerCase().trim().replace(/\s+/g, '-');
     const city = (job.job_city || '').toLowerCase().trim().replace(/\s+/g, '-');
-    
+
     // Remove special characters and normalize
     const normalize = (str) => str
         .replace(/[^\w-]/g, '-')  // Replace special chars with dashes
-        .replace(/-+/g, '-')     // Collapse multiple dashes
-        .replace(/^-|-$/g, '');  // Remove leading/trailing dashes
-    
+        .replace(/-+/g, '-')      // Collapse multiple dashes
+        .replace(/^-|-$/g, '');   // Remove leading/trailing dashes
+
     return `${normalize(company)}-${normalize(title)}-${normalize(city)}`;
+}
+
+/**
+ * Generate a standardized job ID for consistent deduplication across systems
+ * This ensures the same job gets the same ID in both the scraper and Discord posting
+ *
+ * Strategy: Hybrid approach
+ * 1. Primary: Use job URL (most reliable, handles all title variations)
+ * 2. Fallback: Enhanced normalization (Roman numerals, abbreviations)
+ */
+function generateJobId(job) {
+    // Primary method: URL-based ID (99%+ of jobs have URLs)
+    if (job.job_apply_link) {
+        try {
+            const urlObj = new URL(job.job_apply_link);
+            // Normalize: hostname + pathname (remove query params, trailing slashes)
+            const normalized = urlObj.hostname + urlObj.pathname.replace(/\/$/, '');
+            // Convert to safe ID format
+            return normalized.toLowerCase().replace(/[^\w]/g, '-').replace(/-+/g, '-').replace(/^-|-$/g, '');
+        } catch (e) {
+            // Invalid URL format, fall through to enhanced method
+        }
+    }
+
+    // Fallback method: Enhanced normalization (handles Roman numerals, abbreviations)
+    return generateEnhancedId(job);
 }
 
 /**
