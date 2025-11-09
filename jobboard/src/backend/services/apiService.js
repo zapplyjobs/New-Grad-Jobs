@@ -72,10 +72,29 @@ async function fetchExternalJobsData() {
     });
 
     // Transform external data to standard format
+    // Filter by category (all software-related) - primary filter
+    // Fallback to title keywords for entries without category field
     const jobs = response.data
-      .filter(job => job.active && job.url &&
-        (job.title.toLowerCase().includes('engineer') ||
-         job.title.toLowerCase().includes('developer')))
+      .filter(job => {
+        if (!job.active || !job.url) return false;
+
+        // Primary filter: Use category if available
+        if (job.category) {
+          const softwareCategories = [
+            'Software',
+            'Software Engineering',
+            'AI/ML/Data',
+            'Data Science, AI & Machine Learning'
+          ];
+          return softwareCategories.includes(job.category);
+        }
+
+        // Fallback filter: Title keywords for older entries without category
+        const title = job.title.toLowerCase();
+        return title.includes('engineer') ||
+               title.includes('developer') ||
+               title.includes('software');
+      })
       .map(job => ({
         job_title: job.title,
         employer_name: job.company_name,

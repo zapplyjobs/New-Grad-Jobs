@@ -27,30 +27,35 @@ async function fetchAllJobs() {
   const allJobs = [];
 
   // === Part 1: Fetch from API-based companies ===
-  console.log('\n📡 Fetching from API-based companies...');
+  // NOTE: Individual company APIs disabled - all data now from aggregator
+  // This section kept for potential future use if needed
+  console.log('\n📡 Checking API-based companies...');
 
   const companies = getCompanies();
   const companyKeys = Object.keys(companies);
 
-  for (const key of companyKeys) {
-    const company = companies[key];
+  if (companyKeys.length > 0) {
+    for (const key of companyKeys) {
+      const company = companies[key];
 
-    try {
-      const jobs = await fetchAPIJobs(company);
+      try {
+        const jobs = await fetchAPIJobs(company);
 
-      if (jobs && jobs.length > 0) {
-        allJobs.push(...jobs);
+        if (jobs && jobs.length > 0) {
+          allJobs.push(...jobs);
+        }
+
+        // Rate limiting: 2 second delay between API calls
+        await delay(2000);
+
+      } catch (error) {
+        console.error(`❌ Error processing ${company.name}:`, error.message);
       }
-
-      // Rate limiting: 2 second delay between API calls
-      await delay(2000);
-
-    } catch (error) {
-      console.error(`❌ Error processing ${company.name}:`, error.message);
     }
+    console.log(`\n📊 API companies total: ${allJobs.length} jobs`);
+  } else {
+    console.log(`   No API companies configured (using aggregator only)`);
   }
-
-  console.log(`\n📊 API companies total: ${allJobs.length} jobs`);
 
   // === Part 2: Fetch from primary data source ===
   console.log('\n📡 Fetching from primary data source...');
