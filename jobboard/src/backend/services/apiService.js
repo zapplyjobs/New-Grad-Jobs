@@ -122,6 +122,72 @@ async function fetchExternalJobsData() {
 }
 
 /**
+ * Fetch jobs from secondary aggregator (vanshb03)
+ * MODULAR: Disable by removing SECONDARY_DATA_SOURCE_URL env variable
+ * @returns {Promise<Array>} Array of job objects
+ */
+async function fetchSecondaryJobsData() {
+  const dataSourceUrl = process.env.SECONDARY_DATA_SOURCE_URL;
+
+  if (!dataSourceUrl) {
+    console.log('⚠️  Secondary data source not configured (vanshb03 disabled)');
+    return [];
+  }
+
+  try {
+    console.log('📡 Fetching from secondary data source (vanshb03)...');
+
+    const response = await axios.get(dataSourceUrl, {
+      headers: {
+        'Accept': 'application/json',
+        'User-Agent': 'JobAggregator/1.0'
+      },
+      timeout: 60000
+    });
+
+    // Filter by title keywords (vanshb03 has no category field)
+    const jobs = response.data
+      .filter(job => {
+        if (!job.active || !job.url) return false;
+
+        const title = job.title.toLowerCase();
+        return title.includes('software') ||
+               title.includes('engineer') ||
+               title.includes('developer') ||
+               title.includes('data scientist') ||
+               title.includes('machine learning') ||
+               title.includes('ml ') ||
+               title.includes('ai ');
+      })
+      .map(job => ({
+        job_title: job.title,
+        employer_name: job.company_name,
+        job_city: job.locations?.[0]?.split(', ')?.[0] || 'Multiple',
+        job_state: job.locations?.[0]?.split(', ')?.[1] || 'Locations',
+        job_description: `Join ${job.company_name} in this exciting opportunity.`,
+        job_apply_link: job.url,
+        job_posted_at_datetime_utc: safeISOString(job.date_posted || job.date_updated),
+        job_employment_type: 'FULLTIME',
+        source: 'vanshb03' // Track source for debugging
+      }));
+
+    console.log(`✅ Secondary data source (vanshb03): ${jobs.length} jobs`);
+    return jobs;
+
+  } catch (error) {
+    if (error.code === 'ECONNABORTED') {
+      console.error(`⏱️  Secondary data source: Request timeout (>60s)`);
+    } else if (error.response) {
+      console.error(`❌ Secondary data source: HTTP ${error.response.status}`);
+    } else {
+      console.error(`❌ Secondary data source: ${error.message}`);
+    }
+    console.log('⚠️  Continuing without secondary data source');
+    return [];
+  }
+}
+
+/**
  * Helper function to safely convert dates to ISO string
  * @param {*} dateValue - Date value to convert
  * @returns {string|null} ISO string or null
@@ -138,5 +204,6 @@ function safeISOString(dateValue) {
 
 module.exports = {
   fetchAPIJobs,
-  fetchExternalJobsData
+  fetchExternalJobsData,
+  fetchSecondaryJobsData
 };
