@@ -771,11 +771,10 @@ client.once('ready', async () => {
     let totalFailed = 0;
 
     for (const [channelId, channelJobs] of Object.entries(jobsByChannel)) {
-      let channel;
-      try {
-        channel = await client.channels.fetch(channelId);
-      } catch (error) {
-        console.error(`❌ Channel not found or accessible: ${channelId}`, error.message);
+      // Use cache instead of API fetch (channels cached when bot logged in)
+      const channel = client.channels.cache.get(channelId);
+      if (!channel) {
+        console.error(`❌ Channel not found in cache: ${channelId}`);
         totalFailed += channelJobs.length;
         continue;
       }
@@ -805,18 +804,24 @@ client.once('ready', async () => {
           console.log(`  🔍 DEBUG: Job "${job.job_title}" | City: "${job.job_city}" | State: "${job.job_state}" | Location Channel ID: ${locationChannelId ? `"${locationChannelId.substring(0, 4)}..."` : 'null'}`);
 
           if (locationChannelId && locationChannelId.trim() !== '') {
-            try {
-              const locationChannel = await client.channels.fetch(locationChannelId);
-              const locationResult = await postJobToForum(job, locationChannel);
+            // Use cache instead of API fetch (critical: prevents rate limit hang)
+            const locationChannel = client.channels.cache.get(locationChannelId);
 
-              if (locationResult.success) {
-                console.log(`  ✅ Location: ${locationChannel.name}`);
-                jobPostedSuccessfully = true;
-              } else {
-                console.log(`  ⚠️ Location post failed: ${locationChannel.name}`);
+            if (locationChannel) {
+              try {
+                const locationResult = await postJobToForum(job, locationChannel);
+
+                if (locationResult.success) {
+                  console.log(`  ✅ Location: ${locationChannel.name}`);
+                  jobPostedSuccessfully = true;
+                } else {
+                  console.log(`  ⚠️ Location post failed: ${locationChannel.name}`);
+                }
+              } catch (error) {
+                console.error(`  ❌ Location channel error:`, error.message);
               }
-            } catch (error) {
-              console.error(`  ❌ Location channel error:`, error.message);
+            } else {
+              console.error(`  ❌ Location channel not found in cache: ${locationChannelId}`);
             }
 
             // Rate limiting after location post
@@ -842,11 +847,10 @@ client.once('ready', async () => {
     // Legacy single-channel mode
     console.log('📝 Single-channel mode - posting to configured channel');
 
-    let channel;
-    try {
-      channel = await client.channels.fetch(CHANNEL_ID);
-    } catch (error) {
-      console.error('❌ Channel not found or accessible:', CHANNEL_ID, error.message);
+    // Use cache instead of API fetch
+    const channel = client.channels.cache.get(CHANNEL_ID);
+    if (!channel) {
+      console.error('❌ Channel not found in cache:', CHANNEL_ID);
       client.destroy();
       process.exit(1);
       return;
