@@ -769,6 +769,8 @@ client.once('ready', async () => {
     // Post jobs to their respective channels (batch by channel)
     let totalPosted = 0;
     let totalFailed = 0;
+    let channelFullErrorCount = 0;
+    const CHANNEL_FULL_EXIT_THRESHOLD = 5; // Exit after 5 consecutive "channel full" errors
 
     for (const [channelId, channelJobs] of Object.entries(jobsByChannel)) {
       // Use cache instead of API fetch (channels cached when bot logged in)
@@ -791,8 +793,23 @@ client.once('ready', async () => {
         if (industryResult.success) {
           console.log(`  ✅ Industry: ${job.job_title} @ ${job.employer_name}`);
           jobPostedSuccessfully = true;
+          channelFullErrorCount = 0; // Reset counter on success
         } else {
           console.log(`  ❌ Industry post failed: ${job.job_title}`);
+
+          // Check if error is "Maximum threads reached" (code 160006)
+          if (industryResult.error && industryResult.error.code === 160006) {
+            channelFullErrorCount++;
+            console.log(`⚠️  Channel full error count: ${channelFullErrorCount}/${CHANNEL_FULL_EXIT_THRESHOLD}`);
+
+            if (channelFullErrorCount >= CHANNEL_FULL_EXIT_THRESHOLD) {
+              console.log(`\n❌ CRITICAL: Discord channel #${channel.name} is full (max active threads reached)`);
+              console.log(`❌ Exiting early to avoid timeout. ${totalPosted} jobs posted, ${totalFailed + (channelJobs.length - channelJobs.indexOf(job))} failed.`);
+              console.log(`\n💡 ACTION REQUIRED: Archive old threads in Discord channel to make room for new posts.`);
+              client.destroy();
+              process.exit(0);
+            }
+          }
         }
 
         // Rate limiting between industry and location posts
