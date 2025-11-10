@@ -797,6 +797,15 @@ client.once('ready', async () => {
       console.log(`⏭️ Skipping already posted: ${job.job_title} at ${job.employer_name}`);
       return false;
     }
+
+    // MIGRATION CHECK: Also check old fallback ID format to prevent re-posting
+    // Jobs posted before data format migration may have different IDs
+    const fallbackId = generateEnhancedId(job);
+    if (fallbackId !== jobId && postedJobsManager.hasBeenPosted(fallbackId)) {
+      console.log(`⏭️ Skipping already posted (legacy ID): ${job.job_title} at ${job.employer_name}`);
+      return false;
+    }
+
     return true;
   });
 
