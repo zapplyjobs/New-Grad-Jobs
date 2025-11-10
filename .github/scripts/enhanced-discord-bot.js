@@ -816,7 +816,18 @@ client.once('ready', async () => {
     return;
   }
 
-  console.log(`📬 Posting ${unpostedJobs.length} new jobs (${jobs.length - unpostedJobs.length} already posted)...`);
+  console.log(`📬 Found ${unpostedJobs.length} new jobs (${jobs.length - unpostedJobs.length} already posted)...`);
+
+  // Limit to 50 jobs per workflow run to prevent channel overflow and timeouts
+  const MAX_JOBS_PER_RUN = 50;
+  const jobsToPost = unpostedJobs.slice(0, MAX_JOBS_PER_RUN);
+  const deferredJobs = unpostedJobs.length - jobsToPost.length;
+
+  if (deferredJobs > 0) {
+    console.log(`⏸️ Limiting to ${MAX_JOBS_PER_RUN} jobs this run, ${deferredJobs} deferred for next run`);
+  }
+
+  console.log(`📤 Posting ${jobsToPost.length} jobs...`);
 
   // Check if multi-channel mode is enabled
   if (MULTI_CHANNEL_MODE) {
@@ -824,7 +835,7 @@ client.once('ready', async () => {
 
     // Group jobs by channel
     const jobsByChannel = {};
-    for (const job of unpostedJobs) {
+    for (const job of jobsToPost) {
       const channelId = getJobChannel(job);
       if (!channelId || channelId.trim() === '') {
         console.warn(`⚠️ No channel configured for job: ${job.job_title} - skipping`);
@@ -944,7 +955,7 @@ client.once('ready', async () => {
       return;
     }
 
-    for (const job of unpostedJobs) {
+    for (const job of jobsToPost) {
       try {
         const jobId = generateJobId(job);
         const tags = generateTags(job);
