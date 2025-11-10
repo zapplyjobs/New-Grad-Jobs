@@ -756,16 +756,24 @@ function loadAndFilterJobs(filters = {}) {
   }
 }
 
+// Timestamp logging helper
+const startTime = Date.now();
+function logTimestamp(message) {
+  const elapsed = ((Date.now() - startTime) / 1000).toFixed(2);
+  console.log(`[${elapsed}s] ${message}`);
+}
+
 // Event handlers
 client.once('ready', async () => {
-  console.log(`✅ Enhanced Discord bot logged in as ${client.user.tag}`);
-  
+  logTimestamp(`✅ Enhanced Discord bot logged in as ${client.user.tag}`);
+
   // Only register commands if running interactively (not in GitHub Actions)
   if (!process.env.GITHUB_ACTIONS) {
     await registerCommands();
   }
-  
+
   // Load jobs to post
+  logTimestamp('📂 Loading new_jobs.json...');
   let jobs = [];
   try {
     const newJobsPath = path.join(dataDir, 'new_jobs.json');
@@ -773,6 +781,7 @@ client.once('ready', async () => {
       jobs = JSON.parse(fs.readFileSync(newJobsPath, 'utf8'));
       // Normalize jobs to handle multiple data formats
       jobs = jobs.map(job => normalizeJob(job));
+      logTimestamp(`📂 Loaded ${jobs.length} jobs from file`);
     }
   } catch (error) {
     console.log('ℹ️ No new jobs file found or error reading it');
@@ -789,6 +798,7 @@ client.once('ready', async () => {
   }
 
   // Filter out jobs that have already been posted to Discord
+  logTimestamp('🔍 Filtering out already-posted jobs...');
   const unpostedJobs = jobs.filter(job => {
     const jobId = generateJobId(job);
     const hasBeenPosted = postedJobsManager.hasBeenPosted(jobId);
@@ -816,7 +826,7 @@ client.once('ready', async () => {
     return;
   }
 
-  console.log(`📬 Found ${unpostedJobs.length} new jobs (${jobs.length - unpostedJobs.length} already posted)...`);
+  logTimestamp(`📬 Found ${unpostedJobs.length} new jobs (${jobs.length - unpostedJobs.length} already posted)`);
 
   // Limit to 50 jobs per workflow run to prevent channel overflow and timeouts
   const MAX_JOBS_PER_RUN = 50;
@@ -827,13 +837,14 @@ client.once('ready', async () => {
     console.log(`⏸️ Limiting to ${MAX_JOBS_PER_RUN} jobs this run, ${deferredJobs} deferred for next run`);
   }
 
-  console.log(`📤 Posting ${jobsToPost.length} jobs...`);
+  logTimestamp(`📤 Starting to post ${jobsToPost.length} jobs...`);
 
   // Check if multi-channel mode is enabled
   if (MULTI_CHANNEL_MODE) {
-    console.log('🔀 Multi-channel mode enabled - routing jobs to appropriate forums');
+    logTimestamp('🔀 Multi-channel mode enabled - routing jobs to appropriate forums');
 
     // Group jobs by channel
+    logTimestamp('📋 Grouping jobs by channel...');
     const jobsByChannel = {};
     for (const job of jobsToPost) {
       const channelId = getJobChannel(job);
@@ -847,6 +858,7 @@ client.once('ready', async () => {
       }
       jobsByChannel[channelId].push(job);
     }
+    logTimestamp(`📋 Grouped into ${Object.keys(jobsByChannel).length} channels`);
 
     // Post jobs to their respective channels (batch by channel)
     let totalPosted = 0;
@@ -863,21 +875,22 @@ client.once('ready', async () => {
         continue;
       }
 
-      console.log(`\n📌 Posting ${channelJobs.length} jobs to #${channel.name}`);
+      logTimestamp(`\n📌 Starting channel #${channel.name} (${channelJobs.length} jobs)`);
 
       // Post jobs with rate limiting within each batch
       for (const job of channelJobs) {
         const jobId = generateJobId(job);
         let jobPostedSuccessfully = false;
 
+        logTimestamp(`  🚀 Posting job: ${job.job_title} @ ${job.employer_name}`);
         // INDUSTRY POST: Post to industry channel
         const industryResult = await postJobToForum(job, channel);
         if (industryResult.success) {
-          console.log(`  ✅ Industry: ${job.job_title} @ ${job.employer_name}`);
+          logTimestamp(`  ✅ Industry post success`);
           jobPostedSuccessfully = true;
           channelFullErrorCount = 0; // Reset counter on success
         } else {
-          console.log(`  ❌ Industry post failed: ${job.job_title}`);
+          logTimestamp(`  ❌ Industry post failed`);
 
           // Check if error is "Maximum threads reached" (code 160006)
           if (industryResult.error && industryResult.error.code === 160006) {
@@ -895,7 +908,9 @@ client.once('ready', async () => {
         }
 
         // Rate limiting between industry and location posts
+        logTimestamp(`  ⏱️ Rate limit delay (1.5s)...`);
         await new Promise(resolve => setTimeout(resolve, 1500));
+        logTimestamp(`  ⏱️ Delay complete`);
 
         // LOCATION POST: Also post to location channel (if applicable)
         if (LOCATION_MODE_ENABLED) {
@@ -938,10 +953,12 @@ client.once('ready', async () => {
       }
 
       // Longer delay between different channels (3 seconds)
+      logTimestamp(`  ⏱️ Channel delay (3s)...`);
       await new Promise(resolve => setTimeout(resolve, 3000));
+      logTimestamp(`  ⏱️ Channel delay complete`);
     }
 
-    console.log(`\n🎉 Posting complete! Successfully posted: ${totalPosted}, Failed: ${totalFailed}`);
+    logTimestamp(`\n🎉 Posting complete! Successfully posted: ${totalPosted}, Failed: ${totalFailed}`);
   } else {
     // Legacy single-channel mode
     console.log('📝 Single-channel mode - posting to configured channel');
@@ -1001,8 +1018,9 @@ client.once('ready', async () => {
   }
 
   // Clean exit AFTER all async operations complete
-  console.log('✅ All posting operations complete, cleaning up...');
+  logTimestamp('✅ All posting operations complete, cleaning up...');
   await new Promise(resolve => setTimeout(resolve, 2000)); // Grace period for final operations
+  logTimestamp('🏁 Bot shutdown complete');
   client.destroy();
   process.exit(0);
 });
