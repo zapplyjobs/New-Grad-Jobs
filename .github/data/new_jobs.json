@@ -1,1 +1,35 @@
-[]
+[
+  {
+    "job_title": "Software Developer Graduate",
+    "employer_name": "AVEVA",
+    "job_city": "San Leandro",
+    "job_state": "CA",
+    "job_description": "Join AVEVA in this exciting opportunity.",
+    "job_apply_link": "https://aveva.wd3.myworkdayjobs.com/en-US/AVEVA_careers/job/San-Leandro-California-United-States-of-America/Software-Developer-Graduate--US_R011626",
+    "job_posted_at_datetime_utc": "2025-11-10T12:06:45.000Z",
+    "job_employment_type": "FULLTIME",
+    "id": "aveva-wd3-myworkdayjobs-com-en-us-aveva_careers-job-san-leandro-california-united-states-of-america-software-developer-graduate-us_r011626"
+  },
+  {
+    "job_title": "Product Software Engineer",
+    "employer_name": "Qualcomm",
+    "job_city": "San Diego",
+    "job_state": "CA",
+    "job_description": "Join Qualcomm in this exciting opportunity.",
+    "job_apply_link": "https://qualcomm.eightfold.ai/careers/job/446715361809",
+    "job_posted_at_datetime_utc": "2025-11-10T12:03:16.000Z",
+    "job_employment_type": "FULLTIME",
+    "id": "qualcomm-eightfold-ai-careers-job-446715361809"
+  },
+  {
+    "job_title": "Software Engineer II",
+    "employer_name": "RTX",
+    "job_city": "Aurora",
+    "job_state": "CO",
+    "job_description": "Join RTX in this exciting opportunity.",
+    "job_apply_link": "https://globalhr.wd5.myworkdayjobs.com/en-US/REC_RTX_Ext_Gateway/job/CO102-16800-E-Centretech-PkwyAurora-16800-East-Centretech-Pkwy-Building-S75-Aurora-CO-80011-USA/XMLNAME-2026-Full-time---Software-Engineer-II---Onsite--CO-_01801591",
+    "job_posted_at_datetime_utc": "2025-10-23T09:56:58.000Z",
+    "job_employment_type": "FULLTIME",
+    "id": "globalhr-wd5-myworkdayjobs-com-en-us-rec_rtx_ext_gateway-job-co102-16800-e-centretech-pkwyaurora-16800-east-centretech-pkwy-building-s75-aurora-co-80011-usa-xmlname-2026-full-time-software-engineer-ii-onsite-co-_01801591"
+  }
+]
