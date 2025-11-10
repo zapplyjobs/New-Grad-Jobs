@@ -218,14 +218,61 @@ function loadSeenJobsStore() {
     }
 }
 
+// Load posted jobs for accurate deduplication
+function loadPostedJobsStore() {
+    // Get repository root (3 levels up from .github/scripts/job-fetcher)
+    const repoRoot = path.join(__dirname, '..', '..', '..');
+    const dataDir = path.join(repoRoot, '.github', 'data');
+    const postedPath = path.join(dataDir, 'posted_jobs.json');
+
+    try {
+        if (!fs.existsSync(postedPath)) {
+            console.log('ℹ️ No existing posted_jobs.json found - starting fresh');
+            return new Set();
+        }
+
+        const fileContent = fs.readFileSync(postedPath, 'utf8');
+        if (!fileContent.trim()) {
+            console.log('⚠️ Empty posted_jobs.json file - starting fresh');
+            return new Set();
+        }
+
+        const postedJobs = JSON.parse(fileContent);
+        if (!Array.isArray(postedJobs)) {
+            console.log('⚠️ Invalid posted_jobs.json format - expected array, starting fresh');
+            return new Set();
+        }
+
+        // Filter out invalid entries (non-strings or empty strings)
+        const validPostedJobs = postedJobs.filter(id => typeof id === 'string' && id.trim().length > 0);
+
+        if (validPostedJobs.length !== postedJobs.length) {
+            console.log(`⚠️ Filtered ${postedJobs.length - validPostedJobs.length} invalid entries from posted_jobs.json`);
+        }
+
+        console.log(`✅ Loaded ${validPostedJobs.length} previously posted jobs for deduplication`);
+
+        return new Set(validPostedJobs);
+
+    } catch (error) {
+        console.error('❌ Error loading posted_jobs.json:', error.message);
+        console.log('ℹ️ Starting with empty posted jobs set');
+
+        return new Set();
+    }
+}
+
 // Main job processing function
 async function processJobs() {
     console.log('🚀 Starting job processing...');
     
     try {
-        // Load seen jobs for deduplication
-        const seenIds = loadSeenJobsStore();
-        
+        // Load posted jobs for accurate deduplication
+        // Use posted_jobs.json (what we've successfully posted to Discord)
+        // instead of seen_jobs.json (what we've fetched from APIs)
+        const postedIds = loadPostedJobsStore();
+        const seenIds = loadSeenJobsStore(); // Keep for backwards compatibility
+
         // Fetch jobs from both API and real career pages
         const allJobs = await fetchAllJobs();
         const usJobs = allJobs.filter(isUSOnlyJob);
@@ -236,8 +283,9 @@ async function processJobs() {
             job.id = generateJobId(job);
         });
 
-        // Filter for truly NEW jobs (deduplication only via seen_jobs.json)
-        const freshJobs = currentJobs.filter(job => !seenIds.has(job.id));
+        // Filter for truly NEW jobs (deduplication against posted_jobs.json)
+        // This ensures failed posts can be retried and avoids skipping valid jobs
+        const freshJobs = currentJobs.filter(job => !postedIds.has(job.id));
 
         if (freshJobs.length === 0) {
             console.log('ℹ️ No new jobs found - all current openings already processed');
