@@ -277,8 +277,22 @@ async function processJobs() {
         const allJobs = await fetchAllJobs();
         const usJobs = allJobs.filter(isUSOnlyJob);
 
-        // Show ALL jobs (no time filter)
-        const currentJobs = usJobs;
+        // Filter to jobs posted within last 7 days (for Discord)
+        const sevenDaysAgo = Math.floor(Date.now() / 1000) - (7 * 24 * 60 * 60);
+        const recentJobs = usJobs.filter(job => {
+            // Use date_posted field (primary format) or job_posted_at_datetime_utc (legacy)
+            const jobDate = job.date_posted || job.date_updated || 0;
+
+            // If no date available, include it (backwards compatibility)
+            if (!jobDate) return true;
+
+            return jobDate >= sevenDaysAgo;
+        });
+
+        console.log(`📅 Filtered to jobs from last 7 days: ${recentJobs.length}/${usJobs.length} jobs`);
+
+        // Show filtered jobs (7-day window)
+        const currentJobs = recentJobs;
         currentJobs.forEach(job => {
             job.id = generateJobId(job);
         });
