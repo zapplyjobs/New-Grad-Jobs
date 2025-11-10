@@ -4,7 +4,7 @@
  */
 
 const { getCompanies } = require('../../jobboard/src/backend/config/companies.js');
-const { fetchAPIJobs, fetchExternalJobsData, fetchSecondaryJobsData } = require('../../jobboard/src/backend/services/apiService.js');
+const { fetchAPIJobs, fetchExternalJobsData } = require('../../jobboard/src/backend/services/apiService.js');
 const { generateJobId, isUSOnlyJob } = require('./job-fetcher/utils.js');
 
 /**
@@ -66,21 +66,6 @@ async function fetchAllJobs() {
     console.log(`📊 After primary source: ${allJobs.length} jobs total`);
   } catch (error) {
     console.error(`❌ Primary data source failed:`, error.message);
-  }
-
-  // === Part 2b: Fetch from secondary data source (MODULAR) ===
-  // NOTE: Disable by removing SECONDARY_DATA_SOURCE_URL env variable
-  console.log('\n📡 Fetching from secondary data source (vanshb03)...');
-
-  try {
-    const secondaryJobs = await fetchSecondaryJobsData();
-    if (secondaryJobs.length > 0) {
-      allJobs.push(...secondaryJobs);
-      console.log(`📊 After secondary source: ${allJobs.length} jobs total`);
-    }
-  } catch (error) {
-    console.error(`❌ Secondary data source failed:`, error.message);
-    console.log('⚠️  Continuing without secondary source');
   }
 
   // === Part 3: Filter to US-only jobs ===
