@@ -16,8 +16,8 @@ const client = new Client({
   ]
 });
 
-// Time threshold: 12 hours ago
-const TWELVE_HOURS_AGO = Date.now() - (12 * 60 * 60 * 1000);
+// Time threshold: 7 days ago (clear old threads to prevent channel overflow)
+const TWELVE_HOURS_AGO = Date.now() - (7 * 24 * 60 * 60 * 1000);
 
 // Collect all configured channel IDs
 const CHANNEL_IDS = [
