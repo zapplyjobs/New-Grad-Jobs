@@ -25,9 +25,14 @@ function delay(ms) {
 /**
  * Generate enhanced job ID with normalization fallback
  * Handles title variations: Roman numerals (I vs 1), abbreviations (Sr. vs Senior)
+ *
+ * Supports multiple data formats:
+ * - Primary format: title, company_name, locations[]
+ * - Legacy format: job_title, employer_name, job_city
  */
 function generateEnhancedId(job) {
-    let title = (job.job_title || '').toLowerCase().trim();
+    // Support both primary and legacy data formats
+    let title = (job.title || job.job_title || '').toLowerCase().trim();
 
     // Normalize Roman numerals BEFORE replacing spaces (word boundary matching)
     title = title
@@ -42,8 +47,18 @@ function generateEnhancedId(job) {
         .replace(/\b&\b/g, 'and')
         .replace(/\s+/g, '-');        // Spaces to dashes
 
-    const company = (job.employer_name || '').toLowerCase().trim().replace(/\s+/g, '-');
-    const city = (job.job_city || '').toLowerCase().trim().replace(/\s+/g, '-');
+    // Support both formats for company name
+    const company = (job.company_name || job.employer_name || '').toLowerCase().trim().replace(/\s+/g, '-');
+
+    // Support both formats for location
+    // Primary: locations[] array, Legacy: job_city string
+    let city = '';
+    if (job.locations && Array.isArray(job.locations) && job.locations.length > 0) {
+        city = job.locations[0].toLowerCase().trim(); // Use first location
+    } else {
+        city = (job.job_city || '').toLowerCase().trim();
+    }
+    city = city.replace(/\s+/g, '-');
 
     // Remove special characters and normalize
     const normalize = (str) => str
@@ -61,12 +76,19 @@ function generateEnhancedId(job) {
  * Strategy: Hybrid approach
  * 1. Primary: Use job URL (most reliable, handles all title variations)
  * 2. Fallback: Enhanced normalization (Roman numerals, abbreviations)
+ *
+ * Supports multiple data formats:
+ * - Primary format: url field
+ * - Legacy format: job_apply_link field
  */
 function generateJobId(job) {
     // Primary method: URL-based ID (99%+ of jobs have URLs)
-    if (job.job_apply_link) {
+    // Support both primary (url) and legacy (job_apply_link) formats
+    const jobUrl = job.url || job.job_apply_link;
+
+    if (jobUrl) {
         try {
-            const urlObj = new URL(job.job_apply_link);
+            const urlObj = new URL(jobUrl);
             // Normalize: hostname + pathname (remove query params, trailing slashes)
             const normalized = urlObj.hostname + urlObj.pathname.replace(/\/$/, '');
             // Convert to safe ID format
