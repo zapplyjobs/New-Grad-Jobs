@@ -69,7 +69,7 @@ const postedJobsPath = path.join(dataDir, 'posted_jobs.json');
 const companies = JSON.parse(fs.readFileSync('./.github/scripts/job-fetcher/companies.json', 'utf8'));
 
 // Import job ID generation for consistency
-const { generateJobId } = require('./job-fetcher/utils');
+const { generateJobId, generateEnhancedId } = require('./job-fetcher/utils');
 
 /**
  * Normalize job object to handle multiple data formats
