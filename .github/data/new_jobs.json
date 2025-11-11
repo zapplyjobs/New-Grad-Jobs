@@ -1,5 +1,27 @@
 [
   {
+    "job_title": "Software Engineer - Entry Level-Java / C++ - Start Date",
+    "employer_name": "General Dynamics Mission Systems",
+    "job_city": "Manassas",
+    "job_state": "VA",
+    "job_description": "Join General Dynamics Mission Systems in this exciting opportunity.",
+    "job_apply_link": "https://careers-gdms.icims.com/jobs/69189/job?mobile=true&needsRedirect=false",
+    "job_posted_at_datetime_utc": "2025-11-11T00:25:44.000Z",
+    "job_employment_type": "FULLTIME",
+    "id": "careers-gdms-icims-com-jobs-69189-job"
+  },
+  {
+    "job_title": "Software Engineer 1",
+    "employer_name": "Mimecast",
+    "job_city": "Columbus",
+    "job_state": "OH",
+    "job_description": "Join Mimecast in this exciting opportunity.",
+    "job_apply_link": "https://mimecast.wd5.myworkdayjobs.com/Mimecast-Careers/job/United-States-of-America---Ohio---Columbus/Software-Engineer-I_R6082-1",
+    "job_posted_at_datetime_utc": "2025-11-11T00:15:37.000Z",
+    "job_employment_type": "FULLTIME",
+    "id": "mimecast-wd5-myworkdayjobs-com-mimecast-careers-job-united-states-of-america-ohio-columbus-software-engineer-i_r6082-1"
+  },
+  {
     "job_title": "Early Career Software Engineer",
     "employer_name": "Citizen Health",
     "job_city": "SF",
@@ -75,17 +97,6 @@
     "job_posted_at_datetime_utc": "2025-11-07T22:31:37.000Z",
     "job_employment_type": "FULLTIME",
     "id": "job-boards-greenhouse-io-newsbreak-jobs-4615879006"
-  },
-  {
-    "job_title": "Associate AI Engineer",
-    "employer_name": "AHEAD",
-    "job_city": "Chicago",
-    "job_state": "IL",
-    "job_description": "Join AHEAD in this exciting opportunity.",
-    "job_apply_link": "https://jobs.lever.co/thinkahead/ea0c65d1-dd6b-4f68-8abb-2bacebbd98a1",
-    "job_posted_at_datetime_utc": "2025-11-07T22:29:04.000Z",
-    "job_employment_type": "FULLTIME",
-    "id": "jobs-lever-co-thinkahead-ea0c65d1-dd6b-4f68-8abb-2bacebbd98a1"
   },
   {
     "job_title": "Software Engineer",
@@ -517,17 +528,6 @@
     "id": "pae-wd1-myworkdayjobs-com-en-us-amentum_careers-job-us-va-dahlgren-entry-level-software-engineer_r0148073"
   },
   {
-    "job_title": "Software Development Engineer",
-    "employer_name": "Adobe",
-    "job_city": "San Jose",
-    "job_state": "CA",
-    "job_description": "Join Adobe in this exciting opportunity.",
-    "job_apply_link": "https://careers.adobe.com/us/en/job/ADOBUSR158465EXTERNALENUS/Software-Development-Engineer",
-    "job_posted_at_datetime_utc": "2025-10-23T14:09:16.000Z",
-    "job_employment_type": "FULLTIME",
-    "id": "careers-adobe-com-us-en-job-adobusr158465externalenus-software-development-engineer"
-  },
-  {
     "job_title": "Growth Engineering - Mobile",
     "employer_name": "ElevenLabs",
     "job_city": "Remote Globally",
@@ -812,17 +812,6 @@
     "job_posted_at_datetime_utc": "2025-10-13T14:33:29.000Z",
     "job_employment_type": "FULLTIME",
     "id": "insulet-wd5-myworkdayjobs-com-en-us-insuletcareers-job-acton-massachusetts-associate-software-qa-engineer-hybrid-acton-ma-_req-2025-13185"
-  },
-  {
-    "job_title": "AI Context Engineer",
-    "employer_name": "Adobe",
-    "job_city": "San Jose",
-    "job_state": "CA",
-    "job_description": "Join Adobe in this exciting opportunity.",
-    "job_apply_link": "https://careers.adobe.com/us/en/job/ADOBUSR158639EXTERNALENUS/2026-University-Graduate-AI-Context-Engineer",
-    "job_posted_at_datetime_utc": "2025-10-13T13:42:46.000Z",
-    "job_employment_type": "FULLTIME",
-    "id": "careers-adobe-com-us-en-job-adobusr158639externalenus-2026-university-graduate-ai-context-engineer"
   },
   {
     "job_title": "Early Career Analyst - Gen AI - Data Engineering",
@@ -1826,17 +1815,6 @@
     "id": "jobs-lever-co-valkyrietrading-b9907031-0625-49f9-9fbe-7b5618e3640c-apply"
   },
   {
-    "job_title": "Software Engineer – 2026 New Grad",
-    "employer_name": "WhatNot",
-    "job_city": "SF",
-    "job_state": "Locations",
-    "job_description": "Join WhatNot in this exciting opportunity.",
-    "job_apply_link": "https://jobs.ashbyhq.com/whatnot/bc8f8c7f-2c4c-4f43-a238-953568c101b8/application",
-    "job_posted_at_datetime_utc": "2025-09-04T22:12:52.000Z",
-    "job_employment_type": "FULLTIME",
-    "id": "jobs-ashbyhq-com-whatnot-bc8f8c7f-2c4c-4f43-a238-953568c101b8-application"
-  },
-  {
     "job_title": "Founding Full Stack Engineer",
     "employer_name": "OffDeal",
     "job_city": "NYC",
@@ -1903,17 +1881,6 @@
     "id": "tmobile-wd1-myworkdayjobs-com-en-us-external-job-bellevue-washington-associate-ai-engineer_req329843-1"
   },
   {
-    "job_title": "Technology Development Program (TECDP) - Artificial Intelligence",
-    "employer_name": "The Cigna Group",
-    "job_city": "St. Louis",
-    "job_state": "MO",
-    "job_description": "Join The Cigna Group in this exciting opportunity.",
-    "job_apply_link": "https://cigna.wd5.myworkdayjobs.com/en-US/cignacareers/job/St-Louis-MO/Technology-Development-Program--TECDP-----Artificial-Intelligence-Track---Start-Date--July-13--2026_25011433",
-    "job_posted_at_datetime_utc": "2025-09-04T08:49:30.000Z",
-    "job_employment_type": "FULLTIME",
-    "id": "cigna-wd5-myworkdayjobs-com-en-us-cignacareers-job-st-louis-mo-technology-development-program-tecdp-artificial-intelligence-track-start-date-july-13-2026_25011433"
-  },
-  {
     "job_title": "Software Engineer",
     "employer_name": "Stripe",
     "job_city": "San Francisco",
@@ -1923,17 +1890,6 @@
     "job_posted_at_datetime_utc": "2025-09-04T08:40:26.000Z",
     "job_employment_type": "FULLTIME",
     "id": "stripe-com-jobs-listing-software-engineer-new-grad-7210112"
-  },
-  {
-    "job_title": "US Engineering Graduate Program",
-    "employer_name": "2K",
-    "job_city": "Novato",
-    "job_state": "CA",
-    "job_description": "Join 2K in this exciting opportunity.",
-    "job_apply_link": "https://job-boards.greenhouse.io/2k/jobs/6688546003",
-    "job_posted_at_datetime_utc": "2025-09-04T08:33:43.000Z",
-    "job_employment_type": "FULLTIME",
-    "id": "job-boards-greenhouse-io-2k-jobs-6688546003"
   },
   {
     "job_title": "Software Engineer New Grad - Msc/Bsc: AI - Core - Apps",
@@ -1947,17 +1903,6 @@
     "id": "apply-workable-com-eluvio-j-a349a0d2af-apply"
   },
   {
-    "job_title": "Agent Software Engineer – New Grad - 2026 Start",
-    "employer_name": "Decagon",
-    "job_city": "SF",
-    "job_state": "Locations",
-    "job_description": "Join Decagon in this exciting opportunity.",
-    "job_apply_link": "https://jobs.ashbyhq.com/decagon/2a435dd5-1212-42bb-ae5a-d7432902acd2/application",
-    "job_posted_at_datetime_utc": "2025-09-03T23:50:31.000Z",
-    "job_employment_type": "FULLTIME",
-    "id": "jobs-ashbyhq-com-decagon-2a435dd5-1212-42bb-ae5a-d7432902acd2-application"
-  },
-  {
     "job_title": "Software Engineer – University Grad",
     "employer_name": "Glean",
     "job_city": "Palo Alto",
@@ -1967,28 +1912,6 @@
     "job_posted_at_datetime_utc": "2025-09-03T23:30:11.000Z",
     "job_employment_type": "FULLTIME",
     "id": "job-boards-greenhouse-io-gleanwork-jobs-4592324005"
-  },
-  {
-    "job_title": "Product Engineer - Entry Level",
-    "employer_name": "Dover",
-    "job_city": "Allerton",
-    "job_state": "IA",
-    "job_description": "Join Dover in this exciting opportunity.",
-    "job_apply_link": "https://careers.dovercorporation.com/job/Keosauqua-Product-Engineer-IA-52565/1243842701/?ats=successfactors",
-    "job_posted_at_datetime_utc": "2025-09-03T23:01:54.000Z",
-    "job_employment_type": "FULLTIME",
-    "id": "careers-dovercorporation-com-job-keosauqua-product-engineer-ia-52565-1243842701"
-  },
-  {
-    "job_title": "Software Engineer I",
-    "employer_name": "Jerry",
-    "job_city": "San Francisco",
-    "job_state": "CA",
-    "job_description": "Join Jerry in this exciting opportunity.",
-    "job_apply_link": "https://jobs.ashbyhq.com/jerry.ai/88345c93-ae5e-416b-af29-69d8ea6fde78",
-    "job_posted_at_datetime_utc": "2025-09-03T13:26:42.000Z",
-    "job_employment_type": "FULLTIME",
-    "id": "jobs-ashbyhq-com-jerry-ai-88345c93-ae5e-416b-af29-69d8ea6fde78"
   },
   {
     "job_title": "Software Engineer",
@@ -2022,17 +1945,6 @@
     "job_posted_at_datetime_utc": "2025-09-03T03:55:08.000Z",
     "job_employment_type": "FULLTIME",
     "id": "stripe-com-jobs-search"
-  },
-  {
-    "job_title": "Software Engineer I - Salesforce",
-    "employer_name": "The Travelers Companies",
-    "job_city": "Sparks",
-    "job_state": "MD",
-    "job_description": "Join The Travelers Companies in this exciting opportunity.",
-    "job_apply_link": "https://travelers.wd5.myworkdayjobs.com/External/job/GA---Atlanta/Software-Engineer-I--Salesforce-_R-46480",
-    "job_posted_at_datetime_utc": "2025-09-03T01:46:39.000Z",
-    "job_employment_type": "FULLTIME",
-    "id": "travelers-wd5-myworkdayjobs-com-external-job-ga-atlanta-software-engineer-i-salesforce-_r-46480"
   },
   {
     "job_title": "Software Engineer",
@@ -2090,28 +2002,6 @@
     "id": "www-databricks-com-company-careers-university-recruiting-software-engineer-new-grad-2026-start-6865698002"
   },
   {
-    "job_title": "Software Engineer – New Grad - Agent",
-    "employer_name": "Sierra",
-    "job_city": "SF",
-    "job_state": "Locations",
-    "job_description": "Join Sierra in this exciting opportunity.",
-    "job_apply_link": "https://jobs.ashbyhq.com/Sierra/6a75b530-b7bb-4439-bb67-37b4f2b75b96/application",
-    "job_posted_at_datetime_utc": "2025-09-01T22:39:05.000Z",
-    "job_employment_type": "FULLTIME",
-    "id": "jobs-ashbyhq-com-sierra-6a75b530-b7bb-4439-bb67-37b4f2b75b96-application"
-  },
-  {
-    "job_title": "Machine Learning Engineer – New Grad",
-    "employer_name": "Netic",
-    "job_city": "SF",
-    "job_state": "Locations",
-    "job_description": "Join Netic in this exciting opportunity.",
-    "job_apply_link": "https://jobs.ashbyhq.com/netic/f645d611-ae5f-40cc-bfa8-613286060a76/application",
-    "job_posted_at_datetime_utc": "2025-08-31T22:07:51.000Z",
-    "job_employment_type": "FULLTIME",
-    "id": "jobs-ashbyhq-com-netic-f645d611-ae5f-40cc-bfa8-613286060a76-application"
-  },
-  {
     "job_title": "Associate Software Development Engineer",
     "employer_name": "CVS Health",
     "job_city": "Hartford",
@@ -2154,17 +2044,6 @@
     "job_posted_at_datetime_utc": "2025-08-29T16:42:06.000Z",
     "job_employment_type": "FULLTIME",
     "id": "careers-oracle-com-en-sites-jobsearch-job-305993"
-  },
-  {
-    "job_title": "System Dev Engineer I, Analytics ADC",
-    "employer_name": "Amazon",
-    "job_city": "Denver",
-    "job_state": "CO",
-    "job_description": "Join Amazon in this exciting opportunity.",
-    "job_apply_link": "https://www.amazon.jobs/en/jobs/3066890/system-dev-engineer-i-analytics-adc",
-    "job_posted_at_datetime_utc": "2025-08-28T20:46:40.000Z",
-    "job_employment_type": "FULLTIME",
-    "id": "www-amazon-jobs-en-jobs-3066890-system-dev-engineer-i-analytics-adc"
   },
   {
     "job_title": "GPU Architecture Engineer",
@@ -2222,17 +2101,6 @@
     "id": "www-tesla-com-careers-search-job-248966"
   },
   {
-    "job_title": "Machine Learning Graduate (eCommerce User Growth & Intelligent Marketing)",
-    "employer_name": "ByteDance",
-    "job_city": "San Jose",
-    "job_state": "CA",
-    "job_description": "Join ByteDance in this exciting opportunity.",
-    "job_apply_link": "https://joinbytedance.com/search/7542657938525538578",
-    "job_posted_at_datetime_utc": "2025-08-28T20:38:16.000Z",
-    "job_employment_type": "FULLTIME",
-    "id": "joinbytedance-com-search-7542657938525538578"
-  },
-  {
     "job_title": "Software Engineer Graduate (AI Applications)",
     "employer_name": "ByteDance",
     "job_city": "San Jose",
@@ -2264,17 +2132,6 @@
     "job_posted_at_datetime_utc": "2025-08-28T07:51:49.000Z",
     "job_employment_type": "FULLTIME",
     "id": "abbott-wd5-myworkdayjobs-com-en-us-abbottcareers-job-united-states-california-sylmar-software-quality-engineer-i_31128083-1"
-  },
-  {
-    "job_title": "Security Software Engineer I",
-    "employer_name": "Aurora",
-    "job_city": "Mountain View",
-    "job_state": "CA",
-    "job_description": "Join Aurora in this exciting opportunity.",
-    "job_apply_link": "https://aurora.tech/careers/8137861002",
-    "job_posted_at_datetime_utc": "2025-08-28T07:49:32.000Z",
-    "job_employment_type": "FULLTIME",
-    "id": "aurora-tech-careers-8137861002"
   },
   {
     "job_title": "Software Engineer, TensorRT Specialized Platforms",
@@ -2310,17 +2167,6 @@
     "id": "www-samsara-com-company-careers-roles-7172579"
   },
   {
-    "job_title": "Full Stack Engineering",
-    "employer_name": "Abridge",
-    "job_city": "San Francisco",
-    "job_state": "CA",
-    "job_description": "Join Abridge in this exciting opportunity.",
-    "job_apply_link": "https://jobs.ashbyhq.com/abridge/55958eb5-109f-4e88-9793-ed2327fc753a",
-    "job_posted_at_datetime_utc": "2025-08-27T14:17:45.000Z",
-    "job_employment_type": "FULLTIME",
-    "id": "jobs-ashbyhq-com-abridge-55958eb5-109f-4e88-9793-ed2327fc753a"
-  },
-  {
     "job_title": "Software Engineer",
     "employer_name": "Cape",
     "job_city": "New York",
@@ -2341,17 +2187,6 @@
     "job_posted_at_datetime_utc": "2025-08-27T14:13:26.000Z",
     "job_employment_type": "FULLTIME",
     "id": "fmr-wd1-myworkdayjobs-com-en-us-fidelitycareers-job-westlake-tx-xmlname-2026-undergraduate-leap-software-engineer_2116586-1"
-  },
-  {
-    "job_title": "Computer Vision & Machine Learning, Junior",
-    "employer_name": "Allen Control Systems",
-    "job_city": "Austin",
-    "job_state": "TX",
-    "job_description": "Join Allen Control Systems in this exciting opportunity.",
-    "job_apply_link": "https://job-boards.greenhouse.io/allencontrolsystems/jobs/4685229008",
-    "job_posted_at_datetime_utc": "2025-08-27T14:12:05.000Z",
-    "job_employment_type": "FULLTIME",
-    "id": "job-boards-greenhouse-io-allencontrolsystems-jobs-4685229008"
   },
   {
     "job_title": "Software Developer",
@@ -2409,17 +2244,6 @@
     "id": "adobe-wd5-myworkdayjobs-com-external_experienced-job-san-jose-xmlname-2026-university-graduate-machine-learning-engineer_r158682"
   },
   {
-    "job_title": "Full Stack Engineer - New Grad - Product Engineering - Typescript - React - Next.js",
-    "employer_name": "Abridge",
-    "job_city": "SF",
-    "job_state": "Locations",
-    "job_description": "Join Abridge in this exciting opportunity.",
-    "job_apply_link": "https://jobs.ashbyhq.com/abridge/55958eb5-109f-4e88-9793-ed2327fc753a/application",
-    "job_posted_at_datetime_utc": "2025-08-25T23:49:05.000Z",
-    "job_employment_type": "FULLTIME",
-    "id": "jobs-ashbyhq-com-abridge-55958eb5-109f-4e88-9793-ed2327fc753a-application"
-  },
-  {
     "job_title": "2026 University Graduate - Software Engineer",
     "employer_name": "Adobe",
     "job_city": "Seattle",
@@ -2429,17 +2253,6 @@
     "job_posted_at_datetime_utc": "2025-08-25T23:47:19.000Z",
     "job_employment_type": "FULLTIME",
     "id": "adobe-wd5-myworkdayjobs-com-external_experienced-job-san-jose-xmlname-2026-university-graduate-software-engineer_r158684"
-  },
-  {
-    "job_title": "Software Development Engineer I",
-    "employer_name": "GM financial",
-    "job_city": "Arlington",
-    "job_state": "TX",
-    "job_description": "Join GM financial in this exciting opportunity.",
-    "job_apply_link": "https://fa-exvu-saasfaprod1.fa.ocs.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_1/jobs/job/557",
-    "job_posted_at_datetime_utc": "2025-08-25T22:18:30.000Z",
-    "job_employment_type": "FULLTIME",
-    "id": "fa-exvu-saasfaprod1-fa-ocs-oraclecloud-com-hcmui-candidateexperience-en-sites-cx_1-jobs-job-557"
   },
   {
     "job_title": "Associate Software Engineer",
@@ -2497,39 +2310,6 @@
     "id": "www-ixl-com-company-careers"
   },
   {
-    "job_title": "Software Engineer I",
-    "employer_name": "interface.ai",
-    "job_city": "San Jose",
-    "job_state": "CA",
-    "job_description": "Join interface.ai in this exciting opportunity.",
-    "job_apply_link": "https://job-boards.greenhouse.io/interfaceai/jobs/4571115006",
-    "job_posted_at_datetime_utc": "2025-08-22T13:04:44.000Z",
-    "job_employment_type": "FULLTIME",
-    "id": "job-boards-greenhouse-io-interfaceai-jobs-4571115006"
-  },
-  {
-    "job_title": "Data Scientist I",
-    "employer_name": "GEICO",
-    "job_city": "Chevy Chase",
-    "job_state": "MD",
-    "job_description": "Join GEICO in this exciting opportunity.",
-    "job_apply_link": "https://geico.wd1.myworkdayjobs.com/en-US/External/job/Chevy-Chase-MD/Data-Scientist-I_R0059612",
-    "job_posted_at_datetime_utc": "2025-08-22T13:01:23.000Z",
-    "job_employment_type": "FULLTIME",
-    "id": "geico-wd1-myworkdayjobs-com-en-us-external-job-chevy-chase-md-data-scientist-i_r0059612"
-  },
-  {
-    "job_title": "Data Science Graduate",
-    "employer_name": "Hewlett Packard Enterprise",
-    "job_city": "Spring",
-    "job_state": "TX",
-    "job_description": "Join Hewlett Packard Enterprise in this exciting opportunity.",
-    "job_apply_link": "https://hpe.wd5.myworkdayjobs.com/en-US/acjobsite/job/Spring-Texas-United-States-of-America/Data-Science-Graduate_1192963",
-    "job_posted_at_datetime_utc": "2025-08-22T13:00:04.000Z",
-    "job_employment_type": "FULLTIME",
-    "id": "hpe-wd5-myworkdayjobs-com-en-us-acjobsite-job-spring-texas-united-states-of-america-data-science-graduate_1192963"
-  },
-  {
     "job_title": "Software Engineer, Communications Platform",
     "employer_name": "Tesla",
     "job_city": "Fremont",
@@ -2550,50 +2330,6 @@
     "job_posted_at_datetime_utc": "2025-08-21T13:51:22.000Z",
     "job_employment_type": "FULLTIME",
     "id": "careers-cellularsales-icims-com-jobs-19001-junior-data-engineer-job"
-  },
-  {
-    "job_title": "Data Scientist III",
-    "employer_name": "Walmart",
-    "job_city": "Sunnyvale",
-    "job_state": "CA",
-    "job_description": "Join Walmart in this exciting opportunity.",
-    "job_apply_link": "https://walmart.wd5.myworkdayjobs.com/en-US/WalmartExternal/job/Sunnyvale-CA/XMLNAME-2025-Intern-Conversion--2026-FT-Data-Scientist-III---Sunnyvale--CA_R-2251073",
-    "job_posted_at_datetime_utc": "2025-08-21T13:48:57.000Z",
-    "job_employment_type": "FULLTIME",
-    "id": "walmart-wd5-myworkdayjobs-com-en-us-walmartexternal-job-sunnyvale-ca-xmlname-2025-intern-conversion-2026-ft-data-scientist-iii-sunnyvale-ca_r-2251073"
-  },
-  {
-    "job_title": "Software Engineer, Test & Infrastructure I",
-    "employer_name": "Vail",
-    "job_city": "Chicago",
-    "job_state": "IL",
-    "job_description": "Join Vail in this exciting opportunity.",
-    "job_apply_link": "https://jobs.lever.co/vailsys/aac4a828-c88d-4bc1-bf94-324e7ba4ddc9",
-    "job_posted_at_datetime_utc": "2025-08-21T13:42:44.000Z",
-    "job_employment_type": "FULLTIME",
-    "id": "jobs-lever-co-vailsys-aac4a828-c88d-4bc1-bf94-324e7ba4ddc9"
-  },
-  {
-    "job_title": "Software Engineer – New Grad",
-    "employer_name": "Applied Intuition",
-    "job_city": "Ann Arbor",
-    "job_state": "MI",
-    "job_description": "Join Applied Intuition in this exciting opportunity.",
-    "job_apply_link": "https://boards.greenhouse.io/appliedintuition/jobs/4600028005",
-    "job_posted_at_datetime_utc": "2025-08-21T01:42:33.000Z",
-    "job_employment_type": "FULLTIME",
-    "id": "boards-greenhouse-io-appliedintuition-jobs-4600028005"
-  },
-  {
-    "job_title": "Software Engineer – New Grad",
-    "employer_name": "Applied Intuition",
-    "job_city": "Washington",
-    "job_state": "DC",
-    "job_description": "Join Applied Intuition in this exciting opportunity.",
-    "job_apply_link": "https://boards.greenhouse.io/appliedintuition/jobs/4600029005",
-    "job_posted_at_datetime_utc": "2025-08-21T01:42:20.000Z",
-    "job_employment_type": "FULLTIME",
-    "id": "boards-greenhouse-io-appliedintuition-jobs-4600029005"
   },
   {
     "job_title": "Software Engineer",
@@ -2618,17 +2354,6 @@
     "id": "careers-oracle-com-en-sites-jobsearch-job-305127"
   },
   {
-    "job_title": "Software Engineer I",
-    "employer_name": "Jerry",
-    "job_city": "San Francisco",
-    "job_state": "CA",
-    "job_description": "Join Jerry in this exciting opportunity.",
-    "job_apply_link": "https://jobs.ashbyhq.com/jerry.ai/5ce23dea-de2e-4c6d-9556-3c5314d721f7",
-    "job_posted_at_datetime_utc": "2025-08-20T08:58:55.000Z",
-    "job_employment_type": "FULLTIME",
-    "id": "jobs-ashbyhq-com-jerry-ai-5ce23dea-de2e-4c6d-9556-3c5314d721f7"
-  },
-  {
     "job_title": "Software Engineer, Notifications Platform",
     "employer_name": "Whatnot",
     "job_city": "San Francisco",
@@ -2649,17 +2374,6 @@
     "job_posted_at_datetime_utc": "2025-08-20T08:54:45.000Z",
     "job_employment_type": "FULLTIME",
     "id": "nvidia-wd5-myworkdayjobs-com-en-us-nvidiaexternalcareersite-job-us-ca-santa-clara-deep-learning-software-engineer-flashinfer-new-college-grad-2025_jr2002086"
-  },
-  {
-    "job_title": "Machine Learning Researcher",
-    "employer_name": "Citadel Securities",
-    "job_city": "Miami",
-    "job_state": "FL",
-    "job_description": "Join Citadel Securities in this exciting opportunity.",
-    "job_apply_link": "https://www.citadelsecurities.com/careers/details/machine-learning-researcher-phd-graduate-us/",
-    "job_posted_at_datetime_utc": "2025-08-20T08:50:25.000Z",
-    "job_employment_type": "FULLTIME",
-    "id": "www-citadelsecurities-com-careers-details-machine-learning-researcher-phd-graduate-us"
   },
   {
     "job_title": "Software Engineer Graduate (Video-on-Demand Algorithm)",
@@ -2860,50 +2574,6 @@
     "id": "globalfoundries-wd1-myworkdayjobs-com-en-us-external-job-usa-vermont-essex-junction-manufacturing-software-engineer-test-program-applications-automation-2026-new-college-graduate_jr-2502329"
   },
   {
-    "job_title": "Junior Software Developer",
-    "employer_name": "qode.world",
-    "job_city": "New Jersey",
-    "job_state": "NJ",
-    "job_description": "Join qode.world in this exciting opportunity.",
-    "job_apply_link": "https://apply.workable.com/qodeworld/j/5718A36818/",
-    "job_posted_at_datetime_utc": "2025-08-17T08:17:18.000Z",
-    "job_employment_type": "FULLTIME",
-    "id": "apply-workable-com-qodeworld-j-5718a36818"
-  },
-  {
-    "job_title": "Junior Computational Linguist",
-    "employer_name": "Harris",
-    "job_city": "VA",
-    "job_state": "Locations",
-    "job_description": "Join Harris in this exciting opportunity.",
-    "job_apply_link": "https://harriscomputer.wd3.myworkdayjobs.com/en-US/1/job/Virginia-United-States/Junior-Computational-Linguist_R0031051-4",
-    "job_posted_at_datetime_utc": "2025-08-17T08:11:39.000Z",
-    "job_employment_type": "FULLTIME",
-    "id": "harriscomputer-wd3-myworkdayjobs-com-en-us-1-job-virginia-united-states-junior-computational-linguist_r0031051-4"
-  },
-  {
-    "job_title": "ITSM IT Security Engineer I",
-    "employer_name": "Prosidian Consulting",
-    "job_city": "Boulder",
-    "job_state": "CO",
-    "job_description": "Join Prosidian Consulting in this exciting opportunity.",
-    "job_apply_link": "https://jobs.smartrecruiters.com/prosidianconsulting/743999691983726",
-    "job_posted_at_datetime_utc": "2025-08-15T22:57:03.000Z",
-    "job_employment_type": "FULLTIME",
-    "id": "jobs-smartrecruiters-com-prosidianconsulting-743999691983726"
-  },
-  {
-    "job_title": "ITSM IT Security Engineer I",
-    "employer_name": "Prosidian Consulting",
-    "job_city": "Seattle",
-    "job_state": "WA",
-    "job_description": "Join Prosidian Consulting in this exciting opportunity.",
-    "job_apply_link": "https://jobs.smartrecruiters.com/prosidianconsulting/743999692267870",
-    "job_posted_at_datetime_utc": "2025-08-15T22:51:04.000Z",
-    "job_employment_type": "FULLTIME",
-    "id": "jobs-smartrecruiters-com-prosidianconsulting-743999692267870"
-  },
-  {
     "job_title": "Early Career Software Engineer",
     "employer_name": "Anduril",
     "job_city": "Washington",
@@ -2913,28 +2583,6 @@
     "job_posted_at_datetime_utc": "2025-08-15T22:44:46.000Z",
     "job_employment_type": "FULLTIME",
     "id": "boards-greenhouse-io-andurilindustries-jobs-4824369007"
-  },
-  {
-    "job_title": "Software Engineer I - AWS/Node/React/AI",
-    "employer_name": "The Travelers Companies",
-    "job_city": "Atlanta",
-    "job_state": "GA",
-    "job_description": "Join The Travelers Companies in this exciting opportunity.",
-    "job_apply_link": "https://travelers.wd5.myworkdayjobs.com/External/job/GA---Atlanta/Software-Engineer-I--AWS-Node-React-AI-_R-46114",
-    "job_posted_at_datetime_utc": "2025-08-15T22:12:01.000Z",
-    "job_employment_type": "FULLTIME",
-    "id": "travelers-wd5-myworkdayjobs-com-external-job-ga-atlanta-software-engineer-i-aws-node-react-ai-_r-46114"
-  },
-  {
-    "job_title": "Software Engineer I - AWS/Node/React/AI",
-    "employer_name": "The Travelers Companies",
-    "job_city": "Hartford",
-    "job_state": "CT",
-    "job_description": "Join The Travelers Companies in this exciting opportunity.",
-    "job_apply_link": "https://travelers.wd5.myworkdayjobs.com/External/job/CT---Hartford/Software-Engineer-I--AWS-Node-React-AI-_R-46121",
-    "job_posted_at_datetime_utc": "2025-08-15T22:12:00.000Z",
-    "job_employment_type": "FULLTIME",
-    "id": "travelers-wd5-myworkdayjobs-com-external-job-ct-hartford-software-engineer-i-aws-node-react-ai-_r-46121"
   },
   {
     "job_title": "Software Engineer – Early Career",
@@ -2959,17 +2607,6 @@
     "id": "boards-greenhouse-io-andurilindustries-jobs-4824362007"
   },
   {
-    "job_title": "Software Engineer I - Engineering - Development",
-    "employer_name": "Boston Scientific",
-    "job_city": "Houston",
-    "job_state": "TX",
-    "job_description": "Join Boston Scientific in this exciting opportunity.",
-    "job_apply_link": "https://bostonscientific.eightfold.ai/careers/job/563602803142943",
-    "job_posted_at_datetime_utc": "2025-08-15T19:27:38.000Z",
-    "job_employment_type": "FULLTIME",
-    "id": "bostonscientific-eightfold-ai-careers-job-563602803142943"
-  },
-  {
     "job_title": "Software Engineer 1",
     "employer_name": "Choice Hotels",
     "job_city": "Scottsdale",
@@ -2979,17 +2616,6 @@
     "job_posted_at_datetime_utc": "2025-08-15T08:53:23.000Z",
     "job_employment_type": "FULLTIME",
     "id": "choicehotels-wd5-myworkdayjobs-com-en-us-external-job-scottsdale-az-technology-digital-commerce-center-software-engineer-1_r20319"
-  },
-  {
-    "job_title": "Software Engineer I",
-    "employer_name": "Disney",
-    "job_city": "Seattle",
-    "job_state": "WA",
-    "job_description": "Join Disney in this exciting opportunity.",
-    "job_apply_link": "https://disney.wd5.myworkdayjobs.com/en-US/disneycareer/job/Seattle-WA-USA/Software-Engineer-I_10125661",
-    "job_posted_at_datetime_utc": "2025-08-15T08:48:49.000Z",
-    "job_employment_type": "FULLTIME",
-    "id": "disney-wd5-myworkdayjobs-com-en-us-disneycareer-job-seattle-wa-usa-software-engineer-i_10125661"
   },
   {
     "job_title": "Entry Level Software Engineer",
@@ -3034,39 +2660,6 @@
     "job_posted_at_datetime_utc": "2025-08-15T07:42:05.000Z",
     "job_employment_type": "FULLTIME",
     "id": "boeing-wd1-myworkdayjobs-com-en-us-external_careers-job-usa-berkeley-mo-entry-level-flight-simulation-software-engineer_jr2025454088"
-  },
-  {
-    "job_title": "Software Engineer I",
-    "employer_name": "Jerry",
-    "job_city": "San Francisco",
-    "job_state": "CA",
-    "job_description": "Join Jerry in this exciting opportunity.",
-    "job_apply_link": "https://jobs.ashbyhq.com/jerry.ai/a08b2b5b-5bed-4b71-b925-800670b21fd5",
-    "job_posted_at_datetime_utc": "2025-08-15T07:40:38.000Z",
-    "job_employment_type": "FULLTIME",
-    "id": "jobs-ashbyhq-com-jerry-ai-a08b2b5b-5bed-4b71-b925-800670b21fd5"
-  },
-  {
-    "job_title": "Software Engineer I",
-    "employer_name": "KBR",
-    "job_city": "Colorado Springs",
-    "job_state": "CO",
-    "job_description": "Join KBR in this exciting opportunity.",
-    "job_apply_link": "https://kbr.wd5.myworkdayjobs.com/en-US/KBR_Careers/job/Colorado-Springs-Colorado/Software-Engineer-I_R2110482",
-    "job_posted_at_datetime_utc": "2025-08-15T07:38:02.000Z",
-    "job_employment_type": "FULLTIME",
-    "id": "kbr-wd5-myworkdayjobs-com-en-us-kbr_careers-job-colorado-springs-colorado-software-engineer-i_r2110482"
-  },
-  {
-    "job_title": "Software Engineer I - Embedded Devices",
-    "employer_name": "Zoll",
-    "job_city": "Chelmsford",
-    "job_state": "MA",
-    "job_description": "Join Zoll in this exciting opportunity.",
-    "job_apply_link": "https://zoll.wd5.myworkdayjobs.com/en-US/zollmedicalcorp/job/Chelmsford-MA/Software-Engineer-I---Embedded-Devices_R16418",
-    "job_posted_at_datetime_utc": "2025-08-15T07:33:27.000Z",
-    "job_employment_type": "FULLTIME",
-    "id": "zoll-wd5-myworkdayjobs-com-en-us-zollmedicalcorp-job-chelmsford-ma-software-engineer-i-embedded-devices_r16418"
   },
   {
     "job_title": "Machine Learning Engineer Graduate (Monetization Technology - TikTok Ads Creative & Ecosystem) - 2026 Start (BS/MS)",
@@ -3144,28 +2737,6 @@
     "job_posted_at_datetime_utc": "2025-08-15T07:17:18.000Z",
     "job_employment_type": "FULLTIME",
     "id": "joinbytedance-com-search-7535233571066349842"
-  },
-  {
-    "job_title": "Hiring Entry Level Software Engineer",
-    "employer_name": "AG Technologies",
-    "job_city": "Chesterfield",
-    "job_state": "MO",
-    "job_description": "Join AG Technologies in this exciting opportunity.",
-    "job_apply_link": "https://jobs.smartrecruiters.com/AGTechnologies1/112718194",
-    "job_posted_at_datetime_utc": "2025-08-14T18:06:38.000Z",
-    "job_employment_type": "FULLTIME",
-    "id": "jobs-smartrecruiters-com-agtechnologies1-112718194"
-  },
-  {
-    "job_title": "Hiring Entry Level Software Engineer",
-    "employer_name": "AG Technologies",
-    "job_city": "San Francisco",
-    "job_state": "CA",
-    "job_description": "Join AG Technologies in this exciting opportunity.",
-    "job_apply_link": "https://jobs.smartrecruiters.com/AGTechnologies1/113484514",
-    "job_posted_at_datetime_utc": "2025-08-14T18:05:45.000Z",
-    "job_employment_type": "FULLTIME",
-    "id": "jobs-smartrecruiters-com-agtechnologies1-113484514"
   },
   {
     "job_title": "Hiring Entry Level Software Engineer",
