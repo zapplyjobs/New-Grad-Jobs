@@ -277,8 +277,28 @@ async function processJobs() {
         const allJobs = await fetchAllJobs();
         const usJobs = allJobs.filter(isUSOnlyJob);
 
-        // Show ALL jobs (no time filter)
-        const currentJobs = usJobs;
+        // Filter for jobs posted between 24 hours and 90 days ago
+        // Lower bound (24h): Avoids duplicate entries from data source that get cleaned up within hours
+        // Upper bound (90 days): Excludes stale jobs that are months old
+        // This ensures we post stable, recent, and relevant job listings
+        const ONE_DAY_AGO = Date.now() - (24 * 60 * 60 * 1000);
+        const NINETY_DAYS_AGO = Date.now() - (90 * 24 * 60 * 60 * 1000);
+        const currentJobs = usJobs.filter(job => {
+            const jobDate = new Date(job.date_posted || job.date_updated || 0);
+            const isOldEnough = jobDate.getTime() < ONE_DAY_AGO;
+            const isNotTooOld = jobDate.getTime() > NINETY_DAYS_AGO;
+
+            if (!isOldEnough) {
+                console.log(`⏰ Skipping recent job (posted ${Math.round((Date.now() - jobDate.getTime()) / (60 * 60 * 1000))}h ago): ${job.title || job.job_title} at ${job.company_name || job.employer_name}`);
+            } else if (!isNotTooOld) {
+                console.log(`📅 Skipping stale job (posted ${Math.round((Date.now() - jobDate.getTime()) / (24 * 60 * 60 * 1000))} days ago): ${job.title || job.job_title} at ${job.company_name || job.employer_name}`);
+            }
+
+            return isOldEnough && isNotTooOld;
+        });
+
+        console.log(`📅 Age filter: ${usJobs.length} total jobs → ${currentJobs.length} jobs (24h-90d window)`);
+
         currentJobs.forEach(job => {
             job.id = generateJobId(job);
         });
