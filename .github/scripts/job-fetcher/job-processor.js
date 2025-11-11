@@ -284,7 +284,7 @@ async function processJobs() {
         const ONE_DAY_AGO = Date.now() - (24 * 60 * 60 * 1000);
         const NINETY_DAYS_AGO = Date.now() - (90 * 24 * 60 * 60 * 1000);
         const currentJobs = usJobs.filter(job => {
-            const jobDate = new Date(job.date_posted || job.date_updated || 0);
+            const jobDate = new Date(job.date_posted || job.date_updated || job.job_posted_at_datetime_utc || 0);
             const isOldEnough = jobDate.getTime() < ONE_DAY_AGO;
             const isNotTooOld = jobDate.getTime() > NINETY_DAYS_AGO;
 
