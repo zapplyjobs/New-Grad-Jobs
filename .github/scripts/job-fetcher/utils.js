@@ -480,6 +480,7 @@ module.exports = {
     COMPANY_BY_NAME,
     delay,
     generateJobId,
+    generateEnhancedId,
     migrateOldJobId,
     normalizeCompanyName,
     getCompanyEmoji,
