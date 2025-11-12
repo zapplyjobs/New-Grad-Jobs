@@ -277,28 +277,23 @@ async function processJobs() {
         const allJobs = await fetchAllJobs();
         const usJobs = allJobs.filter(isUSOnlyJob);
 
-        // Filter for jobs posted within a specific time window
-        // Lower bound (48h): Avoids duplicate entries from data source that get cleaned up within hours
-        // Upper bound (configurable): Defaults to 48h for fresh jobs, can be extended for catch-up runs
+        // Filter for jobs posted within the last 48 hours (0-48h window)
+        // Configurable via JOB_MAX_AGE_HOURS environment variable
         const MAX_AGE_HOURS = parseInt(process.env.JOB_MAX_AGE_HOURS || '48', 10);
-        const TWO_DAYS_AGO = Date.now() - (48 * 60 * 60 * 1000);
         const MAX_AGE_THRESHOLD = Date.now() - (MAX_AGE_HOURS * 60 * 60 * 1000);
 
         const currentJobs = usJobs.filter(job => {
             const jobDate = new Date(job.date_posted || job.date_updated || job.job_posted_at_datetime_utc || 0);
-            const isOldEnough = jobDate.getTime() < TWO_DAYS_AGO;
-            const isNotTooOld = jobDate.getTime() > MAX_AGE_THRESHOLD;
+            const isWithinWindow = jobDate.getTime() > MAX_AGE_THRESHOLD;
 
-            if (!isOldEnough) {
-                console.log(`⏰ Skipping recent job (posted ${Math.round((Date.now() - jobDate.getTime()) / (60 * 60 * 1000))}h ago): ${job.title || job.job_title} at ${job.company_name || job.employer_name}`);
-            } else if (!isNotTooOld) {
+            if (!isWithinWindow) {
                 console.log(`📅 Skipping stale job (posted ${Math.round((Date.now() - jobDate.getTime()) / (60 * 60 * 1000))}h ago): ${job.title || job.job_title} at ${job.company_name || job.employer_name}`);
             }
 
-            return isOldEnough && isNotTooOld;
+            return isWithinWindow;
         });
 
-        console.log(`📅 Age filter: ${usJobs.length} total jobs → ${currentJobs.length} jobs (48h-${MAX_AGE_HOURS}h window)`);
+        console.log(`📅 Age filter: ${usJobs.length} total jobs → ${currentJobs.length} jobs (0-${MAX_AGE_HOURS}h window)`);
 
         currentJobs.forEach(job => {
             job.id = generateJobId(job);
