@@ -1,1 +1,57 @@
-[]
+[
+  {
+    "job_title": "2026 Full-time - Software Engineer I",
+    "employer_name": "RTX",
+    "job_city": "Fort Wayne",
+    "job_state": "IN",
+    "job_description": "Join RTX in this exciting opportunity.",
+    "job_apply_link": "https://globalhr.wd5.myworkdayjobs.com/rec_rtx_ext_gateway/job/IN301-1010-Production-Rd-Ft-Wayne-IN-1010-Production-Road---Fort-Wayne-IN-46808-USA/XMLNAME-2026-Full-time---Software-Engineer-I---Onsite--IN-_01805670",
+    "job_posted_at_datetime_utc": "2025-11-12T00:26:35.000Z",
+    "job_employment_type": "FULLTIME",
+    "id": "globalhr-wd5-myworkdayjobs-com-rec_rtx_ext_gateway-job-in301-1010-production-rd-ft-wayne-in-1010-production-road-fort-wayne-in-46808-usa-xmlname-2026-full-time-software-engineer-i-onsite-in-_01805670"
+  },
+  {
+    "job_title": "Java Software Engineer 1 - Java Software Engineer I",
+    "employer_name": "RTX",
+    "job_city": "State College",
+    "job_state": "PA",
+    "job_description": "Join RTX in this exciting opportunity.",
+    "job_apply_link": "https://globalhr.wd5.myworkdayjobs.com/rec_rtx_ext_gateway/job/PA602-302-Science-Park-Road-Bldg-5C-302-Science-Park-Road-Building-5C-State-College-PA-16803-2214-USA/XMLNAME-2026-Full-time---Java-Software-Engineer-I---Onsite--PA-_01803259",
+    "job_posted_at_datetime_utc": "2025-11-12T00:26:34.000Z",
+    "job_employment_type": "FULLTIME",
+    "id": "globalhr-wd5-myworkdayjobs-com-rec_rtx_ext_gateway-job-pa602-302-science-park-road-bldg-5c-302-science-park-road-building-5c-state-college-pa-16803-2214-usa-xmlname-2026-full-time-java-software-engineer-i-onsite-pa-_01803259"
+  },
+  {
+    "job_title": "Early Career Software Engineer",
+    "employer_name": "Citizen Health",
+    "job_city": "SF",
+    "job_state": "Locations",
+    "job_description": "Join Citizen Health in this exciting opportunity.",
+    "job_apply_link": "https://jobs.ashbyhq.com/Citizen%20Health/0f057477-c2c4-4b63-8862-2d3c82db32d7/application",
+    "job_posted_at_datetime_utc": "2025-11-12T00:25:03.000Z",
+    "job_employment_type": "FULLTIME",
+    "id": "jobs-ashbyhq-com-citizen-20health-0f057477-c2c4-4b63-8862-2d3c82db32d7-application"
+  },
+  {
+    "job_title": "Software Engineer New Grad",
+    "employer_name": "Benchling",
+    "job_city": "SF",
+    "job_state": "Locations",
+    "job_description": "Join Benchling in this exciting opportunity.",
+    "job_apply_link": "https://boards.greenhouse.io/benchling/jobs/7386982",
+    "job_posted_at_datetime_utc": "2025-11-12T00:07:18.000Z",
+    "job_employment_type": "FULLTIME",
+    "id": "boards-greenhouse-io-benchling-jobs-7386982"
+  },
+  {
+    "job_title": "Data Engineer I",
+    "employer_name": "Expedia Group",
+    "job_city": "Seattle",
+    "job_state": "WA",
+    "job_description": "Join Expedia Group in this exciting opportunity.",
+    "job_apply_link": "https://expedia.wd108.myworkdayjobs.com/en-US/search/job/Washington---Seattle-Campus/Data-Engineer-I_R-98969-2",
+    "job_posted_at_datetime_utc": "2025-11-11T15:36:17.000Z",
+    "job_employment_type": "FULLTIME",
+    "id": "expedia-wd108-myworkdayjobs-com-en-us-search-job-washington-seattle-campus-data-engineer-i_r-98969-2"
+  }
+]
