@@ -1,5 +1,27 @@
 [
   {
+    "job_title": "Software Engineer – Entry Level",
+    "employer_name": "General Dynamics Mission Systems",
+    "job_city": "Bridgewater",
+    "job_state": "MA",
+    "job_description": "Join General Dynamics Mission Systems in this exciting opportunity.",
+    "job_apply_link": "https://careers-gdms.icims.com/jobs/69252/job?mobile=true&needsRedirect=false",
+    "job_posted_at_datetime_utc": "2025-11-13T16:54:25.000Z",
+    "job_employment_type": "FULLTIME",
+    "id": "careers-gdms-icims-com-jobs-69252-job"
+  },
+  {
+    "job_title": "Software Engineer – Entry Level",
+    "employer_name": "General Dynamics Mission Systems",
+    "job_city": "Bremerton",
+    "job_state": "WA",
+    "job_description": "Join General Dynamics Mission Systems in this exciting opportunity.",
+    "job_apply_link": "https://careers-gdms.icims.com/jobs/69259/job?mobile=true&needsRedirect=false",
+    "job_posted_at_datetime_utc": "2025-11-13T16:54:25.000Z",
+    "job_employment_type": "FULLTIME",
+    "id": "careers-gdms-icims-com-jobs-69259-job"
+  },
+  {
     "job_title": "Early Career Software Engineer",
     "employer_name": "Citizen Health",
     "job_city": "SF",
