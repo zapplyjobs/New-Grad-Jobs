@@ -435,13 +435,6 @@
       "starred_at": "2025-10-17T12:22:44Z"
     },
     {
-      "login": "devrimyildiz",
-      "id": 204623156,
-      "avatar_url": "https://avatars.githubusercontent.com/u/204623156?v=4",
-      "html_url": "https://github.com/devrimyildiz",
-      "starred_at": "2025-10-17T16:15:17Z"
-    },
-    {
       "login": "hasanemir448-cloud",
       "id": 234798956,
       "avatar_url": "https://avatars.githubusercontent.com/u/234798956?v=4",
@@ -596,11 +589,11 @@
       "starred_at": "2025-11-10T18:38:45Z"
     }
   ],
-  "total_count": 85,
-  "last_updated": "2025-11-12T06:04:06.085Z",
+  "total_count": 84,
+  "last_updated": "2025-11-13T06:04:14.433Z",
   "stats": {
     "new_since_last_run": 0,
-    "removed_since_last_run": 0,
-    "net_change": 0
+    "removed_since_last_run": 1,
+    "net_change": -1
   }
 }
