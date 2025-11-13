@@ -1,25 +1,14 @@
 [
   {
-    "job_title": "Software Engineer, New Grad",
-    "employer_name": "Maybern",
-    "job_city": "New York",
-    "job_state": "NY",
-    "job_description": "Join Maybern in this exciting opportunity.",
-    "job_apply_link": "https://jobs.ashbyhq.com/maybern/90f7a0d4-4e6c-43e0-a444-06301faa4058",
-    "job_posted_at_datetime_utc": "2025-11-13T15:45:42.000Z",
+    "job_title": "Junior Software Engineer",
+    "employer_name": "CommonLit",
+    "job_city": "Remote in USA",
+    "job_state": "Locations",
+    "job_description": "Join CommonLit in this exciting opportunity.",
+    "job_apply_link": "https://jobs.lever.co/commonlit/7ecb41f7-552c-4879-afaf-b9810a9b6f56/",
+    "job_posted_at_datetime_utc": "2025-11-13T15:46:27.000Z",
     "job_employment_type": "FULLTIME",
-    "id": "jobs-ashbyhq-com-maybern-90f7a0d4-4e6c-43e0-a444-06301faa4058"
-  },
-  {
-    "job_title": "Associate Engineer Embedded Software",
-    "employer_name": "Rockwell Automation",
-    "job_city": "Mayfield Heights",
-    "job_state": "OH",
-    "job_description": "Join Rockwell Automation in this exciting opportunity.",
-    "job_apply_link": "https://rockwellautomation.wd1.myworkdayjobs.com/en-US/External_Rockwell_Automation/job/Mayfield-Heights-Ohio-United-States/Associate-Engineer-Embedded-Software_R25-8467",
-    "job_posted_at_datetime_utc": "2025-11-13T15:43:26.000Z",
-    "job_employment_type": "FULLTIME",
-    "id": "rockwellautomation-wd1-myworkdayjobs-com-en-us-external_rockwell_automation-job-mayfield-heights-ohio-united-states-associate-engineer-embedded-software_r25-8467"
+    "id": "jobs-lever-co-commonlit-7ecb41f7-552c-4879-afaf-b9810a9b6f56"
   },
   {
     "job_title": "Early Career Software Engineer",
