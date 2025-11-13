@@ -499,7 +499,13 @@ function getJobLocationChannel(job) {
     return LOCATION_CHANNEL_CONFIG['remote-usa'];
   }
 
-  // No location match - job won't be posted to location channels
+  // 6. Default fallback: All US jobs without specific location channels → remote-usa
+  // This ensures jobs from Phoenix, Denver, Miami, etc. still get posted somewhere
+  if (state || city) {
+    return LOCATION_CHANNEL_CONFIG['remote-usa'];
+  }
+
+  // No location data at all - skip location channels
   return null;
 }
 
