@@ -499,13 +499,17 @@ function getJobLocationChannel(job) {
     return LOCATION_CHANNEL_CONFIG['remote-usa'];
   }
 
-  // 6. Default fallback: All US jobs without specific location channels → remote-usa
+  // 6. Default fallback: US jobs without specific location channels → remote-usa
   // This ensures jobs from Phoenix, Denver, Miami, etc. still get posted somewhere
-  if (state || city) {
+  // Only apply to confirmed US states to avoid posting Canadian/international jobs
+  const usStates = ['al', 'ak', 'az', 'ar', 'ca', 'co', 'ct', 'de', 'fl', 'ga', 'hi', 'id', 'il', 'in', 'ia', 'ks', 'ky', 'la', 'me', 'md', 'ma', 'mi', 'mn', 'ms', 'mo', 'mt', 'ne', 'nv', 'nh', 'nj', 'nm', 'ny', 'nc', 'nd', 'oh', 'ok', 'or', 'pa', 'ri', 'sc', 'sd', 'tn', 'tx', 'ut', 'vt', 'va', 'wa', 'wv', 'wi', 'wy', 'dc',
+    'alabama', 'alaska', 'arizona', 'arkansas', 'california', 'colorado', 'connecticut', 'delaware', 'florida', 'georgia', 'hawaii', 'idaho', 'illinois', 'indiana', 'iowa', 'kansas', 'kentucky', 'louisiana', 'maine', 'maryland', 'massachusetts', 'michigan', 'minnesota', 'mississippi', 'missouri', 'montana', 'nebraska', 'nevada', 'new hampshire', 'new jersey', 'new mexico', 'new york', 'north carolina', 'north dakota', 'ohio', 'oklahoma', 'oregon', 'pennsylvania', 'rhode island', 'south carolina', 'south dakota', 'tennessee', 'texas', 'utah', 'vermont', 'virginia', 'washington', 'west virginia', 'wisconsin', 'wyoming', 'district of columbia'];
+
+  if (state && usStates.includes(state)) {
     return LOCATION_CHANNEL_CONFIG['remote-usa'];
   }
 
-  // No location data at all - skip location channels
+  // No US location match - skip location channels
   return null;
 }
 
