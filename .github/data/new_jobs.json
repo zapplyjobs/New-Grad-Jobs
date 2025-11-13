@@ -1,5 +1,16 @@
 [
   {
+    "job_title": "Software Engineer 1",
+    "employer_name": "American Express",
+    "job_city": "Phoenix",
+    "job_state": "AZ",
+    "job_description": "Join American Express in this exciting opportunity.",
+    "job_apply_link": "https://aexp.eightfold.ai/careers/job/38773050",
+    "job_posted_at_datetime_utc": "2025-11-13T17:37:31.000Z",
+    "job_employment_type": "FULLTIME",
+    "id": "aexp-eightfold-ai-careers-job-38773050"
+  },
+  {
     "job_title": "Early Career Software Engineer",
     "employer_name": "Citizen Health",
     "job_city": "SF",
