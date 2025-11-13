@@ -8,7 +8,9 @@
     "job_apply_link": "https://aexp.eightfold.ai/careers/job/38773050",
     "job_posted_at_datetime_utc": "2025-11-13T17:37:31.000Z",
     "job_employment_type": "FULLTIME",
-    "id": "aexp-eightfold-ai-careers-job-38773050"
+    "id": "aexp-eightfold-ai-careers-job-38773050",
+    "description_platform": "generic",
+    "description_success": false
   },
   {
     "job_title": "Early Career Software Engineer",
@@ -19,6 +21,8 @@
     "job_apply_link": "https://jobs.ashbyhq.com/Citizen%20Health/93499478-f9b9-4a46-968d-c025e4b65e3f/application",
     "job_posted_at_datetime_utc": "2025-11-12T23:59:50.000Z",
     "job_employment_type": "FULLTIME",
-    "id": "jobs-ashbyhq-com-citizen-20health-93499478-f9b9-4a46-968d-c025e4b65e3f-application"
+    "id": "jobs-ashbyhq-com-citizen-20health-93499478-f9b9-4a46-968d-c025e4b65e3f-application",
+    "description_platform": "ashby",
+    "description_success": false
   }
 ]
