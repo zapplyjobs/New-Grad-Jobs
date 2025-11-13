@@ -1,16 +1,5 @@
 [
   {
-    "job_title": "Engineer 1 - Full-Stack",
-    "employer_name": "Nordstrom",
-    "job_city": "Seattle",
-    "job_state": "WA",
-    "job_description": "Join Nordstrom in this exciting opportunity.",
-    "job_apply_link": "https://nordstrom.wd501.myworkdayjobs.com/nordstrom_careers/job/Seattle-WA/Engineer-1---Full-Stack--Store-Experience-Technology--Hybrid---Seattle--WA-_R-799099",
-    "job_posted_at_datetime_utc": "2025-11-13T00:15:23.000Z",
-    "job_employment_type": "FULLTIME",
-    "id": "nordstrom-wd501-myworkdayjobs-com-nordstrom_careers-job-seattle-wa-engineer-1-full-stack-store-experience-technology-hybrid-seattle-wa-_r-799099"
-  },
-  {
     "job_title": "Early Career Software Engineer",
     "employer_name": "Citizen Health",
     "job_city": "SF",
@@ -20,5 +9,16 @@
     "job_posted_at_datetime_utc": "2025-11-12T23:59:50.000Z",
     "job_employment_type": "FULLTIME",
     "id": "jobs-ashbyhq-com-citizen-20health-93499478-f9b9-4a46-968d-c025e4b65e3f-application"
+  },
+  {
+    "job_title": "Software Engineer 1",
+    "employer_name": "LexisNexis Risk Solutions",
+    "job_city": "Miamisburg",
+    "job_state": "OH",
+    "job_description": "Join LexisNexis Risk Solutions in this exciting opportunity.",
+    "job_apply_link": "https://relx.wd3.myworkdayjobs.com/en-US/RiskSolutions/job/Miamisburg-OH/Software-Engineer-I_R104044",
+    "job_posted_at_datetime_utc": "2025-11-12T23:43:05.000Z",
+    "job_employment_type": "FULLTIME",
+    "id": "relx-wd3-myworkdayjobs-com-en-us-risksolutions-job-miamisburg-oh-software-engineer-i_r104044"
   }
 ]
