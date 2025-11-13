@@ -1,4 +1,4 @@
-const { initBrowser, closeBrowser } = require("./baseScraper.js");
+const { initBrowser, closeBrowser } = require("./baseCollector.js");
 const { getCompanyConfig, getPaginationType } = require("../services/companyService.js");
 const { navigateToFirstPage } = require("../services/navigationService.js");
 const { extractJobData } = require("../services/extractionService.js");
