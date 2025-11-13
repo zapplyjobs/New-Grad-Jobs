@@ -1,14 +1,14 @@
 const fs = require('fs');
 const path = require('path');
 const { fetchAllJobs } = require('../unified-job-fetcher');
-const { 
-    companies, 
-    ALL_COMPANIES, 
-    COMPANY_BY_NAME, 
+const {
+    companies,
+    ALL_COMPANIES,
+    COMPANY_BY_NAME,
     generateJobId,
     migrateOldJobId,
-    normalizeCompanyName, 
-    getCompanyEmoji, 
+    normalizeCompanyName,
+    getCompanyEmoji,
     getCompanyCareerUrl,
     formatTimeAgo,
     isJobOlderThanWeek,
@@ -16,8 +16,11 @@ const {
     getExperienceLevel,
     getJobCategory,
     formatLocation,
-    delay 
+    delay
 } = require('./utils');
+
+// Description fetcher service
+const { fetchDescriptionsBatch } = require('../../../jobboard/src/backend/services/descriptionFetchers');
 
 // Generate company statistics with categories
 function generateCompanyStats(jobs) {
@@ -308,8 +311,37 @@ async function processJobs() {
             writeNewJobsJson([]);
         } else {
             console.log(`📬 Found ${freshJobs.length} new jobs to process`);
-            writeNewJobsJson(freshJobs);
-            updateSeenJobsStore(freshJobs, seenIds);
+
+            // Enrich jobs with descriptions before writing
+            console.log('\n📝 Fetching job descriptions...');
+            console.log('━'.repeat(60));
+
+            const jobsWithDescriptions = await fetchDescriptionsBatch(freshJobs, {
+                batchSize: 10,              // Process 10 jobs at a time
+                delayBetweenRequests: 1000  // 1 second delay between requests
+            });
+
+            // Log description fetching stats
+            const successCount = jobsWithDescriptions.filter(j => j.description_success).length;
+            const failCount = jobsWithDescriptions.length - successCount;
+            const successRate = ((successCount / jobsWithDescriptions.length) * 100).toFixed(1);
+
+            console.log('━'.repeat(60));
+            console.log(`✅ Description fetching complete:`);
+            console.log(`   Success: ${successCount}/${jobsWithDescriptions.length} (${successRate}%)`);
+            console.log(`   Failed: ${failCount}`);
+
+            // Breakdown by platform
+            const platformStats = {};
+            jobsWithDescriptions.forEach(j => {
+                const platform = j.description_platform || 'unknown';
+                platformStats[platform] = (platformStats[platform] || 0) + 1;
+            });
+            console.log(`   Platforms: ${Object.entries(platformStats).map(([p, c]) => `${p}(${c})`).join(', ')}`);
+            console.log('━'.repeat(60) + '\n');
+
+            writeNewJobsJson(jobsWithDescriptions);
+            updateSeenJobsStore(jobsWithDescriptions, seenIds);
         }
 
         // No archived jobs (showing all jobs as current)
