@@ -233,8 +233,9 @@ class PostedJobsManager {
         fs.mkdirSync(dataDir, { recursive: true });
       }
 
-      // Convert Set to sorted array and limit size to prevent infinite growth
-      let postedJobsArray = [...this.postedJobs].sort();
+      // Convert Set to array (preserves insertion order, newest last)
+      // DO NOT sort - sorting alphabetically causes newest jobs to be removed if they start with 'a'
+      let postedJobsArray = [...this.postedJobs];
       const maxEntries = 5000; // Keep last 5000 posted jobs
 
       console.log(`🔍 DEBUG: Before trimming - array has ${postedJobsArray.length} entries`);
@@ -242,12 +243,13 @@ class PostedJobsManager {
       let removedIds = [];
       if (postedJobsArray.length > maxEntries) {
         const originalLength = postedJobsArray.length;
+        // Remove oldest entries (beginning of array) to keep newest entries (end of array)
         const removed = postedJobsArray.slice(0, postedJobsArray.length - maxEntries);
         removedIds = removed;
         postedJobsArray = postedJobsArray.slice(-maxEntries);
         this.postedJobs = new Set(postedJobsArray);
         console.log(`🔍 DEBUG: Trimmed from ${originalLength} to ${postedJobsArray.length}`);
-        console.log(`🔍 DEBUG: Removed ${removed.length} oldest IDs: ${removed.slice(0, 3).join(', ')}${removed.length > 3 ? '...' : ''}`);
+        console.log(`🔍 DEBUG: Removed ${removed.length} oldest IDs (by insertion order): ${removed.slice(0, 3).join(', ')}${removed.length > 3 ? '...' : ''}`);
       }
 
       // Atomic write
