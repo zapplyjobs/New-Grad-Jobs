@@ -67,6 +67,9 @@
   },
   "overrides": {
     "nth-check": ">=2.0.1",
-    "typescript": "~4.9.5"
+    "typescript": "~4.9.5",
+    "js-yaml": ">=4.1.1",
+    "postcss": ">=8.4.31",
+    "webpack-dev-server": ">=5.2.1"
   }
 }
