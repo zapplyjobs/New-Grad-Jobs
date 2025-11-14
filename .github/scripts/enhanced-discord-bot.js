@@ -237,20 +237,44 @@ class PostedJobsManager {
       let postedJobsArray = [...this.postedJobs].sort();
       const maxEntries = 5000; // Keep last 5000 posted jobs
 
+      console.log(`🔍 DEBUG: Before trimming - array has ${postedJobsArray.length} entries`);
+
+      let removedIds = [];
       if (postedJobsArray.length > maxEntries) {
+        const originalLength = postedJobsArray.length;
+        const removed = postedJobsArray.slice(0, postedJobsArray.length - maxEntries);
+        removedIds = removed;
         postedJobsArray = postedJobsArray.slice(-maxEntries);
         this.postedJobs = new Set(postedJobsArray);
+        console.log(`🔍 DEBUG: Trimmed from ${originalLength} to ${postedJobsArray.length}`);
+        console.log(`🔍 DEBUG: Removed ${removed.length} oldest IDs: ${removed.slice(0, 3).join(', ')}${removed.length > 3 ? '...' : ''}`);
       }
 
       // Atomic write
       const tempPath = postedJobsPath + '.tmp';
-      fs.writeFileSync(tempPath, JSON.stringify(postedJobsArray, null, 2));
+
+      console.log(`🔍 DEBUG: Writing temp file to ${tempPath}`);
+      const jsonContent = JSON.stringify(postedJobsArray, null, 2);
+      fs.writeFileSync(tempPath, jsonContent);
+      console.log(`🔍 DEBUG: Temp file written (${jsonContent.length} bytes)`);
+
+      console.log(`🔍 DEBUG: Renaming ${tempPath} → ${postedJobsPath}`);
       fs.renameSync(tempPath, postedJobsPath);
+      console.log(`🔍 DEBUG: Rename complete`);
+
+      // Verify the write
+      if (fs.existsSync(postedJobsPath)) {
+        const stats = fs.statSync(postedJobsPath);
+        console.log(`🔍 DEBUG: Verified file exists, size: ${stats.size} bytes`);
+      } else {
+        console.error('❌ CRITICAL: File does not exist after write!');
+      }
 
       console.log(`💾 Saved ${postedJobsArray.length} posted job IDs to database`);
 
     } catch (error) {
       console.error('❌ CRITICAL: Error saving posted jobs:', error);
+      console.error('   Stack trace:', error.stack);
       console.error('   This will cause duplicate job postings!');
     }
   }
@@ -260,8 +284,11 @@ class PostedJobsManager {
   }
 
   markAsPosted(jobId) {
+    const sizeBefore = this.postedJobs.size;
     console.log(`  📝 Marking as posted: ${jobId.substring(0, 40)}${jobId.length > 40 ? '...' : ''}`);
+    console.log(`  🔍 DEBUG: Set size before add: ${sizeBefore}`);
     this.postedJobs.add(jobId);
+    console.log(`  🔍 DEBUG: Set size after add: ${this.postedJobs.size} (${this.postedJobs.size > sizeBefore ? 'NEW' : 'DUPLICATE'})`);
     this.savePostedJobs();
   }
 }
