@@ -16,8 +16,8 @@ const client = new Client({
   ]
 });
 
-// Time threshold: 12 hours ago
-const TWELVE_HOURS_AGO = Date.now() - (12 * 60 * 60 * 1000);
+// Time threshold: 6 hours ago
+const SIX_HOURS_AGO = Date.now() - (6 * 60 * 60 * 1000);
 
 // Collect all configured channel IDs
 const CHANNEL_IDS = [
@@ -46,7 +46,7 @@ const CHANNEL_IDS = [
 console.log('========================================');
 console.log('Clear All Channels');
 console.log('========================================\n');
-console.log(`⏰ Removing bot posts from last 12 hours`);
+console.log(`⏰ Removing bot posts from last 6 hours`);
 console.log(`📋 Channels to clear: ${CHANNEL_IDS.length}`);
 console.log(`🤖 Bot will delete its own messages and threads\n`);
 
@@ -74,10 +74,10 @@ async function clearTextChannel(channel) {
         break;
       }
 
-      // Filter: posted by bot AND in last 12 hours
+      // Filter: posted by bot AND in last 6 hours
       const messagesToDelete = messages.filter(msg => {
         const isBot = msg.author.id === client.user.id;
-        const isRecent = msg.createdTimestamp > TWELVE_HOURS_AGO;
+        const isRecent = msg.createdTimestamp > SIX_HOURS_AGO;
         return isBot && isRecent;
       });
 
@@ -101,7 +101,7 @@ async function clearTextChannel(channel) {
       }
 
       const oldestMessage = messages.last();
-      if (oldestMessage && oldestMessage.createdTimestamp < TWELVE_HOURS_AGO) {
+      if (oldestMessage && oldestMessage.createdTimestamp < SIX_HOURS_AGO) {
         hasMore = false;
       } else {
         lastMessageId = messages.last()?.id;
@@ -130,17 +130,17 @@ async function clearForumChannel(channel) {
     const threads = await channel.threads.fetchActive();
     console.log(`   Found ${threads.threads.size} active threads`);
 
-    // Also fetch archived threads (last 12 hours)
+    // Also fetch archived threads (last 6 hours)
     const archivedThreads = await channel.threads.fetchArchived({ limit: 100 });
     console.log(`   Found ${archivedThreads.threads.size} archived threads`);
 
     // Combine all threads
     const allThreads = new Map([...threads.threads, ...archivedThreads.threads]);
 
-    // Filter: created by bot AND in last 12 hours
+    // Filter: created by bot AND in last 6 hours
     const threadsToDelete = Array.from(allThreads.values()).filter(thread => {
       const isBot = thread.ownerId === client.user.id;
-      const isRecent = thread.createdTimestamp > TWELVE_HOURS_AGO;
+      const isRecent = thread.createdTimestamp > SIX_HOURS_AGO;
       return isBot && isRecent;
     });
 
