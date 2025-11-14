@@ -587,13 +587,20 @@
       "avatar_url": "https://avatars.githubusercontent.com/u/43180708?v=4",
       "html_url": "https://github.com/mayank64ce",
       "starred_at": "2025-11-10T18:38:45Z"
+    },
+    {
+      "login": "bowenxieoregon",
+      "id": 123434843,
+      "avatar_url": "https://avatars.githubusercontent.com/u/123434843?v=4",
+      "html_url": "https://github.com/bowenxieoregon",
+      "starred_at": "2025-11-14T01:25:54Z"
     }
   ],
-  "total_count": 84,
-  "last_updated": "2025-11-13T06:04:14.433Z",
+  "total_count": 85,
+  "last_updated": "2025-11-14T06:04:41.257Z",
   "stats": {
-    "new_since_last_run": 0,
-    "removed_since_last_run": 1,
-    "net_change": -1
+    "new_since_last_run": 1,
+    "removed_since_last_run": 0,
+    "net_change": 1
   }
 }
