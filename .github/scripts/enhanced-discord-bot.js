@@ -232,23 +232,26 @@ class PostedJobsManager {
       if (!fs.existsSync(dataDir)) {
         fs.mkdirSync(dataDir, { recursive: true });
       }
-      
+
       // Convert Set to sorted array and limit size to prevent infinite growth
       let postedJobsArray = [...this.postedJobs].sort();
       const maxEntries = 5000; // Keep last 5000 posted jobs
-      
+
       if (postedJobsArray.length > maxEntries) {
         postedJobsArray = postedJobsArray.slice(-maxEntries);
         this.postedJobs = new Set(postedJobsArray);
       }
-      
+
       // Atomic write
       const tempPath = postedJobsPath + '.tmp';
       fs.writeFileSync(tempPath, JSON.stringify(postedJobsArray, null, 2));
       fs.renameSync(tempPath, postedJobsPath);
-      
+
+      console.log(`💾 Saved ${postedJobsArray.length} posted job IDs to database`);
+
     } catch (error) {
-      console.error('Error saving posted jobs:', error);
+      console.error('❌ CRITICAL: Error saving posted jobs:', error);
+      console.error('   This will cause duplicate job postings!');
     }
   }
 
@@ -257,6 +260,7 @@ class PostedJobsManager {
   }
 
   markAsPosted(jobId) {
+    console.log(`  📝 Marking as posted: ${jobId.substring(0, 40)}${jobId.length > 40 ? '...' : ''}`);
     this.postedJobs.add(jobId);
     this.savePostedJobs();
   }
