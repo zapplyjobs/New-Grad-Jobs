@@ -2,7 +2,7 @@
   "name": "jobboard",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://zapplyjobs.github.io/New-Grad-Positions",
+  "homepage": "https://zapplyjobs.github.io/New-Grad-Jobs",
   "description": "Real-time job scraping API for Zapply Jobs",
   "main": "server.js",
   "dependencies": {
