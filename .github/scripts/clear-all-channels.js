@@ -16,8 +16,10 @@ const client = new Client({
   ]
 });
 
-// Time threshold: 9 hours ago
-const NINE_HOURS_AGO = Date.now() - (9 * 60 * 60 * 1000);
+// Time window: Clear messages between 4-12 hours old
+// Keep recent jobs (0-4h) and very old messages (12h+)
+const FOUR_HOURS_AGO = Date.now() - (4 * 60 * 60 * 1000);
+const TWELVE_HOURS_AGO = Date.now() - (12 * 60 * 60 * 1000);
 
 // Collect all configured channel IDs
 const CHANNEL_IDS = [
@@ -46,9 +48,10 @@ const CHANNEL_IDS = [
 console.log('========================================');
 console.log('Clear All Channels');
 console.log('========================================\n');
-console.log(`⏰ Removing bot posts from last 9 hours`);
+console.log(`⏰ Removing bot posts between 4-12 hours old`);
 console.log(`📋 Channels to clear: ${CHANNEL_IDS.length}`);
-console.log(`🤖 Bot will delete its own messages and threads\n`);
+console.log(`🤖 Bot will delete its own messages and threads`);
+console.log(`✅ Preserving recent jobs (0-4 hours old)\n`);
 
 /**
  * Clear messages from a text channel
@@ -74,11 +77,12 @@ async function clearTextChannel(channel) {
         break;
       }
 
-      // Filter: posted by bot AND in last 9 hours
+      // Filter: posted by bot AND between 4-12 hours old
       const messagesToDelete = messages.filter(msg => {
         const isBot = msg.author.id === client.user.id;
-        const isRecent = msg.createdTimestamp > NINE_HOURS_AGO;
-        return isBot && isRecent;
+        const olderThan4h = msg.createdTimestamp < FOUR_HOURS_AGO;
+        const newerThan12h = msg.createdTimestamp > TWELVE_HOURS_AGO;
+        return isBot && olderThan4h && newerThan12h;
       });
 
       console.log(`   Found ${messagesToDelete.size} bot messages in batch`);
@@ -101,7 +105,7 @@ async function clearTextChannel(channel) {
       }
 
       const oldestMessage = messages.last();
-      if (oldestMessage && oldestMessage.createdTimestamp < NINE_HOURS_AGO) {
+      if (oldestMessage && oldestMessage.createdTimestamp < TWELVE_HOURS_AGO) {
         hasMore = false;
       } else {
         lastMessageId = messages.last()?.id;
@@ -137,11 +141,12 @@ async function clearForumChannel(channel) {
     // Combine all threads
     const allThreads = new Map([...threads.threads, ...archivedThreads.threads]);
 
-    // Filter: created by bot AND in last 9 hours
+    // Filter: created by bot AND between 4-12 hours old
     const threadsToDelete = Array.from(allThreads.values()).filter(thread => {
       const isBot = thread.ownerId === client.user.id;
-      const isRecent = thread.createdTimestamp > NINE_HOURS_AGO;
-      return isBot && isRecent;
+      const olderThan4h = thread.createdTimestamp < FOUR_HOURS_AGO;
+      const newerThan12h = thread.createdTimestamp > TWELVE_HOURS_AGO;
+      return isBot && olderThan4h && newerThan12h;
     });
 
     console.log(`   ${threadsToDelete.length} bot threads to delete`);
