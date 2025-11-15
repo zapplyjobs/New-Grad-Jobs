@@ -1,5 +1,18 @@
 [
   {
+    "job_title": "Associate Product Engineer",
+    "employer_name": "ASSA ABLOY",
+    "job_city": "Mason City",
+    "job_state": "IA",
+    "job_description": "Join ASSA ABLOY in this exciting opportunity.",
+    "job_apply_link": "https://assaabloy.jobs2web.com/job/Mason-City-Associate-Product-Engineer-IA-50401/1233045501/?ats=successfactors",
+    "job_posted_at_datetime_utc": "2025-11-15T07:38:41.000Z",
+    "job_employment_type": "FULLTIME",
+    "id": "assaabloy-jobs2web-com-job-mason-city-associate-product-engineer-ia-50401-1233045501",
+    "description_platform": "generic",
+    "description_success": false
+  },
+  {
     "job_title": "Early Career Software Engineer",
     "employer_name": "Citizen Health",
     "job_city": "SF",
@@ -24,19 +37,6 @@
     "id": "mthree-com-careers-job",
     "description_platform": "generic",
     "description_success": false
-  },
-  {
-    "job_title": "Imaging Analyst",
-    "employer_name": "Fidelity National Financial",
-    "job_city": "Altamonte Springs",
-    "job_state": "FL",
-    "job_description": "<h2>Overview</h2> <p>The Imaging Analyst role within the Imaging department of Property Insight is responsible for ensuring our client facing plants are kept current. This include working through tickets, discrepancies, analyzing data sets for gaps, and acquiring those gaps from their source.</p> <h2>Duties</h2> <p>• Review, analyze and make recommendations to convert various external image sources for ingestion into a standardized repository and format.• Manage the ingestion of current updates to the images from the external sources including updates to formats received and improvements to the ingestion processing. • Review and analysis of reports and insights to confirm currency or identify gaps that need remediated.• Analyzes problems and determines root causes.• Owns the remediation of problems end to end ensuring timely resolution for customers• Coordinates with internal and external stakeholders to receive and delivery imaging assets in a timely manner. • Ability to navigate competing priorities ensuring all deadlines are met.• Fully takes ownership of process and acts as an SME (subject matter expert).</p> <h2>Education</h2> <p>Bachelor’s degree in business administration, economics, computer science, management information systems or related field.</p> <h2>Experience</h2> <p>Minium of 1 year analyst experience or similar role that utilizes a similar skillset.</p> <p>&nbsp;</p> <p><strong>REQUIREMENTS:</strong></p> <p>&nbsp;</p> <p>• Strong attention to detail.• Desire to learn and drive efficiencies in existing processes.• Thrives in a team environment.• Problem solving, quantitative and analytical abilities.• Strong communication skills – both written and verbal.• Strong Excel skills.• Beginner SQL skills.</p> <h2>Additional Information</h2> <p>• One year Title industry experience• Experience with large datasets to identify and remediate issues</p>",
-    "job_apply_link": "https://careers-fnf.icims.com/jobs/3210/job?mobile=true&needsRedirect=false",
-    "job_posted_at_datetime_utc": "2025-11-14T23:16:09.000Z",
-    "job_employment_type": "FULLTIME",
-    "id": "careers-fnf-icims-com-jobs-3210-job",
-    "description_platform": "icims",
-    "description_success": true
   },
   {
     "job_title": "Software Engineer 1",
