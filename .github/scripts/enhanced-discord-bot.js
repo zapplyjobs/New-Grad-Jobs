@@ -71,6 +71,13 @@ const companies = JSON.parse(fs.readFileSync('./.github/scripts/job-fetcher/comp
 // Import job ID generation for consistency
 const { generateJobId, generateEnhancedId } = require('./job-fetcher/utils');
 
+// Import routing logger and enhanced channel router for debugging
+const RoutingLogger = require('./routing-logger');
+const { getJobChannelDetails } = require('./enhanced-channel-router');
+
+// Initialize routing logger
+const routingLogger = new RoutingLogger();
+
 /**
  * Normalize job object to handle multiple data formats
  * Supports both primary format and legacy format
@@ -879,16 +886,26 @@ client.once('ready', async () => {
     // Group jobs by channel
     const jobsByChannel = {};
     for (const job of jobsToPost) {
-      const channelId = getJobChannel(job);
+      // Get detailed routing information for debugging
+      const routingInfo = getJobChannelDetails(job, CHANNEL_CONFIG);
+      const channelId = routingInfo.channelId;
+
       if (!channelId || channelId.trim() === '') {
         console.warn(`⚠️ No channel configured for job: ${job.job_title} - skipping`);
         continue;
       }
 
       if (!jobsByChannel[channelId]) {
-        jobsByChannel[channelId] = [];
+        jobsByChannel[channelId] = {
+          jobs: [],
+          category: routingInfo.category,
+          channelId: channelId
+        };
       }
-      jobsByChannel[channelId].push(job);
+      jobsByChannel[channelId].jobs.push({
+        job,
+        routingInfo
+      });
     }
 
     // Post jobs to their respective channels (batch by channel)
@@ -897,20 +914,29 @@ client.once('ready', async () => {
     let channelFullErrorCount = 0;
     const CHANNEL_FULL_EXIT_THRESHOLD = 5; // Exit after 5 consecutive "channel full" errors
 
-    for (const [channelId, channelJobs] of Object.entries(jobsByChannel)) {
+    for (const [channelId, channelData] of Object.entries(jobsByChannel)) {
       // Use cache instead of API fetch (channels cached when bot logged in)
       const channel = client.channels.cache.get(channelId);
       if (!channel) {
         console.error(`❌ Channel not found in cache: ${channelId}`);
-        totalFailed += channelJobs.length;
+        totalFailed += channelData.jobs.length;
         continue;
       }
 
-      console.log(`\n📌 Posting ${channelJobs.length} jobs to #${channel.name}`);
+      console.log(`\n📌 Posting ${channelData.jobs.length} jobs to #${channel.name}`);
 
       // Post jobs with rate limiting within each batch
-      for (const job of channelJobs) {
+      for (const { job, routingInfo } of channelData.jobs) {
         const jobId = generateJobId(job);
+
+        // Log routing decision for debugging
+        routingLogger.logRouting(
+          job,
+          routingInfo.category,
+          routingInfo.matchedKeyword,
+          channelId,
+          channel.name
+        );
         let jobPostedSuccessfully = false;
 
         // INDUSTRY POST: Post to industry channel
@@ -1045,6 +1071,24 @@ client.once('ready', async () => {
 
   // Clean exit AFTER all async operations complete
   console.log('✅ All posting operations complete, cleaning up...');
+
+  // Save routing logs (encrypted for GitHub Actions, plaintext for local)
+  if (process.env.GITHUB_ACTIONS) {
+    const password = process.env.LOG_ENCRYPT_PASSWORD;
+    if (password) {
+      try {
+        routingLogger.saveEncrypted(password);
+      } catch (error) {
+        console.error('❌ Failed to save encrypted routing logs:', error.message);
+      }
+    } else {
+      console.warn('⚠️ LOG_ENCRYPT_PASSWORD not set - routing logs not saved');
+    }
+  } else {
+    // Local development - save plaintext logs
+    routingLogger.savePlaintext();
+  }
+
   await new Promise(resolve => setTimeout(resolve, 2000)); // Grace period for final operations
   client.destroy();
   process.exit(0);
