@@ -1,31 +1,5 @@
 [
   {
-    "job_title": "Data Scientist - Product Analytics",
-    "employer_name": "Meta",
-    "job_city": "Seattle",
-    "job_state": "WA",
-    "job_description": "As a Data Scientist at Meta, you will shape the future of people-facing and business-facing products we build across our entire family of applications (Facebook, Instagram, Messenger, WhatsApp, Oculus). By applying your technical skills, analytical mindset, and product intuition to one of the richest data sets in the world, you will help define the experiences we build for billions of people and hundreds of millions of businesses around the world. You will collaborate on a wide array of product and business problems with a wide-range of cross-functional partners across Product, Engineering, Research, Data Engineering, Marketing, Sales, Finance and others. You will use data and analysis to identify and solve product development’s biggest challenges. You will influence product strategy and investment decisions with data, be focused on impact, and collaborate with other teams. By joining Meta, you will become part of a world-class analytics community dedicated to skill development and career growth in analytics and beyond. Product leadership: You will use data to shape product development, quantify new opportunities, identify upcoming challenges, and ensure the products we build bring value to people, businesses, and Meta. You will help your partner teams prioritize what to build, set goals, and understand their product’s ecosystem. Analytics: You will guide teams using data and insights. You will focus on developing hypotheses and employ a varied toolkit of rigorous analytical approaches, different methodologies, frameworks, and technical approaches to test them. Communication and influence: You won’t simply present data, but tell data-driven stories. You will convince and influence your partners using clear insights and recommendations. You will strive to build credibility through structure and clarity, and be a trusted strategic partner.",
-    "job_apply_link": "https://www.metacareers.com/jobs/1474404313779164",
-    "job_posted_at_datetime_utc": "2025-11-15T07:45:11.000Z",
-    "job_employment_type": "FULLTIME",
-    "id": "www-metacareers-com-jobs-1474404313779164",
-    "description_platform": "generic",
-    "description_success": true
-  },
-  {
-    "job_title": "Data Developer",
-    "employer_name": "Meta",
-    "job_city": "Austin",
-    "job_state": "TX",
-    "job_description": "Meta Platforms, Inc. (Meta), formerly known as Facebook Inc., builds technologies that help people connect, find communities, and grow businesses. When Facebook launched in 2004, it changed the way people connect. Apps and services like Messenger, Instagram, and WhatsApp further empowered billions around the world. Now, Meta is moving beyond 2D screens toward immersive experiences like augmented and virtual reality to help build the next evolution in social technology. To apply, click “Apply to Job” online on this web page.",
-    "job_apply_link": "https://www.metacareers.com/jobs/1245571270931878",
-    "job_posted_at_datetime_utc": "2025-11-15T07:43:44.000Z",
-    "job_employment_type": "FULLTIME",
-    "id": "www-metacareers-com-jobs-1245571270931878",
-    "description_platform": "generic",
-    "description_success": true
-  },
-  {
     "job_title": "Early Career Software Engineer",
     "employer_name": "Citizen Health",
     "job_city": "SF",
