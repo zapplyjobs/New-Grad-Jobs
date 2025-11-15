@@ -1,38 +1,38 @@
 {
   "zapplyjobs/New-Grad-Jobs": {
-    "stars": 85,
+    "stars": 86,
     "forks": 6,
     "issues": 2,
-    "updated": "2025-11-14T06:04:41.256Z"
+    "updated": "2025-11-15T06:03:57.917Z"
   },
   "zapplyjobs/New-Grad-Data-Science-Jobs": {
-    "stars": 15,
+    "stars": 16,
     "forks": 1,
     "issues": 0,
-    "updated": "2025-11-14T06:04:41.256Z"
+    "updated": "2025-11-15T06:03:57.917Z"
   },
   "zapplyjobs/New-Grad-Internships": {
-    "stars": 11,
+    "stars": 12,
     "forks": 0,
     "issues": 0,
-    "updated": "2025-11-14T06:04:41.256Z"
+    "updated": "2025-11-15T06:03:57.917Z"
   },
   "zapplyjobs/New-Grad-Hardware-Engineering-Jobs": {
+    "stars": 12,
+    "forks": 0,
+    "issues": 0,
+    "updated": "2025-11-15T06:03:57.917Z"
+  },
+  "zapplyjobs/New-Grad-Software-Engineering-Jobs": {
     "stars": 11,
     "forks": 0,
     "issues": 0,
-    "updated": "2025-11-14T06:04:41.256Z"
-  },
-  "zapplyjobs/New-Grad-Software-Engineering-Jobs": {
-    "stars": 10,
-    "forks": 0,
-    "issues": 0,
-    "updated": "2025-11-14T06:04:41.256Z"
+    "updated": "2025-11-15T06:03:57.917Z"
   },
   "zapplyjobs/New-Grad-Nursing-Jobs": {
-    "stars": 7,
+    "stars": 8,
     "forks": 0,
     "issues": 0,
-    "updated": "2025-11-14T06:04:41.256Z"
+    "updated": "2025-11-15T06:03:57.917Z"
   }
 }
