@@ -372,47 +372,71 @@ function getJobChannel(job) {
   const description = (job.job_description || '').toLowerCase();
   const combined = `${title} ${description}`;
 
-  // Sales roles - Check first as they're very specific
-  if (/\b(sales|account executive|account manager|bdr|sdr|business development|customer success|revenue|quota)\b/.test(combined)) {
+  // TECH ROLES - Check first (most common for our job board)
+  if (/\b(software engineer|developer|programmer|data scientist|devops|system administrator|systems analyst|IT|technical|backend|frontend|full stack|mobile|cloud|infrastructure|security|qa|test engineer|sre|reliability|platform|machine learning|ai|algorithm)\b/.test(title)) {
+    return CHANNEL_CONFIG.tech;
+  }
+
+  // Sales roles - Check title first to avoid matching company names
+  if (/\b(sales|account executive|account manager|bdr|sdr|business development|customer success|revenue|quota)\b/.test(title)) {
     return CHANNEL_CONFIG.sales;
   }
 
-  // Marketing roles
-  if (/\b(marketing|growth|seo|sem|content marketing|brand|campaign|digital marketing|social media|copywriter|creative director)\b/.test(combined)) {
+  // Marketing roles - Check title first
+  if (/\b(marketing|growth|seo|sem|content marketing|brand|campaign|digital marketing|social media|copywriter|creative director)\b/.test(title)) {
     return CHANNEL_CONFIG.marketing;
   }
 
-  // Finance roles
-  if (/\b(finance|accounting|financial analyst|controller|treasury|audit|tax|bookkeep|cfo|actuarial|investment|banker)\b/.test(combined)) {
+  // Finance roles - Check title first
+  if (/\b(finance|accounting|financial analyst|controller|treasury|audit|tax|bookkeep|cfo|actuarial|investment|banker)\b/.test(title)) {
     return CHANNEL_CONFIG.finance;
   }
 
-  // Healthcare roles
-  if (/\b(healthcare|medical|clinical|health|nurse|doctor|physician|therapist|pharmaceutical|biotech|hospital|patient care)\b/.test(combined)) {
+  // Healthcare roles - More specific to avoid company name matches
+  if (/\b(healthcare|medical|clinical|nurse|doctor|physician|therapist|pharmaceutical|biotech|hospital|patient care|registered nurse|rn|lpn|md|pa|clinical research)\b/.test(title)) {
     return CHANNEL_CONFIG.healthcare;
   }
 
-  // Product Management roles - Be specific to avoid false positives
-  if (/\b(product manager|product owner|product marketing|(\bpm\b)|product lead|product strategy|product analyst)\b/.test(combined)) {
+  // Product Management roles - Check title first
+  if (/\b(product manager|product owner|product marketing|(\bpm\b)|product lead|product strategy|product analyst)\b/.test(title)) {
     return CHANNEL_CONFIG.product;
   }
 
-  // Supply Chain/Operations roles - Exclude "people operations"
-  if (/\b(supply chain|logistics|(?<!people )operations manager|procurement|inventory|warehouse|distribution|sourcing|fulfillment|shipping)\b/.test(combined)) {
+  // Supply Chain/Operations roles - Check title first
+  if (/\b(supply chain|logistics|operations manager|procurement|inventory|warehouse|distribution|sourcing|fulfillment|shipping)\b/.test(title)) {
     return CHANNEL_CONFIG['supply-chain'];
   }
 
-  // Project Management roles - Be specific to avoid confusion with Product Management
-  if (/\b(project manager|program manager|scrum master|agile coach|pmo|project coordinator|delivery manager)\b/.test(combined)) {
+  // Project Management roles - Check title first
+  if (/\b(project manager|program manager|scrum master|agile coach|pmo|project coordinator|delivery manager)\b/.test(title)) {
     return CHANNEL_CONFIG['project-management'];
   }
 
-  // HR roles
-  if (/\b(human resources|(\bhr\b)|recruiter|talent acquisition|people operations|compensation|benefits|hiring manager|recruitment|workforce)\b/.test(combined)) {
+  // HR roles - Check title first
+  if (/\b(human resources|(\bhr\b)|recruiter|talent acquisition|people operations|compensation|benefits|hiring manager|recruitment|workforce)\b/.test(title)) {
     return CHANNEL_CONFIG.hr;
   }
 
-  // Default to tech for all engineering/technical roles
+  // FALLBACK: Check descriptions for roles that might have different titles
+  // Only if title didn't match anything specific
+
+  // Healthcare from description (but exclude company names)
+  if (/\b(healthcare|medical|clinical|nurse|doctor|physician|therapist|pharmaceutical|biotech|hospital|patient care|registered nurse|rn|lpn|md|pa|clinical research)\b/.test(description) &&
+      !/\b(health|cardinal|united|osf|ascension|hca|tenet)\b/.test(title)) {
+    return CHANNEL_CONFIG.healthcare;
+  }
+
+  // Finance from description
+  if (/\b(finance|accounting|financial analyst|controller|treasury|audit|tax|bookkeep|cfo|actuarial|investment|banker)\b/.test(description)) {
+    return CHANNEL_CONFIG.finance;
+  }
+
+  // Tech roles from description
+  if (/\b(software engineer|developer|programmer|data scientist|devops|system administrator|systems analyst|IT|technical|backend|frontend|full stack|mobile|cloud|infrastructure|security|qa|test engineer|sre|reliability|platform|machine learning|ai|algorithm)\b/.test(description)) {
+    return CHANNEL_CONFIG.tech;
+  }
+
+  // Default to tech for all remaining roles
   // This includes: Software Engineer, Data Scientist, DevOps, QA, IT, Security, etc.
   return CHANNEL_CONFIG.tech;
 }
