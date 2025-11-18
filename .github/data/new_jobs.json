@@ -1,5 +1,31 @@
 [
   {
+    "job_title": "Software Engineer (New Grads)",
+    "employer_name": "MLabs",
+    "job_city": "San Francisco",
+    "job_state": "CA",
+    "job_description": "Software Engineer (New Grad/Entry-Level)Full-time | On-site Location: San Francisco, CAWe are a rapidly growing, cash-flow positive technology company modernizing a $12 trillion global industry. We are seeking a world-class Software Engineer to join o...",
+    "job_apply_link": "https://apply.workable.com/mlabs/j/9FD344525A/",
+    "job_posted_at_datetime_utc": "2025-11-18T05:31:17.000Z",
+    "job_employment_type": "FULLTIME",
+    "id": "apply-workable-com-mlabs-j-9fd344525a",
+    "description_platform": "generic",
+    "description_success": true
+  },
+  {
+    "job_title": "Data Labeler",
+    "employer_name": "Figure",
+    "job_city": "San Jose",
+    "job_state": "CA",
+    "job_description": "Figure is an AI Robotics company developing a general purpose humanoid. Our humanoid robot, Figure 02, is designed for commercial tasks and the home. We are based in San Jose, CA and require 5 days/week in-office collaboration. It’s time to build.We are looking for Data Labeler to help us in our efforts to annotate and label our data for AI training applications. Responsibilities: Use proprietary annotation tools to label objects, poses, and interactions in images and video streams from our humanoid robots Collaborate with ML engineers to refine labeling guidelines and improve interface efficiency Identify and flag ambiguous or edge-case scenarios for review by the ML team Maintain high throughput and consistent quality across large annotation batches Contribute feedback on workflow improvements and tool enhancements Requirements: Strong attention to detail and the ability to apply consistent logic across diverse scenarios Comfortable navigating computer-based tools and quickly learning new software Patient, quality-focused mindset with the ability to juggle multiple assignments Clear written and verbal communication skills Reliable, self-motivated work style and a collaborative spirit within a fast-paced environment Fluency in English required This is a one-month contract-to-hire position, with potential for longer-term opportunities depending on your contributions and interests. We’re looking for motivated people who want to support real-world robot development—and grow with us. The US base salary range for this full-time position starts at $30/hr. The pay offered for this position may vary based on several individual factors, including job-related knowledge, skills, and experience. The total compensation package may also include additional components/benefits depending on the specific role. This information will be shared if an employment offer is extended.",
+    "job_apply_link": "https://job-boards.greenhouse.io/figureai/jobs/4590702006",
+    "job_posted_at_datetime_utc": "2025-11-18T05:05:45.000Z",
+    "job_employment_type": "FULLTIME",
+    "id": "job-boards-greenhouse-io-figureai-jobs-4590702006",
+    "description_platform": "greenhouse",
+    "description_success": true
+  },
+  {
     "job_title": "Early Career Software Engineer",
     "employer_name": "Citizen Health",
     "job_city": "SF",
