@@ -386,20 +386,6 @@
       "starred_at": "2025-10-14T21:44:05Z"
     },
     {
-      "login": "02enes",
-      "id": 234269173,
-      "avatar_url": "https://avatars.githubusercontent.com/u/234269173?v=4",
-      "html_url": "https://github.com/02enes",
-      "starred_at": "2025-10-15T17:37:03Z"
-    },
-    {
-      "login": "semih038orhan-del",
-      "id": 233091087,
-      "avatar_url": "https://avatars.githubusercontent.com/u/233091087?v=4",
-      "html_url": "https://github.com/semih038orhan-del",
-      "starred_at": "2025-10-15T19:05:12Z"
-    },
-    {
       "login": "serhatpkr25",
       "id": 234214004,
       "avatar_url": "https://avatars.githubusercontent.com/u/234214004?v=4",
@@ -435,25 +421,11 @@
       "starred_at": "2025-10-17T12:22:44Z"
     },
     {
-      "login": "hasanemir448-cloud",
-      "id": 234798956,
-      "avatar_url": "https://avatars.githubusercontent.com/u/234798956?v=4",
-      "html_url": "https://github.com/hasanemir448-cloud",
-      "starred_at": "2025-10-17T17:41:25Z"
-    },
-    {
       "login": "shrprabh",
       "id": 148508046,
       "avatar_url": "https://avatars.githubusercontent.com/u/148508046?v=4",
       "html_url": "https://github.com/shrprabh",
       "starred_at": "2025-10-17T19:09:13Z"
-    },
-    {
-      "login": "mustafacangungor216-code",
-      "id": 234287022,
-      "avatar_url": "https://avatars.githubusercontent.com/u/234287022?v=4",
-      "html_url": "https://github.com/mustafacangungor216-code",
-      "starred_at": "2025-10-17T19:42:35Z"
     },
     {
       "login": "htcyldz2663-cmd",
@@ -468,13 +440,6 @@
       "avatar_url": "https://avatars.githubusercontent.com/u/221129897?v=4",
       "html_url": "https://github.com/AnnieAdil98",
       "starred_at": "2025-10-18T12:19:37Z"
-    },
-    {
-      "login": "Mehmet0002-hup",
-      "id": 233529059,
-      "avatar_url": "https://avatars.githubusercontent.com/u/233529059?v=4",
-      "html_url": "https://github.com/Mehmet0002-hup",
-      "starred_at": "2025-10-18T13:18:12Z"
     },
     {
       "login": "AmnahSiddiqua",
@@ -610,11 +575,11 @@
       "starred_at": "2025-11-15T09:54:38Z"
     }
   ],
-  "total_count": 87,
-  "last_updated": "2025-11-19T06:04:06.900Z",
+  "total_count": 82,
+  "last_updated": "2025-11-20T06:04:03.652Z",
   "stats": {
     "new_since_last_run": 0,
-    "removed_since_last_run": 0,
-    "net_change": 0
+    "removed_since_last_run": 5,
+    "net_change": -5
   }
 }
