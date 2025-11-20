@@ -1,46 +1,46 @@
 # Discord Bot Execution Audit
-**Timestamp:** 2025-11-20T23:32:49.548Z
+**Timestamp:** 2025-11-20T23:48:11.508Z
 **Exit Code:** ✅ Success
 ## Metrics
-- **Jobs Posted:** 0
+- **Jobs Posted:** 4
 - **Jobs Failed:** 0
 - **Jobs Skipped:** 2
-- **Database Saved:** ❌ No
+- **Database Saved:** ✅ Yes
 ## Sanitized Log Output
 ```
-[2025-11-20T23:32:47.969Z] ========================================
-[2025-11-20T23:32:47.970Z] Discord Bot Execution Log
-[2025-11-20T23:32:47.970Z] Environment: GitHub Actions
-[2025-11-20T23:32:47.970Z] Node Version: v20.19.5
-[2025-11-20T23:32:47.970Z] ========================================
-[2025-11-20T23:32:47.970Z] Environment Variables Check:
-[2025-11-20T23:32:47.970Z] DISCORD_TOKEN: ✅ Set
-[2025-11-20T23:32:47.970Z] DISCORD_CHANNEL_ID: ✅ Set
-[2025-11-20T23:32:47.970Z] DISCORD_CLIENT_ID: ❌ Not set
-[2025-11-20T23:32:47.970Z] DISCORD_GUILD_ID: ❌ Not set
-[2025-11-20T23:32:47.970Z] 
+[2025-11-20T23:47:40.934Z] ========================================
+[2025-11-20T23:47:40.935Z] Discord Bot Execution Log
+[2025-11-20T23:47:40.935Z] Environment: GitHub Actions
+[2025-11-20T23:47:40.935Z] Node Version: v20.19.5
+[2025-11-20T23:47:40.935Z] ========================================
+[2025-11-20T23:47:40.935Z] Environment Variables Check:
+[2025-11-20T23:47:40.935Z] DISCORD_TOKEN: ✅ Set
+[2025-11-20T23:47:40.935Z] DISCORD_CHANNEL_ID: ✅ Set
+[2025-11-20T23:47:40.935Z] DISCORD_CLIENT_ID: ❌ Not set
+[2025-11-20T23:47:40.935Z] DISCORD_GUILD_ID: ❌ Not set
+[2025-11-20T23:47:40.935Z] 
 Multi-Channel Configuration:
-[2025-11-20T23:32:47.970Z] DISCORD_TECH_CHANNEL_ID: ✅ Set
-[2025-11-20T23:32:47.970Z] DISCORD_SALES_CHANNEL_ID: ✅ Set
-[2025-11-20T23:32:47.970Z] DISCORD_MARKETING_CHANNEL_ID: ✅ Set
-[2025-11-20T23:32:47.970Z] DISCORD_FINANCE_CHANNEL_ID: ✅ Set
-[2025-11-20T23:32:47.970Z] DISCORD_HEALTHCARE_CHANNEL_ID: ✅ Set
-[2025-11-20T23:32:47.971Z] DISCORD_PRODUCT_CHANNEL_ID: ✅ Set
-[2025-11-20T23:32:47.971Z] DISCORD_SUPPLY_CHANNEL_ID: ✅ Set
-[2025-11-20T23:32:47.971Z] DISCORD_PM_CHANNEL_ID: ✅ Set
-[2025-11-20T23:32:47.971Z] DISCORD_HR_CHANNEL_ID: ✅ Set
-[2025-11-20T23:32:47.971Z] 
+[2025-11-20T23:47:40.936Z] DISCORD_TECH_CHANNEL_ID: ✅ Set
+[2025-11-20T23:47:40.936Z] DISCORD_SALES_CHANNEL_ID: ✅ Set
+[2025-11-20T23:47:40.936Z] DISCORD_MARKETING_CHANNEL_ID: ✅ Set
+[2025-11-20T23:47:40.936Z] DISCORD_FINANCE_CHANNEL_ID: ✅ Set
+[2025-11-20T23:47:40.936Z] DISCORD_HEALTHCARE_CHANNEL_ID: ✅ Set
+[2025-11-20T23:47:40.936Z] DISCORD_PRODUCT_CHANNEL_ID: ✅ Set
+[2025-11-20T23:47:40.936Z] DISCORD_SUPPLY_CHANNEL_ID: ✅ Set
+[2025-11-20T23:47:40.936Z] DISCORD_PM_CHANNEL_ID: ✅ Set
+[2025-11-20T23:47:40.936Z] DISCORD_HR_CHANNEL_ID: ✅ Set
+[2025-11-20T23:47:40.936Z] 
 Multi-Channel Mode: ✅ ENABLED
-[2025-11-20T23:32:47.971Z] 
+[2025-11-20T23:47:40.936Z] 
 Data Files Check:
-[2025-11-20T23:32:47.971Z] .github/data/new_jobs.json: ✅ Exists (2 items, 1144 bytes)
-[2025-11-20T23:32:47.972Z] .github/data/posted_jobs.json: ✅ Exists (5000 items, 325142 bytes)
-[2025-11-20T23:32:47.972Z] 
+[2025-11-20T23:47:40.936Z] .github/data/new_jobs.json: ✅ Exists (6 items, 22407 bytes)
+[2025-11-20T23:47:40.938Z] .github/data/posted_jobs.json: ✅ Exists (5000 items, 325142 bytes)
+[2025-11-20T23:47:40.938Z] 
 ========================================
-[2025-11-20T23:32:47.972Z] Starting Enhanced Discord Bot...
-[2025-11-20T23:32:47.972Z] ========================================
-[2025-11-20T23:32:48.240Z] [BOT] 🔍 DEBUG: LOCATION_MODE_ENABLED = true
-[2025-11-20T23:32:48.241Z] [BOT] 🔍 DEBUG: Location channel configuration:
+[2025-11-20T23:47:40.939Z] Starting Enhanced Discord Bot...
+[2025-11-20T23:47:40.939Z] ========================================
+[2025-11-20T23:47:41.226Z] [BOT] 🔍 DEBUG: LOCATION_MODE_ENABLED = true
+[2025-11-20T23:47:41.227Z] [BOT] 🔍 DEBUG: Location channel configuration:
   - remote-usa: "1429...9802"
   - new-york: "1429...9032"
   - austin: "1429...5915"
@@ -51,15 +51,108 @@ Data Files Check:
   - san-francisco: "1429...9088"
   - sunnyvale: "1429...4859"
   - san-bruno: "1429...9086"
-[2025-11-20T23:32:48.847Z] [BOT] ✅ Enhanced Discord bot logged in as Zapply Jobs Bot#9522
-[2025-11-20T23:32:48.848Z] [BOT] ⏭️ Skipping already posted (legacy ID): ROLE_6a50d101 at IXL Learning
-[2025-11-20T23:32:48.848Z] [BOT] ⏭️ Skipping already posted (legacy ID): ROLE_2237147a at Citizen Health
-[2025-11-20T23:32:48.848Z] [BOT] ℹ️ No new jobs to post - all jobs have been posted already
-[2025-11-20T23:32:48.857Z] 
+[2025-11-20T23:47:42.026Z] [BOT] ✅ Enhanced Discord bot logged in as Zapply Jobs Bot#9522
+[2025-11-20T23:47:42.028Z] [BOT] ⏭️ Skipping already posted (legacy ID): ROLE_6a50d101 at IXL Learning
+[2025-11-20T23:47:42.028Z] [BOT] ⏭️ Skipping already posted (legacy ID): ROLE_2237147a at Citizen Health
+📬 Found 4 new jobs (2 already posted)...
+📤 Posting 4 jobs...
+[2025-11-20T23:47:42.028Z] [BOT] 🔀 Multi-channel mode enabled - routing jobs to appropriate forums
+[2025-11-20T23:47:42.031Z] [BOT] 📌 Posting 2 jobs to #💻・tech-jobs
+[2025-11-20T23:47:42.031Z] [BOT] 📍 [ROUTING] "Software Engineer Test Automation - Prisma Access" @ ORG_94b92bc9 Alto Networks
+[2025-11-20T23:47:42.031Z] [BOT] Category: TECH (matched: "software")
+   Channel: 💻・tech-jobs (1391...8819)
+[2025-11-20T23:47:42.036Z] [BOT ERROR] (node:2474) DeprecationWarning: The ready event has been renamed to clientReady to distinguish it from the gateway READY event and will only emit under that name in v15. Please use clientReady instead.
+(Use `node --trace-deprecation ...` to show where the warning was created)
+[2025-11-20T23:47:42.575Z] [BOT] ✅ Created forum post: 🏢 Software Engineer Test Automation - Prisma Access @ ORG_94b92bc9 Alto Networks in #💻・tech-jobs
+  ✅ Industry: Software Engineer Test Automation - Prisma Access @ ORG_94b92bc9 Alto Networks
+[2025-11-20T23:47:44.076Z] [BOT] 🔍 DEBUG: Job "Software Engineer Test Automation - Prisma Access" | City: "Santa Clara" | State: "CA" | Location Channel ID: "1429..."
+[2025-11-20T23:47:44.284Z] [BOT] ✅ Created forum post: 🏢 Software Engineer Test Automation - Prisma Access @ ORG_94b92bc9 Alto Networks in #🌉・san-francisco
+  ✅ Location: 🌉・san-francisco
+[2025-11-20T23:47:45.784Z] [BOT] 📝 Marking as posted: JID_554c3bf7...
+  🔍 DEBUG: Set size before add: 5000
+[2025-11-20T23:47:45.784Z] [BOT] 🔍 DEBUG: Set size after add: 5001 (NEW)
+🔍 DEBUG: Before trimming - array has 5001 entries
+[2025-11-20T23:47:45.785Z] [BOT] 🔍 DEBUG: Trimmed from 5001 to 5000
+🔍 DEBUG: Removed 1 oldest IDs (by insertion order): JID_9edd41e3
+🔍 DEBUG: Writing temp file to /home/runner/work/New-Grad-Jobs/New-Grad-Jobs/.github/data/posted_jobs.json.tmp
+[2025-11-20T23:47:45.786Z] [BOT] 🔍 DEBUG: Temp file written (325148 bytes)
+🔍 DEBUG: Renaming /home/runner/work/New-Grad-Jobs/New-Grad-Jobs/.github/data/posted_jobs.json.tmp → /home/runner/work/New-Grad-Jobs/New-Grad-Jobs/.github/data/posted_jobs.json
+[2025-11-20T23:47:45.787Z] [BOT] 🔍 DEBUG: Rename complete
+[2025-11-20T23:47:45.787Z] [BOT] 🔍 DEBUG: Verified file exists, size: 325148 bytes
+[2025-11-20T23:47:45.787Z] [BOT] 💾 Saved 5000 posted job IDs to database
+[2025-11-20T23:47:45.787Z] [BOT] 📍 [ROUTING] "Staff Auditor-Data Analytics" @ ORG_a2f917d4 Financial
+   Category: TECH (matched: "data")
+   Channel: 💻・tech-jobs (1391...8819)
+[2025-11-20T23:47:46.068Z] [BOT] ✅ Created forum post: 🏢 Staff Auditor-Data Analytics @ ORG_a2f917d4 Financial in #💻・tech-jobs
+[2025-11-20T23:47:46.068Z] [BOT] ✅ Industry: Staff Auditor-Data Analytics @ ORG_a2f917d4 Financial
+[2025-11-20T23:47:47.570Z] [BOT] 🔍 DEBUG: Job "Staff Auditor-Data Analytics" | City: "Minneapolis" | State: "MN" | Location Channel ID: "1429..."
+[2025-11-20T23:47:47.820Z] [BOT] ✅ Created forum post: 🏢 Staff Auditor-Data Analytics @ ORG_a2f917d4 Financial in #💻・remote-usa
+[2025-11-20T23:47:47.821Z] [BOT] ✅ Location: 💻・remote-usa
+[2025-11-20T23:47:49.321Z] [BOT] 📝 Marking as posted: JID_5cbea66e...
+  🔍 DEBUG: Set size before add: 5000
+[2025-11-20T23:47:49.322Z] [BOT] 🔍 DEBUG: Set size after add: 5001 (NEW)
+🔍 DEBUG: Before trimming - array has 5001 entries
+[2025-11-20T23:47:49.322Z] [BOT] 🔍 DEBUG: Trimmed from 5001 to 5000
+[2025-11-20T23:47:49.322Z] [BOT] 🔍 DEBUG: Removed 1 oldest IDs (by insertion order): JID_8ea1a7e5
+🔍 DEBUG: Writing temp file to /home/runner/work/New-Grad-Jobs/New-Grad-Jobs/.github/data/posted_jobs.json.tmp
+[2025-11-20T23:47:49.323Z] [BOT] 🔍 DEBUG: Temp file written (325220 bytes)
+🔍 DEBUG: Renaming /home/runner/work/New-Grad-Jobs/New-Grad-Jobs/.github/data/posted_jobs.json.tmp → /home/runner/work/New-Grad-Jobs/New-Grad-Jobs/.github/data/posted_jobs.json
+[2025-11-20T23:47:49.324Z] [BOT] 🔍 DEBUG: Rename complete
+[2025-11-20T23:47:49.324Z] [BOT] 🔍 DEBUG: Verified file exists, size: 325220 bytes
+💾 Saved 5000 posted job IDs to database
+[2025-11-20T23:47:52.325Z] [BOT] 📌 Posting 1 jobs to #📣・marketing-jobs
+[2025-11-20T23:47:52.325Z] [BOT] 📍 [ROUTING] "Marketing Science Analyst" @ ORG_a7dddf79 Partners
+   Category: MARKETING (matched: "marketing")
+   Channel: 📣・marketing-jobs (1391...4570)
+[2025-11-20T23:47:53.160Z] [BOT] ✅ Created forum post: 🏢 Marketing Science Analyst @ ORG_a7dddf79 Partners in #📣・marketing-jobs
+  ✅ Industry: Marketing Science Analyst @ ORG_a7dddf79 Partners
+[2025-11-20T23:47:54.661Z] [BOT] 🔍 DEBUG: Job "Marketing Science Analyst" | City: "Miami" | State: "FL" | Location Channel ID: "1429..."
+[2025-11-20T23:47:55.379Z] [BOT] ✅ Created forum post: 🏢 Marketing Science Analyst @ ORG_a7dddf79 Partners in #💻・remote-usa
+  ✅ Location: 💻・remote-usa
+[2025-11-20T23:47:56.879Z] [BOT] 📝 Marking as posted: JID_6a67d68d-...
+  🔍 DEBUG: Set size before add: 5000
+[2025-11-20T23:47:56.879Z] [BOT] 🔍 DEBUG: Set size after add: 5001 (NEW)
+🔍 DEBUG: Before trimming - array has 5001 entries
+[2025-11-20T23:47:56.879Z] [BOT] 🔍 DEBUG: Trimmed from 5001 to 5000
+[2025-11-20T23:47:56.880Z] [BOT] 🔍 DEBUG: Removed 1 oldest IDs (by insertion order): JID_3eeb17b2
+🔍 DEBUG: Writing temp file to /home/runner/work/New-Grad-Jobs/New-Grad-Jobs/.github/data/posted_jobs.json.tmp
+[2025-11-20T23:47:56.881Z] [BOT] 🔍 DEBUG: Temp file written (325243 bytes)
+🔍 DEBUG: Renaming /home/runner/work/New-Grad-Jobs/New-Grad-Jobs/.github/data/posted_jobs.json.tmp → /home/runner/work/New-Grad-Jobs/New-Grad-Jobs/.github/data/posted_jobs.json
+[2025-11-20T23:47:56.881Z] [BOT] 🔍 DEBUG: Rename complete
+[2025-11-20T23:47:56.882Z] [BOT] 🔍 DEBUG: Verified file exists, size: 325243 bytes
+[2025-11-20T23:47:56.882Z] [BOT] 💾 Saved 5000 posted job IDs to database
+[2025-11-20T23:47:59.882Z] [BOT] 📌 Posting 1 jobs to #💰・finance-jobs
+[2025-11-20T23:47:59.882Z] [BOT] 📍 [ROUTING] "Analyst – Power Market Fundamentals" @ ORG_c6f03864 Energy
+   Category: FINANCE (matched: "finance")
+   Channel: 💰・finance-jobs (1391...2941)
+[2025-11-20T23:48:00.377Z] [BOT] ✅ Created forum post: 🏢 Analyst – Power Market Fundamentals @ ORG_c6f03864 Energy in #💰・finance-jobs
+  ✅ Industry: Analyst – Power Market Fundamentals @ ORG_c6f03864 Energy
+[2025-11-20T23:48:01.878Z] [BOT] 🔍 DEBUG: Job "Analyst – Power Market Fundamentals" | City: "San Diego" | State: "CA" | Location Channel ID: "1429..."
+[2025-11-20T23:48:03.749Z] [BOT] ✅ Created forum post: 🏢 Analyst – Power Market Fundamentals @ ORG_c6f03864 Energy in #🌉・san-francisco
+  ✅ Location: 🌉・san-francisco
+[2025-11-20T23:48:05.249Z] [BOT] 📝 Marking as posted: JID_6f019501...
+[2025-11-20T23:48:05.250Z] [BOT] 🔍 DEBUG: Set size before add: 5000
+  🔍 DEBUG: Set size after add: 5001 (NEW)
+🔍 DEBUG: Before trimming - array has 5001 entries
+[2025-11-20T23:48:05.250Z] [BOT] 🔍 DEBUG: Trimmed from 5001 to 5000
+🔍 DEBUG: Removed 1 oldest IDs (by insertion order): JID_eb78f82d
+🔍 DEBUG: Writing temp file to /home/runner/work/New-Grad-Jobs/New-Grad-Jobs/.github/data/posted_jobs.json.tmp
+[2025-11-20T23:48:05.251Z] [BOT] 🔍 DEBUG: Temp file written (325244 bytes)
+🔍 DEBUG: Renaming /home/runner/work/New-Grad-Jobs/New-Grad-Jobs/.github/data/posted_jobs.json.tmp → /home/runner/work/New-Grad-Jobs/New-Grad-Jobs/.github/data/posted_jobs.json
+[2025-11-20T23:48:05.251Z] [BOT] 🔍 DEBUG: Rename complete
+[2025-11-20T23:48:05.251Z] [BOT] 🔍 DEBUG: Verified file exists, size: 325244 bytes
+💾 Saved 5000 posted job IDs to database
+[2025-11-20T23:48:08.252Z] [BOT] 🎉 Posting complete! Successfully posted: 4, Failed: 0
+✅ All posting operations complete, cleaning up...
+[2025-11-20T23:48:08.292Z] [BOT] 🔐 Encrypted routing log saved: /home/runner/work/New-Grad-Jobs/New-Grad-Jobs/.github/audit/routing-encrypted.json
+   Total entries: 4
+   Timestamp: 2025-11-20T23:48:08.292Z
+[2025-11-20T23:48:10.303Z] 
 ========================================
 ```
 ## Errors Detected
 - DISCORD_CLIENT_ID: ❌ Not set
 - DISCORD_GUILD_ID: ❌ Not set
+- [BOT ERROR] (node:2474) DeprecationWarning: The ready event has been renamed to clientReady to distinguish it from the gateway READY event and will only emit under that name in v15. Please use clientReady instead.
 ---
 *Log sanitized for repository commit. Full logs available as GitHub Actions artifacts.*
