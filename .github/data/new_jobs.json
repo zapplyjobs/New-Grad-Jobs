@@ -24,18 +24,5 @@
     "id": "www-ixl-com-company-jobs",
     "description_platform": "generic",
     "description_success": true
-  },
-  {
-    "job_title": "Early Career Software Engineer",
-    "employer_name": "Citizen Health",
-    "job_city": "San Francisco",
-    "job_state": "Locations",
-    "job_description": "Join Citizen Health in this exciting opportunity.",
-    "job_apply_link": "https://jobs.ashbyhq.com/Citizen%20Health/ccd73294-568c-4348-a963-71c5362a5363",
-    "job_posted_at_datetime_utc": "2025-11-19T13:52:31.000Z",
-    "job_employment_type": "FULLTIME",
-    "id": "jobs-ashbyhq-com-citizen-20health-ccd73294-568c-4348-a963-71c5362a5363",
-    "description_platform": "ashby",
-    "description_success": false
   }
 ]
