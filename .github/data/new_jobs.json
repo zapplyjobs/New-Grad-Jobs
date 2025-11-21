@@ -1,44 +1,5 @@
 [
   {
-    "job_title": "Systems Software Engineer",
-    "employer_name": "Apple",
-    "job_city": "San Diego",
-    "job_state": "CA",
-    "job_description": "Apply for a Systems Software Engineer job at Apple. Read about the role and find out if it’s right for you.",
-    "job_apply_link": "https://jobs.apple.com/en-us/details/200617621",
-    "job_posted_at_datetime_utc": "2025-11-21T10:08:20.000Z",
-    "job_employment_type": "FULLTIME",
-    "id": "jobs-apple-com-en-us-details-200617621",
-    "description_platform": "generic",
-    "description_success": true
-  },
-  {
-    "job_title": "Database Analyst - Part-Time/Remote - School of Law",
-    "employer_name": "Wash U",
-    "job_city": "St. Louis",
-    "job_state": "MO",
-    "job_description": "Scheduled Hours25Position SummaryThe Database Analyst will be responsible for the development, execution and continuous measurable improvement of the department’s “database and related educational platforms. Analyze database needs and propose software solutions. Develops, designs, creates, maintains and backs up databases and applications, including data entry systems.Job DescriptionPrimary Duties & Responsibilities:Responsible for all assigned Database development strategy, generation and dissemination.Designs and develops in-house relational database applications.Assists management in designing database applications for initiatives and oversees the related data entry process as needed.Assists in integrating the database with the program web server as needed.Maintains database development, maintenance, performance evaluation and correction on databases ensuring proper operation, integrity and performance.Assists in user support, training and documentation for applications development.Actively tracks metrics and analyzes demand/satisfaction/outcomes associated with departmental Database initiative; manage assigned Databases and assist with custom surveys.Inputs data, update records, run reports, in coordination with WUSTL colleagues.Performs other duties as assigned.Working Conditions:Job Location/Working ConditionsNormal office environmentPhysical EffortTypically sitting at a desk or tableEquipmentOffice equipmentThe above statements are intended to describe the general nature and level of work performed by people assigned to this classification. They are not intended to be construed as an exhaustive list of all job duties performed by the personnel so classified. Management reserves the right to revise or amend duties at any time.Required QualificationsEducation:Bachelor’s degree or combination of education and/or experience may substitute for minimum education.Certifications/Professional Licenses:No specific certification/professional license is required for this position.Work Experience:Various Databases (1 Year)Skills: Not ApplicableDriver's License: A driver's license is not required for this position.More About This JobThis position will be fully remote and part-time working approximately 25 hours per week.Preferred QualificationsEducation:M.B.A. - Master of Business Administration, Master's degreeCertifications/Professional Licenses:No additional certification/professional licenses unless stated elsewhere in the job posting.Work Experience:Data Analysis (6 Years), Software Development/Testing (6 Years)Skills:Apache Hadoop, AWS Tools, C (Programming Language), C++ Programming Language, C Sharp (Programming Language), Java, Java Enterprise Edition, Linear Regressions, Natural Language Processing (NLP), NoSQL, Python (Programming Language), R Programming, SAS Analytics, Scalable Web Applications, Shell Scripting, SPSS Data Analysis, SQL Databases, Stata, Structured Query Language (SQL), UI SpecificationGradeG11Salary Range$53,100.00 - $90,600.00 / AnnuallyThe salary range reflects base salaries paid for positions in a given job grade across the University. Individual rates within the range will be determined by factors including one's qualifications and performance, equity with others in the department, market rates for positions within the same grade and department budget.QuestionsFor frequently asked questions about the application process, please refer to our External Applicant FAQ.AccommodationIf you are unable to use our online application system and would like an accommodation, please email CandidateQuestions@wustl.edu or call the dedicated accommodation inquiry number at 314-935-1149 and leave a voicemail with the nature of your request.All qualified individuals must be able to perform the essential functions of the position satisfactorily and, if requested, reasonable accommodations will be made to enable employees with disabilities to perform the essential functions of their job, absent undue hardship.Pre-Employment ScreeningAll external candidates receiving an offer for employment will be required to submit to pre-employment screening for this position. The screenings will include criminal background check and, as applicable for the position, other background checks, drug screen, an employment and education or licensure/certification verification, physical examination, certain vaccinations and/or governmental registry checks. All offers are contingent upon successful completion of required screening.Benefits StatementWashington University in St. Louis is committed to providing a comprehensive and competitive benefits package to our employees. Benefits eligibility is subject to employment status, full-time equivalent (FTE) workload, and weekly standard hours. Please visit our website at https://hr.wustl.edu/benefits/ to view a summary of benefits.EEO Statement Washington University in St. Louis is committed to the principles and practices of equal employment opportunity and especially encourages applications by those from underrepresented groups. It is the University’s policy to provide equal opportunity and access to persons in all job titles without regard to race, ethnicity, color, national origin, age, religion, sex, sexual orientation, gender identity or expression, disability, protected veteran status, or genetic information.Washington University is dedicated to building a community of individuals who are committed to contributing to an inclusive environment – fostering respect for all and welcoming individuals from diverse backgrounds, experiences and perspectives. Individuals with a commitment to these values are encouraged to apply.",
-    "job_apply_link": "https://wustl.wd1.myworkdayjobs.com/external/job/St-Louis-MO/Database-Analyst--Part-Time-Remote----School-of-Law_JR91345",
-    "job_posted_at_datetime_utc": "2025-11-21T10:04:44.000Z",
-    "job_employment_type": "FULLTIME",
-    "id": "wustl-wd1-myworkdayjobs-com-external-job-st-louis-mo-database-analyst-part-time-remote-school-of-law_jr91345",
-    "description_platform": "workday",
-    "description_success": true
-  },
-  {
-    "job_title": "Java Software Engineer - Oracle Health and Analytics",
-    "employer_name": "Oracle",
-    "job_city": "Seattle",
-    "job_state": "WA",
-    "job_description": "FTE - Intended for students graduating with their Bachelor's, Master’s, or Doctorate’s degree by, or have graduated within 12 months of cohort start date in June/July 2026. Target Start Date: early-June or mid-July 2026.",
-    "job_apply_link": "https://eeho.fa.us2.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_45001/job/316172",
-    "job_posted_at_datetime_utc": "2025-11-21T09:58:51.000Z",
-    "job_employment_type": "FULLTIME",
-    "id": "eeho-fa-us2-oraclecloud-com-hcmui-candidateexperience-en-sites-cx_45001-job-316172",
-    "description_platform": "generic",
-    "description_success": true
-  },
-  {
     "job_title": "Early Career Software Engineer",
     "employer_name": "Citizen Health",
     "job_city": "SF",
