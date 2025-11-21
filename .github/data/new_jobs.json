@@ -11,18 +11,5 @@
     "id": "jobs-ashbyhq-com-citizen-20health-9b5fade0-0721-433d-9692-3585442456f6-application",
     "description_platform": "ashby",
     "description_success": true
-  },
-  {
-    "job_title": "Software Engineer",
-    "employer_name": "IXL Learning",
-    "job_city": "San Mateo",
-    "job_state": "CA",
-    "job_description": "See how IXL makes math, language arts, science, social studies, and Spanish fun! TRY IXL TODAY >",
-    "job_apply_link": "https://www.ixl.com/company/jobs?gh_jid=8299912002",
-    "job_posted_at_datetime_utc": "2025-11-19T23:27:49.000Z",
-    "job_employment_type": "FULLTIME",
-    "id": "www-ixl-com-company-jobs",
-    "description_platform": "generic",
-    "description_success": true
   }
 ]
