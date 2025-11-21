@@ -1,5 +1,18 @@
 [
   {
+    "job_title": "AIML Resident - Health",
+    "employer_name": "Apple",
+    "job_city": "NYC",
+    "job_state": "Locations",
+    "job_description": "Apply for a AIML Resident - Health job at Apple. Read about the role and find out if it’s right for you.",
+    "job_apply_link": "https://jobs.apple.com/en-us/details/200630790",
+    "job_posted_at_datetime_utc": "2025-11-21T14:44:50.000Z",
+    "job_employment_type": "FULLTIME",
+    "id": "jobs-apple-com-en-us-details-200630790",
+    "description_platform": "generic",
+    "description_success": true
+  },
+  {
     "job_title": "Early Career Software Engineer",
     "employer_name": "Citizen Health",
     "job_city": "SF",
