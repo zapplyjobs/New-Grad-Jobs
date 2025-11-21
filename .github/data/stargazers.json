@@ -576,10 +576,10 @@
     }
   ],
   "total_count": 82,
-  "last_updated": "2025-11-20T06:04:03.652Z",
+  "last_updated": "2025-11-21T06:04:03.735Z",
   "stats": {
     "new_since_last_run": 0,
-    "removed_since_last_run": 5,
-    "net_change": -5
+    "removed_since_last_run": 0,
+    "net_change": 0
   }
 }
