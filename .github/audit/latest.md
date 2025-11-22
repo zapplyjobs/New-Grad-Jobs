@@ -1,5 +1,5 @@
 # Discord Bot Execution Audit
-**Timestamp:** 2025-11-22T13:46:08.163Z
+**Timestamp:** 2025-11-22T14:01:11.659Z
 **Exit Code:** ✅ Success
 ## Metrics
 - **Jobs Posted:** 0
@@ -8,39 +8,39 @@
 - **Database Saved:** ❌ No
 ## Sanitized Log Output
 ```
-[2025-11-22T13:46:06.185Z] ========================================
-[2025-11-22T13:46:06.186Z] Discord Bot Execution Log
-[2025-11-22T13:46:06.186Z] Environment: GitHub Actions
-[2025-11-22T13:46:06.186Z] Node Version: v20.19.5
-[2025-11-22T13:46:06.186Z] ========================================
-[2025-11-22T13:46:06.186Z] Environment Variables Check:
-[2025-11-22T13:46:06.186Z] DISCORD_TOKEN: ✅ Set
-[2025-11-22T13:46:06.186Z] DISCORD_CHANNEL_ID: ✅ Set
-[2025-11-22T13:46:06.186Z] DISCORD_CLIENT_ID: ❌ Not set
-[2025-11-22T13:46:06.186Z] DISCORD_GUILD_ID: ❌ Not set
-[2025-11-22T13:46:06.187Z] 
+[2025-11-22T14:01:09.539Z] ========================================
+[2025-11-22T14:01:09.540Z] Discord Bot Execution Log
+[2025-11-22T14:01:09.540Z] Environment: GitHub Actions
+[2025-11-22T14:01:09.541Z] Node Version: v20.19.5
+[2025-11-22T14:01:09.541Z] ========================================
+[2025-11-22T14:01:09.541Z] Environment Variables Check:
+[2025-11-22T14:01:09.541Z] DISCORD_TOKEN: ✅ Set
+[2025-11-22T14:01:09.541Z] DISCORD_CHANNEL_ID: ✅ Set
+[2025-11-22T14:01:09.541Z] DISCORD_CLIENT_ID: ❌ Not set
+[2025-11-22T14:01:09.541Z] DISCORD_GUILD_ID: ❌ Not set
+[2025-11-22T14:01:09.541Z] 
 Multi-Channel Configuration:
-[2025-11-22T13:46:06.187Z] DISCORD_TECH_CHANNEL_ID: ✅ Set
-[2025-11-22T13:46:06.187Z] DISCORD_SALES_CHANNEL_ID: ✅ Set
-[2025-11-22T13:46:06.187Z] DISCORD_MARKETING_CHANNEL_ID: ✅ Set
-[2025-11-22T13:46:06.187Z] DISCORD_FINANCE_CHANNEL_ID: ✅ Set
-[2025-11-22T13:46:06.187Z] DISCORD_HEALTHCARE_CHANNEL_ID: ✅ Set
-[2025-11-22T13:46:06.187Z] DISCORD_PRODUCT_CHANNEL_ID: ✅ Set
-[2025-11-22T13:46:06.187Z] DISCORD_SUPPLY_CHANNEL_ID: ✅ Set
-[2025-11-22T13:46:06.187Z] DISCORD_PM_CHANNEL_ID: ✅ Set
-[2025-11-22T13:46:06.187Z] DISCORD_HR_CHANNEL_ID: ✅ Set
-[2025-11-22T13:46:06.187Z] 
+[2025-11-22T14:01:09.541Z] DISCORD_TECH_CHANNEL_ID: ✅ Set
+[2025-11-22T14:01:09.541Z] DISCORD_SALES_CHANNEL_ID: ✅ Set
+[2025-11-22T14:01:09.541Z] DISCORD_MARKETING_CHANNEL_ID: ✅ Set
+[2025-11-22T14:01:09.541Z] DISCORD_FINANCE_CHANNEL_ID: ✅ Set
+[2025-11-22T14:01:09.541Z] DISCORD_HEALTHCARE_CHANNEL_ID: ✅ Set
+[2025-11-22T14:01:09.541Z] DISCORD_PRODUCT_CHANNEL_ID: ✅ Set
+[2025-11-22T14:01:09.541Z] DISCORD_SUPPLY_CHANNEL_ID: ✅ Set
+[2025-11-22T14:01:09.541Z] DISCORD_PM_CHANNEL_ID: ✅ Set
+[2025-11-22T14:01:09.541Z] DISCORD_HR_CHANNEL_ID: ✅ Set
+[2025-11-22T14:01:09.541Z] 
 Multi-Channel Mode: ✅ ENABLED
-[2025-11-22T13:46:06.187Z] 
+[2025-11-22T14:01:09.541Z] 
 Data Files Check:
-[2025-11-22T13:46:06.187Z] .github/data/new_jobs.json: ✅ Exists (1 items, 6206 bytes)
-[2025-11-22T13:46:06.189Z] .github/data/posted_jobs.json: ✅ Exists (5000 items, 327572 bytes)
-[2025-11-22T13:46:06.189Z] 
+[2025-11-22T14:01:09.542Z] .github/data/new_jobs.json: ✅ Exists (1 items, 6206 bytes)
+[2025-11-22T14:01:09.543Z] .github/data/posted_jobs.json: ✅ Exists (5000 items, 327572 bytes)
+[2025-11-22T14:01:09.543Z] 
 ========================================
-[2025-11-22T13:46:06.189Z] Starting Enhanced Discord Bot...
-[2025-11-22T13:46:06.189Z] ========================================
-[2025-11-22T13:46:06.505Z] [BOT] 🔍 DEBUG: LOCATION_MODE_ENABLED = true
-[2025-11-22T13:46:06.505Z] [BOT] 🔍 DEBUG: Location channel configuration:
+[2025-11-22T14:01:09.543Z] Starting Enhanced Discord Bot...
+[2025-11-22T14:01:09.543Z] ========================================
+[2025-11-22T14:01:09.832Z] [BOT] 🔍 DEBUG: LOCATION_MODE_ENABLED = true
+[2025-11-22T14:01:09.833Z] [BOT] 🔍 DEBUG: Location channel configuration:
   - remote-usa: "1429...9802"
   - new-york: "1429...9032"
   - austin: "1429...5915"
@@ -48,13 +48,13 @@ Data Files Check:
   - seattle: "1429...6267"
   - redmond: "1429...1724"
   - mountain-view: "1429...8265"
-[2025-11-22T13:46:06.506Z] [BOT] - san-francisco: "1429...9088"
+  - san-francisco: "1429...9088"
   - sunnyvale: "1429...4859"
   - san-bruno: "1429...9086"
-[2025-11-22T13:46:07.447Z] [BOT] ✅ Enhanced Discord bot logged in as Zapply Jobs Bot#9522
-[2025-11-22T13:46:07.448Z] [BOT] ⏭️ Skipping already posted (legacy ID): ROLE_2237147a at Citizen Health
-[2025-11-22T13:46:07.448Z] [BOT] ℹ️ No new jobs to post - all jobs have been posted already
-[2025-11-22T13:46:07.457Z] 
+[2025-11-22T14:01:10.853Z] [BOT] ✅ Enhanced Discord bot logged in as Zapply Jobs Bot#9522
+[2025-11-22T14:01:10.854Z] [BOT] ⏭️ Skipping already posted (legacy ID): ROLE_2237147a at Citizen Health
+[2025-11-22T14:01:10.854Z] [BOT] ℹ️ No new jobs to post - all jobs have been posted already
+[2025-11-22T14:01:10.862Z] 
 ========================================
 ```
 ## Errors Detected
